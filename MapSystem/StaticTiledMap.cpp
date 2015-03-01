@@ -1,5 +1,4 @@
-#include "StaticTiledMap.hpp"
-#define __DEBUG
+//#include "StaticTiledMap.hpp"
 bool TileMap::loadMap(const std::string name){	
 	std::chrono::time_point<std::chrono::system_clock> start,end;
 	start = std::chrono::system_clock::now();

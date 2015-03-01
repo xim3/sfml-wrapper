@@ -4,13 +4,12 @@
 #include "tinyxml/tinyxml.h"
 #include "easylogging++.h"
 INITIALIZE_EASYLOGGINGPP
-#include "AnimatedSprite/AnimatedTex.cpp"
-#include "Person/Person.cpp"
-#include "Person/Player.cpp"
-#include "NpcManager/NpcManager.cpp"
-#include "MapSystem/ItemManager.cpp"
-
-#include "MapSystem/StaticTiledMap.cpp"
+#include "AnimatedSprite/AnimatedTex.hpp"
+#include "Person/Person.hpp"
+#include "Person/Player.hpp"
+#include "NpcManager/NpcManager.hpp"
+#include "MapSystem/ItemManager.hpp"
+#include "MapSystem/StaticTiledMap.hpp"
 #include "DialogSystem/Dialog.h"
 #include "DialogSystem/Button.h"
 #include "DialogSystem/Menu.h"
@@ -27,12 +26,11 @@ int main()
     window.setFramerateLimit(60);
     sf::Clock frameClock;
     sf::Clock i_clock;
-    sf::Clock playerclock;
+
     ItemManager imgr;
     NpcManager nmgr;
     TileMap map;    
     Player gamer;
-    gamer.setTimerHandle(&playerclock);
     gamer.load("player.xml");
     map.setItemManagerHandle(&imgr);
     map.setNPCManagerHandle(&nmgr);
@@ -46,15 +44,13 @@ int main()
 	sf::Int32 itemId = 0;
 	unsigned int iid = 0;
 	bool isit,sol,por;
-	sf::Vector2f mov1(0,0);
-	gamer.setPositionHandle(&mov1);
 	sf::Vector2f x;
     while (window.isOpen())
     {
     sf::Vector2f movement(0.f, 0.f);
-    mov1 = sf::Vector2f(0.f,0.f);
     sf::Event event;
-    while(window.pollEvent(event)){
+    while(window.pollEvent(event))
+    {
 		  if(event.type == sf::Event::Closed)
            window.close();
 				if (event.type == sf::Event::MouseButtonPressed)
@@ -66,8 +62,7 @@ int main()
 		}
 	}
     pzz = gamer.getPosition();
-    aPos = gamer.getPosition1();
- 
+
 	isit = map.isItem(pzz,itemId);
 	sol = map.isSolidTile(pzz);
 	por = map.isPortal(pzz);

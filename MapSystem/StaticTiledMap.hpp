@@ -49,4 +49,4 @@ class TileMap : public sf::Drawable, public sf::Transformable
 		NpcManager  *nmgr = nullptr;
 		ItemManager *imgr = nullptr;		
 };
-
+#include "StaticTiledMap.cpp"

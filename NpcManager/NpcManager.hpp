@@ -10,3 +10,4 @@ class NpcManager
 	private:
 		std::vector<NPC> m_npcs;
 };
+#include "NpcManager.cpp"

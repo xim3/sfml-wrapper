@@ -1,7 +1,7 @@
-#include "ItemManager.hpp"
 inline size_t ItemManager::playerItemCount() const{
 	return playerItems.size();
 }
+
 inline void ItemManager::addItem(Item itm){
 	std::vector<Item>::iterator it = 
 	std::find(playerItems.begin(), playerItems.end(), Item(0,0,0,itm.id,0));
@@ -10,6 +10,7 @@ inline void ItemManager::addItem(Item itm){
 	}
 	else return;
 }
+
 inline bool ItemManager::deleteItem(const int id){
 	std::vector<Item>::iterator it 
 	= std::find(playerItems.begin(), playerItems.end(), Item(0,0,0,id,0));
@@ -20,6 +21,7 @@ inline bool ItemManager::deleteItem(const int id){
 	else
 		return false;
 }
+
 Item ItemManager::getItem(const int id) const{
 	std::vector<Item>::const_iterator it 
 	= std::find(playerItems.begin(), playerItems.end(), Item(0,0,0,id,0));
@@ -28,12 +30,14 @@ Item ItemManager::getItem(const int id) const{
 	else
 		return Item();
 }
+
 void ItemManager::update(const sf::Vector2u &vct){
 	for(auto &item : playerItems){
 		item.x = vct.x;
 		item.y = vct.y;
 	}
 }
+
 bool ItemManager::loadItems(std::string name)
 {
 	TiXmlDocument doc(name.c_str());
@@ -100,6 +104,7 @@ bool ItemManager::loadItems(std::string name)
 	LOG(ERROR) << "Załadowano dane" << itemsinfo.size() << " itemów.";
 	return true;
 }
+
 ItemData ItemManager::getData(size_t gid) const
 {
 	std::vector<ItemData>::const_iterator it = 
@@ -108,13 +113,16 @@ ItemData ItemManager::getData(size_t gid) const
 		return *it;
 	return ItemData(WEAPON,"undefined","undefined",0,0,0,0,0,0,0);
 }
+
 int ItemManager::getGID(size_t id) const
 {
 	return getItem(id).gid;
 }
+
 inline void ItemManager::setPicked(size_t id){
 	picked[id] = true;
 }
+
 inline bool ItemManager::isPicked(size_t id) const{
 	return picked[id];
 }

@@ -1,10 +1,12 @@
 #pragma once
-#include "Person.hpp"
-Person::Person()
+Person::Person(unsigned int x, unsigned int y)
 {
+	tile_height = x;
+	tile_height = y;
 	anitex.setOrigin(tile_width/2,tile_height);
 	nokeypressed = true;
 }
+
 bool Person::load(const std::string path)
 {
 	TiXmlDocument doc(path.c_str());
@@ -72,32 +74,33 @@ bool Person::load(const std::string path)
 void Person::walkDown(){
 	nokeypressed = false;
 	c_anim = &anims[0];
-	position->y += (unsigned int)speed;
+	position.y += (unsigned int)speed;
 }
 void Person::walkLeft(){
 	nokeypressed = false;
 	c_anim = &anims[1];
-	position->x -= (unsigned int)speed;
+	position.x -= (unsigned int)speed;
 }
 void Person::walkRight(){
 	nokeypressed = false;
 	c_anim = &anims[2];
-	position->x += (unsigned int)speed;
+	position.x += (unsigned int)speed;
 }
 void Person::walkUp(){
 	nokeypressed = false;
 	c_anim = &anims[3];
-	position->y -= (unsigned int)speed;
+	position.y -= (unsigned int)speed;
 }
 void Person::update(){
-	sf::Time ftime = _hnd->restart();
+	sf::Time ftime = _clock.restart();
 	anitex.play(*c_anim);
-	anitex.move((*position) * ftime.asSeconds());
+	anitex.move(position * ftime.asSeconds());
 	if(nokeypressed){
 	anitex.stop();
 	}
 	anitex.update(ftime);
 	nokeypressed = true;
+	idle();
 }
 void Person::setPosition(unsigned int x,unsigned int y){
 	anitex.setPosition(sf::Vector2f(x*tile_width,y*tile_height));
@@ -105,15 +108,12 @@ void Person::setPosition(unsigned int x,unsigned int y){
 void Person::draw(sf::RenderTarget& target, sf::RenderStates states) const{
 	anitex.draw(target,states);
 }
-void Person::setTimerHandle(sf::Clock * c){
-	_hnd = c;
-}
-void Person::setPositionHandle(sf::Vector2f *vct){
-	position = vct;
+void Person::idle(){
+	position = sf::Vector2f(0,0);
 }
 sf::Vector2u Person::getPosition(){
 	return sf::Vector2u((anitex.getPosition().x)/tile_width,(anitex.getPosition().y)/tile_height);
 }
-sf::Vector2f Person::getPosition1(){
+sf::Vector2f Person::getPositionFloat(){
 	return sf::Vector2f(anitex.getPosition().x,anitex.getPosition().y);
 }

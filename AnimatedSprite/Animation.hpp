@@ -19,3 +19,4 @@ private:
     unsigned int tile_width = 32;
     unsigned int tile_height= 32;
 };
+#include "Animation.cpp"

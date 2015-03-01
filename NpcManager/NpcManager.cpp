@@ -1,10 +1,9 @@
 #pragma once
-#include "NpcManager.hpp"
 // ugly
 // x|x|x
 // x|o|x <-- Sprawdzane są te pola, 'o' to NPC
 // x|x|x
-bool near(const NPC& _npc, const sf::Vector2u &vct)
+bool near(const NPC& _npc, const sf::Vector2u &vct) 
 {
 	if((_npc.m_pos.x == vct.x 	  && _npc.m_pos.y == vct.y    ) ||
 	   (_npc.m_pos.x == vct.x     && _npc.m_pos.y == vct.y - 1) ||

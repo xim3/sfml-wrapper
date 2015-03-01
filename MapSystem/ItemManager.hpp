@@ -36,3 +36,4 @@ private:
 	std::vector<ItemData> itemsinfo;
 	std::vector<bool> picked;
 };
+#include "ItemManager.cpp"

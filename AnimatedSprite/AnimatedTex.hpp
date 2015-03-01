@@ -3,7 +3,7 @@
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/System/Vector2.hpp>
-#include "Animation.cpp"
+#include "Animation.hpp"
 class AnimatedTex : public sf::Drawable, public sf::Transformable
 {
 public:
@@ -37,3 +37,4 @@ private:
   
 
 };
+#include "AnimatedTex.cpp"
