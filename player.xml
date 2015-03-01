@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<player file="player.png" width="32" height="32" speed="120.0" datatype="xy" frametime="0.1">
+	<tex dir="down">
+		<data x="32" y="0"/>
+		<data x="64" y="0"/>
+		<data x="32" y="0"/>
+		<data x="0"  y="0"/>
+	</tex>
+	<tex dir="left">
+		<data x="32" y="32"/>
+		<data x="64" y="32"/>
+		<data x="32" y="32"/>
+		<data x="0" y="32"/>
+	</tex>
+	<tex dir="right">
+		<data x="32" y="64"/>
+		<data x="64" y="64"/>
+		<data x="32" y="64"/>
+		<data x="0" y="64"/>
+	</tex>
+	<tex dir="up">
+		<data x="32" y="96"/>
+		<data x="64" y="96"/>
+		<data x="32" y="96"/>
+		<data x="0" y="96"/>				
+	</tex>		
+</player>

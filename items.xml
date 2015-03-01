@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<items>
+    <item gid="1734" name="xd xd" type="0">
+        <desc>ac ac</desc>
+        <data attack="5" speed="1" quality="1" price="50" />
+    </item>
+    <item gid="1732" name="wand" type="0">
+        <desc>fajny wand</desc>
+        <data attack="15" speed="0.5" quality="2" price="200" />
+    </item>
+    <item gid="1602" name="Mikstura many" type="2">
+        <desc>Odnawia 10 mp</desc>
+        <data power="1" price="15" />
+    </item>
+    <item gid="1472" name="Magic Book" type="1">
+        <desc>Bardzo dobry item</desc>
+        <data defence="10" quality="2" price="600" />
+    </item>
+    <item gid="1604" name="Heal potion" type="2">
+        <desc>Odnawia 10 hp</desc>
+        <data power="2" price="600" />
+    </item>
+    <item gid="1357" name="Rękawica Chwały" type="1">
+		<desc>Ukradziona Karmazynowemu Mścicielowi</desc>
+		<data defence="20" quality="3" price="5000"/>
+    </item>
+    <item gid="2945" name="Rózga druida" type="0">
+		<desc>Dla początkującego druida</desc>
+		<data attack="20" speed="1" quality="1" price="20"/>
+    </item>
+</items>
