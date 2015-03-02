@@ -1,0 +1,262 @@
+\hypertarget{class_entity}{\section{Dokumentacja klasy Entity}
+\label{class_entity}\index{Entity@{Entity}}
+}
+
+
+Klasa bytu, który może poruszać sie po mapie, i mieć animacje.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\-hpp$>$}
+
+Diagram dziedziczenia dla Entity\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_entity}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_entity_a8e13fe1a39745c6912d62e252edc0709}{Entity} (unsigned int x=32, unsigned int y=32)
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_entity_a2d6182aff5fb37582bdb52abfd1d7fde}{load} (const std\-::string path)
+\begin{DoxyCompactList}\small\item\em Ładuje animacje z pliku. \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a10f39c35a26c9a808676c70eb2742c7b}{void \hyperlink{class_entity_a10f39c35a26c9a808676c70eb2742c7b}{move\-Down} ()}\label{class_entity_a10f39c35a26c9a808676c70eb2742c7b}
+
+\begin{DoxyCompactList}\small\item\em Porusza obiekt w dół i animuje ruch. \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a7775cd62029bcba5875a6d9e28172d0e}{void \hyperlink{class_entity_a7775cd62029bcba5875a6d9e28172d0e}{move\-Left} ()}\label{class_entity_a7775cd62029bcba5875a6d9e28172d0e}
+
+\begin{DoxyCompactList}\small\item\em Porusza obiekt w lewo i animuje ruch. \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a72d22f873f82e23e424f58d42a45162c}{void \hyperlink{class_entity_a72d22f873f82e23e424f58d42a45162c}{move\-Right} ()}\label{class_entity_a72d22f873f82e23e424f58d42a45162c}
+
+\begin{DoxyCompactList}\small\item\em Porusza obiekt w prawo i animuje ruch. \end{DoxyCompactList}\item 
+\hypertarget{class_entity_ab72296eceda3417186ccdb2b2dd64ff8}{void \hyperlink{class_entity_ab72296eceda3417186ccdb2b2dd64ff8}{move\-Up} ()}\label{class_entity_ab72296eceda3417186ccdb2b2dd64ff8}
+
+\begin{DoxyCompactList}\small\item\em Porusza obiekt w góre i animuje ruch. \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}{void \hyperlink{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}{update} ()}\label{class_entity_a00b6eeaf99b35c8f8b10b5fbfc1baf4f}
+
+\begin{DoxyCompactList}\small\item\em Odświeża animacje. \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a651d16aa7cc3046e9387912496685ead}{void \hyperlink{class_entity_a651d16aa7cc3046e9387912496685ead}{idle} ()}\label{class_entity_a651d16aa7cc3046e9387912496685ead}
+
+\begin{DoxyCompactList}\small\item\em idle \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_af6eeb3e2ab8bfe2885bab25f156ed78b}{set\-Position} (unsigned int, unsigned int)
+\begin{DoxyCompactList}\small\item\em Ustawia pozycje ( w kaflach ) \end{DoxyCompactList}\item 
+void \hyperlink{class_entity_a727a12d714ee329c92b62f3ba60f79f9}{set\-Position\-Float} (float, float)
+\begin{DoxyCompactList}\small\item\em Ustawia pozycje ( float ) \end{DoxyCompactList}\item 
+sf\-::\-Vector2u \hyperlink{class_entity_a60954d1d71c33104bf549f39c61dbb9f}{get\-Position} ()
+\begin{DoxyCompactList}\small\item\em Zwraca pozycje przeliczoną na kafle. \end{DoxyCompactList}\item 
+\hypertarget{class_entity_aa254c3e47aa6d3c4b9e2bbbcc786d93f}{sf\-::\-Vector2f \hyperlink{class_entity_aa254c3e47aa6d3c4b9e2bbbcc786d93f}{get\-Position\-Float} ()}\label{class_entity_aa254c3e47aa6d3c4b9e2bbbcc786d93f}
+
+\begin{DoxyCompactList}\small\item\em Zwraca pozycje w floatcie. \end{DoxyCompactList}\item 
+\hypertarget{class_entity_a8a29089df65336842035e9a6b73677f6}{virtual void \hyperlink{class_entity_a8a29089df65336842035e9a6b73677f6}{draw} (sf\-::\-Render\-Target \&target, sf\-::\-Render\-States states) const }\label{class_entity_a8a29089df65336842035e9a6b73677f6}
+
+\begin{DoxyCompactList}\small\item\em Rysuje. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_entity_ae9986b41f6b347a36c9692c30e6cb5e7}{unsigned int {\bfseries tile\-\_\-width} = 32}\label{class_entity_ae9986b41f6b347a36c9692c30e6cb5e7}
+
+\item 
+\hypertarget{class_entity_aa6c74732076834899b7e3a05744a2109}{unsigned int {\bfseries tile\-\_\-height} = 32}\label{class_entity_aa6c74732076834899b7e3a05744a2109}
+
+\item 
+std\-::vector$<$ \hyperlink{class_animation}{Animation} $>$ \hyperlink{class_entity_adca44d97840ac7cff2d91d4d518edbcf}{anims}
+\begin{DoxyCompactList}\small\item\em Animacje. \end{DoxyCompactList}\item 
+\hyperlink{class_animation}{Animation} $\ast$ \hyperlink{class_entity_a60767e4984ab5817623a970f40c51591}{c\-\_\-anim}
+\begin{DoxyCompactList}\small\item\em Aktualna animacja. \end{DoxyCompactList}\item 
+\hyperlink{class_animated_tex}{Animated\-Tex} \hyperlink{class_entity_ad968b2c732af4a7087842f31202438fc}{anitex}
+\begin{DoxyCompactList}\small\item\em Util. \end{DoxyCompactList}\item 
+sf\-::\-Vector2f \hyperlink{class_entity_afc349ec89c2bffef70bf6a1d95603154}{position}
+\begin{DoxyCompactList}\small\item\em Pozycja. \end{DoxyCompactList}\item 
+sf\-::\-Texture \hyperlink{class_entity_a50a3dffcf26eb1950587414663951267}{tiles}
+\begin{DoxyCompactList}\small\item\em Tekstura. \end{DoxyCompactList}\item 
+float \hyperlink{class_entity_a1de3d8d9ab8088f61e6726069b26fa60}{speed}
+\begin{DoxyCompactList}\small\item\em Szybkość przemieszczania się \end{DoxyCompactList}\item 
+sf\-::\-Clock \hyperlink{class_entity_a371e5de242da644dca5e90674eb0c1bc}{\-\_\-clock}
+\begin{DoxyCompactList}\small\item\em Zegarek. \end{DoxyCompactList}\item 
+bool \hyperlink{class_entity_a819f25d4808e9e06d2e3af164b901350}{nokeypressed}
+\begin{DoxyCompactList}\small\item\em klawisz \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa bytu, który może poruszać sie po mapie, i mieć animacje. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_entity_a8e13fe1a39745c6912d62e252edc0709}{\index{Entity@{Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!Entity@{Entity}}
+\subsubsection[{Entity}]{\setlength{\rightskip}{0pt plus 5cm}Entity\-::\-Entity (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x = {\ttfamily 32}, }
+\item[{unsigned int}]{y = {\ttfamily 32}}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a8e13fe1a39745c6912d62e252edc0709}
+
+
+Konstruktor. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em x,y} & współrzędne \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_entity_a60954d1d71c33104bf549f39c61dbb9f}{\index{Entity@{Entity}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!Entity@{Entity}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2u Entity\-::get\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a60954d1d71c33104bf549f39c61dbb9f}
+
+
+Zwraca pozycje przeliczoną na kafle. 
+
+\begin{DoxyReturn}{Zwraca}
+Pozycja 
+\end{DoxyReturn}
+\hypertarget{class_entity_a2d6182aff5fb37582bdb52abfd1d7fde}{\index{Entity@{Entity}!load@{load}}
+\index{load@{load}!Entity@{Entity}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}bool Entity\-::load (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{path}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a2d6182aff5fb37582bdb52abfd1d7fde}
+
+
+Ładuje animacje z pliku. 
+
+Możliwe dwa formaty plików, informacje logowane do pliku. 
+\begin{DoxyParams}{Parametry}
+{\em path} & -\/ ścieżka do pliku X\-M\-L \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Powodzenie operacji 
+\end{DoxyReturn}
+\hypertarget{class_entity_af6eeb3e2ab8bfe2885bab25f156ed78b}{\index{Entity@{Entity}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!Entity@{Entity}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::set\-Position (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x, }
+\item[{unsigned int}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_entity_af6eeb3e2ab8bfe2885bab25f156ed78b}
+
+
+Ustawia pozycje ( w kaflach ) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em xy} & -\/ współrzędne \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_entity_a727a12d714ee329c92b62f3ba60f79f9}{\index{Entity@{Entity}!set\-Position\-Float@{set\-Position\-Float}}
+\index{set\-Position\-Float@{set\-Position\-Float}!Entity@{Entity}}
+\subsubsection[{set\-Position\-Float}]{\setlength{\rightskip}{0pt plus 5cm}void Entity\-::set\-Position\-Float (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_entity_a727a12d714ee329c92b62f3ba60f79f9}
+
+
+Ustawia pozycje ( float ) 
+
+
+\begin{DoxyParams}{Parametry}
+{\em xy} & -\/ współrzędne \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{class_entity_a371e5de242da644dca5e90674eb0c1bc}{\index{Entity@{Entity}!\-\_\-clock@{\-\_\-clock}}
+\index{\-\_\-clock@{\-\_\-clock}!Entity@{Entity}}
+\subsubsection[{\-\_\-clock}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Clock Entity\-::\-\_\-clock\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_a371e5de242da644dca5e90674eb0c1bc}
+
+
+Zegarek. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\hypertarget{class_entity_adca44d97840ac7cff2d91d4d518edbcf}{\index{Entity@{Entity}!anims@{anims}}
+\index{anims@{anims}!Entity@{Entity}}
+\subsubsection[{anims}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf Animation}$>$ Entity\-::anims\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_adca44d97840ac7cff2d91d4d518edbcf}
+
+
+Animacje. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\hypertarget{class_entity_ad968b2c732af4a7087842f31202438fc}{\index{Entity@{Entity}!anitex@{anitex}}
+\index{anitex@{anitex}!Entity@{Entity}}
+\subsubsection[{anitex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Animated\-Tex} Entity\-::anitex\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_ad968b2c732af4a7087842f31202438fc}
+
+
+Util. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\hypertarget{class_entity_a60767e4984ab5817623a970f40c51591}{\index{Entity@{Entity}!c\-\_\-anim@{c\-\_\-anim}}
+\index{c\-\_\-anim@{c\-\_\-anim}!Entity@{Entity}}
+\subsubsection[{c\-\_\-anim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Animation}$\ast$ Entity\-::c\-\_\-anim\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_a60767e4984ab5817623a970f40c51591}
+
+
+Aktualna animacja. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\hypertarget{class_entity_a819f25d4808e9e06d2e3af164b901350}{\index{Entity@{Entity}!nokeypressed@{nokeypressed}}
+\index{nokeypressed@{nokeypressed}!Entity@{Entity}}
+\subsubsection[{nokeypressed}]{\setlength{\rightskip}{0pt plus 5cm}bool Entity\-::nokeypressed\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_a819f25d4808e9e06d2e3af164b901350}
+
+
+klawisz 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\hypertarget{class_entity_afc349ec89c2bffef70bf6a1d95603154}{\index{Entity@{Entity}!position@{position}}
+\index{position@{position}!Entity@{Entity}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Entity\-::position\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_afc349ec89c2bffef70bf6a1d95603154}
+
+
+Pozycja. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\hypertarget{class_entity_a1de3d8d9ab8088f61e6726069b26fa60}{\index{Entity@{Entity}!speed@{speed}}
+\index{speed@{speed}!Entity@{Entity}}
+\subsubsection[{speed}]{\setlength{\rightskip}{0pt plus 5cm}float Entity\-::speed\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_a1de3d8d9ab8088f61e6726069b26fa60}
+
+
+Szybkość przemieszczania się 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}\hypertarget{class_entity_a50a3dffcf26eb1950587414663951267}{\index{Entity@{Entity}!tiles@{tiles}}
+\index{tiles@{tiles}!Entity@{Entity}}
+\subsubsection[{tiles}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Texture Entity\-::tiles\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_entity_a50a3dffcf26eb1950587414663951267}
+
+
+Tekstura. 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+Person/Entity.\-hpp\item 
+Person/Entity.\-cpp\end{DoxyCompactItemize}

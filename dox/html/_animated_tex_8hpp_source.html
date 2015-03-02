@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>RPG: Plik źródłowy AnimatedSprite/AnimatedTex.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RPG
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_31e65fde3a060808962c3d318ccfa4bc.html">AnimatedSprite</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AnimatedTex.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;SFML/Graphics/RenderTarget.hpp&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;SFML/System/Time.hpp&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Drawable.hpp&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics/Transformable.hpp&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;SFML/System/Vector2.hpp&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Animation.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="class_animated_tex.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_animated_tex.html" title="Klasa animowanej tekstury, odpowiada za rysowanie i odswieżanie animacji.">AnimatedTex</a> : <span class="keyword">public</span> sf::Drawable, <span class="keyword">public</span> sf::Transformable</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_animated_tex.html#aad27e7a75d924a41d6ce730b39a5988c">AnimatedTex</a>(sf::Time frameTime = sf::seconds(0.1f), <span class="keywordtype">bool</span> paused = <span class="keyword">false</span>, <span class="keywordtype">bool</span> looped = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#a85fef84459eabfa907232b82a0789bd5" title="Odświeża animacje.">update</a>(sf::Time deltaTime);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#aaa4f26ecb114c606f56ba454214db018" title="Ustawia animacje.">setAnimation</a>(<span class="keyword">const</span> <a class="code" href="class_animation.html" title="Klasa przechowująca klatki animacji i ich teksture.">Animation</a>&amp; animation);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#a25446e7f0029da5abb56a35281b8115a" title="Ustawia czas między klatkami.">setFrameTime</a>(sf::Time time);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#a77af1f173095af0bd443740f59ac6550" title="Uruchamia animacje.">play</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#a77af1f173095af0bd443740f59ac6550" title="Uruchamia animacje.">play</a>(<span class="keyword">const</span> <a class="code" href="class_animation.html" title="Klasa przechowująca klatki animacji i ich teksture.">Animation</a>&amp; animation);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#a1217fc5e02d0fd5a2b4390aba66d2271" title="Zatrzymuje animacje.">pause</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#ae8b62c21e84ad32ebc371284137d1b79" title="Zatrzymuje animacje i ustawia aktualną klatke na na pierwszą">stop</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#a8414031e3cc3bda582d795df01fca65a" title="Ustawia zapętlenie animacji.">setLooped</a>(<span class="keywordtype">bool</span> looped);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#aaa02af5734329917da31be2f52336773" title="Ustawia kolor teksturki klatki.">setColor</a>(<span class="keyword">const</span> sf::Color&amp; color);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_animation.html" title="Klasa przechowująca klatki animacji i ich teksture.">Animation</a>* <a class="code" href="class_animated_tex.html#ace0aa8bb9be4e8e9843b4016c2ff591d" title="Zwraca wskaźnik na animacje.">getAnimation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_animated_tex.html#a502ded64b6add47ed8b50625e1867bbc" title="Zwraca zapętlenie animacji.">isLooped</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_animated_tex.html#a754cd308e993be565ac85b0727c5d2eb" title="Zwraca wartość czy animacja aktualnie jest odgrywana.">isPlaying</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    sf::Time <a class="code" href="class_animated_tex.html#a1855bb9bc1b7fe5fd444aa9a78ece8e5" title="Zwraca czas między klatkami.">getFrameTime</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#a86e96fdee62a1e60d7b14fec305c957e" title="Ustawia klatke.">setFrame</a>(std::size_t newFrame);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_animated_tex.html#a9aa89a45cea7054d84c1b589be0afae3" title="Rysuje animacje.">draw</a>(sf::RenderTarget&amp; target, sf::RenderStates states) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">const</span> <a class="code" href="class_animation.html" title="Klasa przechowująca klatki animacji i ich teksture.">Animation</a>* m_animation;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    sf::Time m_frameTime;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    sf::Time m_currentTime;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::size_t m_currentFrame;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">bool</span> m_isPaused;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> m_isLooped;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">const</span> sf::Texture* m_texture;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    sf::Vertex m_vertices[4];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Pn, 2 mar 2015 16:03:05 dla RPG programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

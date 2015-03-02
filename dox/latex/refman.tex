@@ -1,0 +1,99 @@
+\documentclass{book}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage{amssymb}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large R\-P\-G }\\
+\vspace*{1cm}
+{\large Wygenerowano przez Doxygen 1.8.1.2}\\
+\vspace*{0.5cm}
+{\small Pn, 2 mar 2015 16:03:06}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{projekt4p}
+\label{md_README}
+\hypertarget{md_README}{}
+\input{md__r_e_a_d_m_e}
+\chapter{Indeks klas}
+\input{hierarchy}
+\chapter{Indeks klas}
+\input{annotated}
+\chapter{Dokumentacja klas}
+\input{class_animated_tex}
+\input{struct_animated_tile}
+\input{class_animation}
+\input{struct_background_tile}
+\input{class_button}
+\input{class_dialog}
+\input{class_entity}
+\input{class_equipment}
+\input{class_equipment_item}
+\input{struct_item}
+\input{struct_item_data}
+\input{class_item_manager}
+\input{class_menu}
+\input{struct_n_p_c}
+\input{class_npc_manager}
+\input{class_player}
+\input{struct_portal_tile}
+\input{struct_solid_tile}
+\input{struct_tile}
+\input{class_tile_map}
+\printindex
+\end{document}

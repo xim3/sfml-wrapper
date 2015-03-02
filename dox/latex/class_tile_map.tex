@@ -1,0 +1,263 @@
+\hypertarget{class_tile_map}{\section{Dokumentacja klasy Tile\-Map}
+\label{class_tile_map}\index{Tile\-Map@{Tile\-Map}}
+}
+
+
+Klasa renderująca mape.  
+
+
+
+
+{\ttfamily \#include $<$Static\-Tiled\-Map.\-hpp$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_tile_map_a6e0ee732702ceb28a6f49052f6cf1126}{set\-Item\-Manager\-Handle} (\hyperlink{class_item_manager}{Item\-Manager} $\ast$igr)
+\begin{DoxyCompactList}\small\item\em Ustawia uchwyt do klasy \hyperlink{class_item_manager}{Item\-Manager}. \end{DoxyCompactList}\item 
+\hypertarget{class_tile_map_a137e40e291677a1201dd96bdbd6bc6bd}{size\-\_\-t {\bfseries items\-On\-Map\-Count} () const }\label{class_tile_map_a137e40e291677a1201dd96bdbd6bc6bd}
+
+\item 
+\hypertarget{class_tile_map_a68fbe6582a01b4c565d93ddc7bde2123}{size\-\_\-t {\bfseries solid\-Tiles\-Count} () const }\label{class_tile_map_a68fbe6582a01b4c565d93ddc7bde2123}
+
+\item 
+bool \hyperlink{class_tile_map_ac084a4b6aea0e050ec4a8aeea760a515}{load\-Map} (const std\-::string name)
+\begin{DoxyCompactList}\small\item\em Ładuje mape z pliku. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tile_map_ac5d4d6a3522663052bab1396b1116a89}{is\-Item} (sf\-::\-Vector2u, int \&\-\_\-id) const 
+\begin{DoxyCompactList}\small\item\em Zwraca boola czy pod danym xy jest item. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tile_map_a9abb261e84ab1ce52d5f2cc6a9c43bbb}{is\-Portal} (sf\-::\-Vector2u)
+\begin{DoxyCompactList}\small\item\em Zwraca bool czy xy jest portalem. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tile_map_aac072fd241cd09e88a256099055f7238}{pick\-Item} (sf\-::\-Vector2u)
+\begin{DoxyCompactList}\small\item\em Usuwa item z mapy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tile_map_ab6b915163f9462171d78d9265332c553}{drop\-Item} (const int)
+\begin{DoxyCompactList}\small\item\em Dodaje item do mapy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tile_map_aed48e1dfdf55facc59cbf7e7b60a80d7}{is\-Solid\-Tile} (sf\-::\-Vector2u) const 
+\begin{DoxyCompactList}\small\item\em Zwraca bool czy xy jest solidną kratka. \end{DoxyCompactList}\item 
+sf\-::\-Vector2f \hyperlink{class_tile_map_a53c335525a76ce71c88404a73573500e}{reload} (sf\-::\-Vector2u \&)
+\begin{DoxyCompactList}\small\item\em Przeładowywuje mapke jeśli dane xy jest portalem(linkiem) \end{DoxyCompactList}\item 
+int \hyperlink{class_tile_map_a3c64cb00cc8d0e38f7c24e16149fd987}{get\-G\-I\-D} (size\-\_\-t) const 
+\begin{DoxyCompactList}\small\item\em Zwraca G\-I\-D itemu na podstawie I\-D. \end{DoxyCompactList}\item 
+const sf\-::\-Texture \& \hyperlink{class_tile_map_ae9a8aa44841e001cad6414c517bde545}{get\-Texture} () const 
+\begin{DoxyCompactList}\small\item\em Zwraca referencje do tilesetu. \end{DoxyCompactList}\item 
+void \hyperlink{class_tile_map_a995c3475a7451f9b449295fbe01509f0}{refresh\-Animations} ()
+\begin{DoxyCompactList}\small\item\em Odswieża animacje. \end{DoxyCompactList}\item 
+void \hyperlink{class_tile_map_a28a3df759d609bc19688d48b26489718}{set\-N\-P\-C\-Manager\-Handle} (\hyperlink{class_npc_manager}{Npc\-Manager} $\ast$)
+\begin{DoxyCompactList}\small\item\em Ustawia uchwyt do klasy \hyperlink{class_npc_manager}{Npc\-Manager}. \end{DoxyCompactList}\item 
+\hypertarget{class_tile_map_a16fe09376fea6c92725cc3b5bb9d0a2d}{void {\bfseries print\-Solid\-Tiles} ()}\label{class_tile_map_a16fe09376fea6c92725cc3b5bb9d0a2d}
+
+\item 
+\hypertarget{class_tile_map_a105d246af258dc45a025053a0e08c860}{void {\bfseries print\-Items1} ()}\label{class_tile_map_a105d246af258dc45a025053a0e08c860}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa renderująca mape. 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_tile_map_ab6b915163f9462171d78d9265332c553}{\index{Tile\-Map@{Tile\-Map}!drop\-Item@{drop\-Item}}
+\index{drop\-Item@{drop\-Item}!TileMap@{Tile\-Map}}
+\subsubsection[{drop\-Item}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\-Map\-::drop\-Item (
+\begin{DoxyParamCaption}
+\item[{const int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_ab6b915163f9462171d78d9265332c553}
+
+
+Dodaje item do mapy. 
+
+Wyszukuje item o danym id (id są unikalne) w itemach gracza (Klasie \hyperlink{class_item_manager}{Item\-Manager}) i usuwa ją z vectora w tej klasie, a następnie dodaje do itemków na mapie 
+\begin{DoxyParams}{Parametry}
+{\em id} & id itemu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Jeśli istnieje item o takim id true w przeciwnym wypadku false 
+\end{DoxyReturn}
+\hypertarget{class_tile_map_a3c64cb00cc8d0e38f7c24e16149fd987}{\index{Tile\-Map@{Tile\-Map}!get\-G\-I\-D@{get\-G\-I\-D}}
+\index{get\-G\-I\-D@{get\-G\-I\-D}!TileMap@{Tile\-Map}}
+\subsubsection[{get\-G\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}int Tile\-Map\-::get\-G\-I\-D (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{id}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_a3c64cb00cc8d0e38f7c24e16149fd987}
+
+
+Zwraca G\-I\-D itemu na podstawie I\-D. 
+
+Wyszukuje w vectorze itemów na mapie itemu o danym id i zwraca jego G\-I\-D 
+\begin{DoxyParams}{Parametry}
+{\em id} & id przedmiotu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+G\-I\-D przedmiotu jeśli istnieje item o takim id na mapie, w przeciwnym wypadku -\/1 
+\end{DoxyReturn}
+\hypertarget{class_tile_map_ae9a8aa44841e001cad6414c517bde545}{\index{Tile\-Map@{Tile\-Map}!get\-Texture@{get\-Texture}}
+\index{get\-Texture@{get\-Texture}!TileMap@{Tile\-Map}}
+\subsubsection[{get\-Texture}]{\setlength{\rightskip}{0pt plus 5cm}const sf\-::\-Texture \& Tile\-Map\-::get\-Texture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_ae9a8aa44841e001cad6414c517bde545}
+
+
+Zwraca referencje do tilesetu. 
+
+\begin{DoxyReturn}{Zwraca}
+sf\-::\-Texture\& 
+\end{DoxyReturn}
+\hypertarget{class_tile_map_ac5d4d6a3522663052bab1396b1116a89}{\index{Tile\-Map@{Tile\-Map}!is\-Item@{is\-Item}}
+\index{is\-Item@{is\-Item}!TileMap@{Tile\-Map}}
+\subsubsection[{is\-Item}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\-Map\-::is\-Item (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Vector2u}]{vct, }
+\item[{int \&}]{\-\_\-id}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_ac5d4d6a3522663052bab1396b1116a89}
+
+
+Zwraca boola czy pod danym xy jest item. 
+
+Zwraca boola czy pod danym xy jest item, i jeśli tak ustawia przez referencje jego id, jeśli nie to przez referencje zosanie ustawione -\/1 
+\begin{DoxyParams}{Parametry}
+{\em vct} & współrzędne \-\_\-id referencja do inta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true i id w referencji jeśli xy to item false i -\/1 w referencji jeśli xy nie jest itemem 
+\end{DoxyReturn}
+\hypertarget{class_tile_map_a9abb261e84ab1ce52d5f2cc6a9c43bbb}{\index{Tile\-Map@{Tile\-Map}!is\-Portal@{is\-Portal}}
+\index{is\-Portal@{is\-Portal}!TileMap@{Tile\-Map}}
+\subsubsection[{is\-Portal}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\-Map\-::is\-Portal (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Vector2u}]{vct}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_a9abb261e84ab1ce52d5f2cc6a9c43bbb}
+
+
+Zwraca bool czy xy jest portalem. 
+
+Zwraca bool czy xy jest portalem ( linkiem do innej mapy ) 
+\begin{DoxyParams}{Parametry}
+{\em vct} & współrzędne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+true jeśli portal, w przeciwnym wypadku false 
+\end{DoxyReturn}
+\hypertarget{class_tile_map_aed48e1dfdf55facc59cbf7e7b60a80d7}{\index{Tile\-Map@{Tile\-Map}!is\-Solid\-Tile@{is\-Solid\-Tile}}
+\index{is\-Solid\-Tile@{is\-Solid\-Tile}!TileMap@{Tile\-Map}}
+\subsubsection[{is\-Solid\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\-Map\-::is\-Solid\-Tile (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Vector2u}]{vct}
+\end{DoxyParamCaption}
+) const}}\label{class_tile_map_aed48e1dfdf55facc59cbf7e7b60a80d7}
+
+
+Zwraca bool czy xy jest solidną kratka. 
+
+Zwraca bool czy xy jest solidna kratka (taka na którą nie można wejść) 
+\begin{DoxyParams}{Parametry}
+{\em vct} & współrzędne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Jeśli xy solidne true, w przeciwnym wypadku false 
+\end{DoxyReturn}
+\hypertarget{class_tile_map_ac084a4b6aea0e050ec4a8aeea760a515}{\index{Tile\-Map@{Tile\-Map}!load\-Map@{load\-Map}}
+\index{load\-Map@{load\-Map}!TileMap@{Tile\-Map}}
+\subsubsection[{load\-Map}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\-Map\-::load\-Map (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_ac084a4b6aea0e050ec4a8aeea760a515}
+
+
+Ładuje mape z pliku. 
+
+Niepowodzenia zapisuje do pliku z logiem 
+\begin{DoxyParams}{Parametry}
+{\em name} & nazwa mapy do załadowania \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Powodzenie operacji 
+\end{DoxyReturn}
+\hypertarget{class_tile_map_aac072fd241cd09e88a256099055f7238}{\index{Tile\-Map@{Tile\-Map}!pick\-Item@{pick\-Item}}
+\index{pick\-Item@{pick\-Item}!TileMap@{Tile\-Map}}
+\subsubsection[{pick\-Item}]{\setlength{\rightskip}{0pt plus 5cm}bool Tile\-Map\-::pick\-Item (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Vector2u}]{xy}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_aac072fd241cd09e88a256099055f7238}
+
+
+Usuwa item z mapy. 
+
+Wyszukuje w wektorze itemów na mapie itema o danym xy i usuwa go, dodaje item o danym id do Item\-Managera i ustawia mu flage picked w klasie \hyperlink{class_item_manager}{Item\-Manager} (oznacza to że item został podniesiony z mapy raz i przy kolejnym załadowaniu mapy już nie zostanie wyrenderowany) docelowo flagi picked będą zapisywane w save (ale to jest T\-O\-D\-O) 
+\begin{DoxyParams}{Parametry}
+{\em xy} & wektor z pozycją gracza \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Jeśli item podniesiony true, jeśli pod współrzędnymi nie ma itema to false 
+\end{DoxyReturn}
+\hypertarget{class_tile_map_a995c3475a7451f9b449295fbe01509f0}{\index{Tile\-Map@{Tile\-Map}!refresh\-Animations@{refresh\-Animations}}
+\index{refresh\-Animations@{refresh\-Animations}!TileMap@{Tile\-Map}}
+\subsubsection[{refresh\-Animations}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\-Map\-::refresh\-Animations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_a995c3475a7451f9b449295fbe01509f0}
+
+
+Odswieża animacje. 
+
+Resetuje zegar i zmienia klatki animacji na mapie \hypertarget{class_tile_map_a53c335525a76ce71c88404a73573500e}{\index{Tile\-Map@{Tile\-Map}!reload@{reload}}
+\index{reload@{reload}!TileMap@{Tile\-Map}}
+\subsubsection[{reload}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Tile\-Map\-::reload (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Vector2u \&}]{vct}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_a53c335525a76ce71c88404a73573500e}
+
+
+Przeładowywuje mapke jeśli dane xy jest portalem(linkiem) 
+
+Przeładowywuje mapke (czyści tablice vertexów, oraz itemy na mapie) ustawia współrzędne gracza i wywołuje metode \hyperlink{class_tile_map_ac084a4b6aea0e050ec4a8aeea760a515}{load\-Map()} 
+\begin{DoxyParams}{Parametry}
+{\em vct} & Współrzędne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+Nowe współrzędne w których ma pojawić sie gracz lub wektor(0,0) jeśli błąd 
+\end{DoxyReturn}
+\hypertarget{class_tile_map_a6e0ee732702ceb28a6f49052f6cf1126}{\index{Tile\-Map@{Tile\-Map}!set\-Item\-Manager\-Handle@{set\-Item\-Manager\-Handle}}
+\index{set\-Item\-Manager\-Handle@{set\-Item\-Manager\-Handle}!TileMap@{Tile\-Map}}
+\subsubsection[{set\-Item\-Manager\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\-Map\-::set\-Item\-Manager\-Handle (
+\begin{DoxyParamCaption}
+\item[{{\bf Item\-Manager} $\ast$}]{igr}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_a6e0ee732702ceb28a6f49052f6cf1126}
+
+
+Ustawia uchwyt do klasy \hyperlink{class_item_manager}{Item\-Manager}. 
+
+Klasa mapy potrzebuje informacji o itemach i dlatego potrzebny jest tu uchwyt \hypertarget{class_tile_map_a28a3df759d609bc19688d48b26489718}{\index{Tile\-Map@{Tile\-Map}!set\-N\-P\-C\-Manager\-Handle@{set\-N\-P\-C\-Manager\-Handle}}
+\index{set\-N\-P\-C\-Manager\-Handle@{set\-N\-P\-C\-Manager\-Handle}!TileMap@{Tile\-Map}}
+\subsubsection[{set\-N\-P\-C\-Manager\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}void Tile\-Map\-::set\-N\-P\-C\-Manager\-Handle (
+\begin{DoxyParamCaption}
+\item[{{\bf Npc\-Manager} $\ast$}]{\-\_\-hnd}
+\end{DoxyParamCaption}
+)}}\label{class_tile_map_a28a3df759d609bc19688d48b26489718}
+
+
+Ustawia uchwyt do klasy \hyperlink{class_npc_manager}{Npc\-Manager}. 
+
+Ustawia uchwyt do klasy \hyperlink{class_npc_manager}{Npc\-Manager} 
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+Map\-System/Static\-Tiled\-Map.\-hpp\item 
+Map\-System/Static\-Tiled\-Map.\-cpp\end{DoxyCompactItemize}

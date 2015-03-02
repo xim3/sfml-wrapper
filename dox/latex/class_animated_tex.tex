@@ -1,0 +1,248 @@
+\hypertarget{class_animated_tex}{\section{Dokumentacja klasy Animated\-Tex}
+\label{class_animated_tex}\index{Animated\-Tex@{Animated\-Tex}}
+}
+
+
+Klasa animowanej tekstury, odpowiada za rysowanie i odswieżanie animacji.  
+
+
+
+
+{\ttfamily \#include $<$Animated\-Tex.\-hpp$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_animated_tex_aad27e7a75d924a41d6ce730b39a5988c}{Animated\-Tex} (sf\-::\-Time frame\-Time=sf\-::seconds(0.\-1f), bool paused=false, bool looped=true)
+\item 
+void \hyperlink{class_animated_tex_a85fef84459eabfa907232b82a0789bd5}{update} (sf\-::\-Time delta\-Time)
+\begin{DoxyCompactList}\small\item\em Odświeża animacje. \end{DoxyCompactList}\item 
+void \hyperlink{class_animated_tex_aaa4f26ecb114c606f56ba454214db018}{set\-Animation} (const \hyperlink{class_animation}{Animation} \&animation)
+\begin{DoxyCompactList}\small\item\em Ustawia animacje. \end{DoxyCompactList}\item 
+void \hyperlink{class_animated_tex_a25446e7f0029da5abb56a35281b8115a}{set\-Frame\-Time} (sf\-::\-Time time)
+\begin{DoxyCompactList}\small\item\em Ustawia czas między klatkami. \end{DoxyCompactList}\item 
+\hypertarget{class_animated_tex_a77af1f173095af0bd443740f59ac6550}{void \hyperlink{class_animated_tex_a77af1f173095af0bd443740f59ac6550}{play} ()}\label{class_animated_tex_a77af1f173095af0bd443740f59ac6550}
+
+\begin{DoxyCompactList}\small\item\em Uruchamia animacje. \end{DoxyCompactList}\item 
+void \hyperlink{class_animated_tex_a9445c85032a203894a3365f0d62ac19e}{play} (const \hyperlink{class_animation}{Animation} \&animation)
+\begin{DoxyCompactList}\small\item\em Ustawia animacje i ją uruchamia. \end{DoxyCompactList}\item 
+\hypertarget{class_animated_tex_a1217fc5e02d0fd5a2b4390aba66d2271}{void \hyperlink{class_animated_tex_a1217fc5e02d0fd5a2b4390aba66d2271}{pause} ()}\label{class_animated_tex_a1217fc5e02d0fd5a2b4390aba66d2271}
+
+\begin{DoxyCompactList}\small\item\em Zatrzymuje animacje. \end{DoxyCompactList}\item 
+\hypertarget{class_animated_tex_ae8b62c21e84ad32ebc371284137d1b79}{void \hyperlink{class_animated_tex_ae8b62c21e84ad32ebc371284137d1b79}{stop} ()}\label{class_animated_tex_ae8b62c21e84ad32ebc371284137d1b79}
+
+\begin{DoxyCompactList}\small\item\em Zatrzymuje animacje i ustawia aktualną klatke na na pierwszą \end{DoxyCompactList}\item 
+void \hyperlink{class_animated_tex_a8414031e3cc3bda582d795df01fca65a}{set\-Looped} (bool looped)
+\begin{DoxyCompactList}\small\item\em Ustawia zapętlenie animacji. \end{DoxyCompactList}\item 
+void \hyperlink{class_animated_tex_aaa02af5734329917da31be2f52336773}{set\-Color} (const sf\-::\-Color \&color)
+\begin{DoxyCompactList}\small\item\em Ustawia kolor teksturki klatki. \end{DoxyCompactList}\item 
+const \hyperlink{class_animation}{Animation} $\ast$ \hyperlink{class_animated_tex_ace0aa8bb9be4e8e9843b4016c2ff591d}{get\-Animation} () const 
+\begin{DoxyCompactList}\small\item\em Zwraca wskaźnik na animacje. \end{DoxyCompactList}\item 
+bool \hyperlink{class_animated_tex_a502ded64b6add47ed8b50625e1867bbc}{is\-Looped} () const 
+\begin{DoxyCompactList}\small\item\em Zwraca zapętlenie animacji. \end{DoxyCompactList}\item 
+bool \hyperlink{class_animated_tex_a754cd308e993be565ac85b0727c5d2eb}{is\-Playing} () const 
+\begin{DoxyCompactList}\small\item\em Zwraca wartość czy animacja aktualnie jest odgrywana. \end{DoxyCompactList}\item 
+sf\-::\-Time \hyperlink{class_animated_tex_a1855bb9bc1b7fe5fd444aa9a78ece8e5}{get\-Frame\-Time} () const 
+\begin{DoxyCompactList}\small\item\em Zwraca czas między klatkami. \end{DoxyCompactList}\item 
+void \hyperlink{class_animated_tex_a86e96fdee62a1e60d7b14fec305c957e}{set\-Frame} (std\-::size\-\_\-t new\-Frame)
+\begin{DoxyCompactList}\small\item\em Ustawia klatke. \end{DoxyCompactList}\item 
+\hypertarget{class_animated_tex_a9aa89a45cea7054d84c1b589be0afae3}{virtual void \hyperlink{class_animated_tex_a9aa89a45cea7054d84c1b589be0afae3}{draw} (sf\-::\-Render\-Target \&target, sf\-::\-Render\-States states) const }\label{class_animated_tex_a9aa89a45cea7054d84c1b589be0afae3}
+
+\begin{DoxyCompactList}\small\item\em Rysuje animacje. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa animowanej tekstury, odpowiada za rysowanie i odswieżanie animacji. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_animated_tex_aad27e7a75d924a41d6ce730b39a5988c}{\index{Animated\-Tex@{Animated\-Tex}!Animated\-Tex@{Animated\-Tex}}
+\index{Animated\-Tex@{Animated\-Tex}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{Animated\-Tex}]{\setlength{\rightskip}{0pt plus 5cm}Animated\-Tex\-::\-Animated\-Tex (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Time}]{frame\-Time = {\ttfamily sf\-:\-:seconds(0.1f)}, }
+\item[{bool}]{paused = {\ttfamily false}, }
+\item[{bool}]{looped = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{class_animated_tex_aad27e7a75d924a41d6ce730b39a5988c}
+
+\begin{DoxyParams}{Parametry}
+{\em frame\-Time} & -\/ Czas wyświetlania klatki, paused -\/ pauza looped -\/ zapętlenie \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_animated_tex_ace0aa8bb9be4e8e9843b4016c2ff591d}{\index{Animated\-Tex@{Animated\-Tex}!get\-Animation@{get\-Animation}}
+\index{get\-Animation@{get\-Animation}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{get\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Animation} $\ast$ Animated\-Tex\-::get\-Animation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_animated_tex_ace0aa8bb9be4e8e9843b4016c2ff591d}
+
+
+Zwraca wskaźnik na animacje. 
+
+\begin{DoxyReturn}{Zwraca}
+Animacja 
+\end{DoxyReturn}
+\hypertarget{class_animated_tex_a1855bb9bc1b7fe5fd444aa9a78ece8e5}{\index{Animated\-Tex@{Animated\-Tex}!get\-Frame\-Time@{get\-Frame\-Time}}
+\index{get\-Frame\-Time@{get\-Frame\-Time}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{get\-Frame\-Time}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Time Animated\-Tex\-::get\-Frame\-Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_animated_tex_a1855bb9bc1b7fe5fd444aa9a78ece8e5}
+
+
+Zwraca czas między klatkami. 
+
+\begin{DoxyReturn}{Zwraca}
+sf\-::\-Time -\/ czas 
+\end{DoxyReturn}
+\hypertarget{class_animated_tex_a502ded64b6add47ed8b50625e1867bbc}{\index{Animated\-Tex@{Animated\-Tex}!is\-Looped@{is\-Looped}}
+\index{is\-Looped@{is\-Looped}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{is\-Looped}]{\setlength{\rightskip}{0pt plus 5cm}bool Animated\-Tex\-::is\-Looped (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_animated_tex_a502ded64b6add47ed8b50625e1867bbc}
+
+
+Zwraca zapętlenie animacji. 
+
+\begin{DoxyReturn}{Zwraca}
+Zapętlenie 
+\end{DoxyReturn}
+\hypertarget{class_animated_tex_a754cd308e993be565ac85b0727c5d2eb}{\index{Animated\-Tex@{Animated\-Tex}!is\-Playing@{is\-Playing}}
+\index{is\-Playing@{is\-Playing}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{is\-Playing}]{\setlength{\rightskip}{0pt plus 5cm}bool Animated\-Tex\-::is\-Playing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_animated_tex_a754cd308e993be565ac85b0727c5d2eb}
+
+
+Zwraca wartość czy animacja aktualnie jest odgrywana. 
+
+\begin{DoxyReturn}{Zwraca}
+Stan 
+\end{DoxyReturn}
+\hypertarget{class_animated_tex_a9445c85032a203894a3365f0d62ac19e}{\index{Animated\-Tex@{Animated\-Tex}!play@{play}}
+\index{play@{play}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{play}]{\setlength{\rightskip}{0pt plus 5cm}void Animated\-Tex\-::play (
+\begin{DoxyParamCaption}
+\item[{const {\bf Animation} \&}]{animation}
+\end{DoxyParamCaption}
+)}}\label{class_animated_tex_a9445c85032a203894a3365f0d62ac19e}
+
+
+Ustawia animacje i ją uruchamia. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em animation} & -\/ animacja \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animated_tex_aaa4f26ecb114c606f56ba454214db018}{\index{Animated\-Tex@{Animated\-Tex}!set\-Animation@{set\-Animation}}
+\index{set\-Animation@{set\-Animation}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{set\-Animation}]{\setlength{\rightskip}{0pt plus 5cm}void Animated\-Tex\-::set\-Animation (
+\begin{DoxyParamCaption}
+\item[{const {\bf Animation} \&}]{animation}
+\end{DoxyParamCaption}
+)}}\label{class_animated_tex_aaa4f26ecb114c606f56ba454214db018}
+
+
+Ustawia animacje. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em animation} & -\/ animacja \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animated_tex_aaa02af5734329917da31be2f52336773}{\index{Animated\-Tex@{Animated\-Tex}!set\-Color@{set\-Color}}
+\index{set\-Color@{set\-Color}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void Animated\-Tex\-::set\-Color (
+\begin{DoxyParamCaption}
+\item[{const sf\-::\-Color \&}]{color}
+\end{DoxyParamCaption}
+)}}\label{class_animated_tex_aaa02af5734329917da31be2f52336773}
+
+
+Ustawia kolor teksturki klatki. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em color} & -\/ kolor \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animated_tex_a86e96fdee62a1e60d7b14fec305c957e}{\index{Animated\-Tex@{Animated\-Tex}!set\-Frame@{set\-Frame}}
+\index{set\-Frame@{set\-Frame}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{set\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Animated\-Tex\-::set\-Frame (
+\begin{DoxyParamCaption}
+\item[{std\-::size\-\_\-t}]{new\-Frame}
+\end{DoxyParamCaption}
+)}}\label{class_animated_tex_a86e96fdee62a1e60d7b14fec305c957e}
+
+
+Ustawia klatke. 
+
+Przełącza klatke 
+\begin{DoxyParams}{Parametry}
+{\em Numer} & klatki \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animated_tex_a25446e7f0029da5abb56a35281b8115a}{\index{Animated\-Tex@{Animated\-Tex}!set\-Frame\-Time@{set\-Frame\-Time}}
+\index{set\-Frame\-Time@{set\-Frame\-Time}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{set\-Frame\-Time}]{\setlength{\rightskip}{0pt plus 5cm}void Animated\-Tex\-::set\-Frame\-Time (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Time}]{time}
+\end{DoxyParamCaption}
+)}}\label{class_animated_tex_a25446e7f0029da5abb56a35281b8115a}
+
+
+Ustawia czas między klatkami. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em time} & -\/ czas \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animated_tex_a8414031e3cc3bda582d795df01fca65a}{\index{Animated\-Tex@{Animated\-Tex}!set\-Looped@{set\-Looped}}
+\index{set\-Looped@{set\-Looped}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{set\-Looped}]{\setlength{\rightskip}{0pt plus 5cm}void Animated\-Tex\-::set\-Looped (
+\begin{DoxyParamCaption}
+\item[{bool}]{looped}
+\end{DoxyParamCaption}
+)}}\label{class_animated_tex_a8414031e3cc3bda582d795df01fca65a}
+
+
+Ustawia zapętlenie animacji. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em looped} & -\/ zapętlenie \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animated_tex_a85fef84459eabfa907232b82a0789bd5}{\index{Animated\-Tex@{Animated\-Tex}!update@{update}}
+\index{update@{update}!AnimatedTex@{Animated\-Tex}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Animated\-Tex\-::update (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Time}]{delta\-Time}
+\end{DoxyParamCaption}
+)}}\label{class_animated_tex_a85fef84459eabfa907232b82a0789bd5}
+
+
+Odświeża animacje. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em delta\-Time} & -\/ delta\\
+\hline
+\end{DoxyParams}
+Przełącza klatki animacji 
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+Animated\-Sprite/Animated\-Tex.\-hpp\item 
+Animated\-Sprite/Animated\-Tex.\-cpp\end{DoxyCompactItemize}

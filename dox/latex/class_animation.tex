@@ -1,0 +1,143 @@
+\hypertarget{class_animation}{\section{Dokumentacja klasy Animation}
+\label{class_animation}\index{Animation@{Animation}}
+}
+
+
+Klasa przechowująca klatki animacji i ich teksture.  
+
+
+
+
+{\ttfamily \#include $<$Animation.\-hpp$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_animation_ada4bef5d91687cdd610a830bd90093f9}{void \hyperlink{class_animation_ada4bef5d91687cdd610a830bd90093f9}{set\-Tile\-Size} (unsigned int width, unsigned int height)}\label{class_animation_ada4bef5d91687cdd610a830bd90093f9}
+
+\begin{DoxyCompactList}\small\item\em ustawia wiekość kafla \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a486ee5fa2d40ae90f227a19866998c91}{add\-Frame} (sf\-::\-Int\-Rect rect)
+\begin{DoxyCompactList}\small\item\em dodaje klatke animacji \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_ad55efa0c04a03239a8c176f1710b7a9b}{add\-Frame\-G\-I\-D} (unsigned int i)
+\begin{DoxyCompactList}\small\item\em dodaje klatke \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a8528dea500d55c9849ab6d3c30ae15eb}{set\-Tileset} (const sf\-::\-Texture \&texture)
+\begin{DoxyCompactList}\small\item\em ustawia tileset z animacjami \end{DoxyCompactList}\item 
+const sf\-::\-Texture $\ast$ \hyperlink{class_animation_aafed5696c35b893bb721aa1303d5e84f}{get\-Sprite\-Sheet} () const 
+\begin{DoxyCompactList}\small\item\em zwraca tileset \end{DoxyCompactList}\item 
+std\-::size\-\_\-t \hyperlink{class_animation_aa8dc627c1800fcad9b9e53c9a102ded3}{get\-Size} () const 
+\begin{DoxyCompactList}\small\item\em zwraca ilość klatek w animacji \end{DoxyCompactList}\item 
+const sf\-::\-Int\-Rect \& \hyperlink{class_animation_ad587678b331518e926b19b807b153daa}{get\-Frame} (std\-::size\-\_\-t n) const 
+\begin{DoxyCompactList}\small\item\em zwraca klatke \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Klasa przechowująca klatki animacji i ich teksture. 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_animation_a486ee5fa2d40ae90f227a19866998c91}{\index{Animation@{Animation}!add\-Frame@{add\-Frame}}
+\index{add\-Frame@{add\-Frame}!Animation@{Animation}}
+\subsubsection[{add\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::add\-Frame (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Int\-Rect}]{rect}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a486ee5fa2d40ae90f227a19866998c91}
+
+
+dodaje klatke animacji 
+
+
+\begin{DoxyParams}{Parametry}
+{\em rect} & klatka animacji \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+null 
+\end{DoxyReturn}
+\hypertarget{class_animation_ad55efa0c04a03239a8c176f1710b7a9b}{\index{Animation@{Animation}!add\-Frame\-G\-I\-D@{add\-Frame\-G\-I\-D}}
+\index{add\-Frame\-G\-I\-D@{add\-Frame\-G\-I\-D}!Animation@{Animation}}
+\subsubsection[{add\-Frame\-G\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::add\-Frame\-G\-I\-D (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{G\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{class_animation_ad55efa0c04a03239a8c176f1710b7a9b}
+
+
+dodaje klatke 
+
+dodaje klatke na podstawie G\-I\-D(przeliczonych współrzędnych na wielkość w kaflach) a nie współrzędnych całej tekstury 
+\begin{DoxyParams}{Parametry}
+{\em G\-I\-D} & gid klatki \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+null 
+\end{DoxyReturn}
+\hypertarget{class_animation_ad587678b331518e926b19b807b153daa}{\index{Animation@{Animation}!get\-Frame@{get\-Frame}}
+\index{get\-Frame@{get\-Frame}!Animation@{Animation}}
+\subsubsection[{get\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}const sf\-::\-Int\-Rect \& Animation\-::get\-Frame (
+\begin{DoxyParamCaption}
+\item[{std\-::size\-\_\-t}]{n}
+\end{DoxyParamCaption}
+) const}}\label{class_animation_ad587678b331518e926b19b807b153daa}
+
+
+zwraca klatke 
+
+zwraca klatke z vectora klatek 
+\begin{DoxyParams}{Parametry}
+{\em numer} & klatki \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+referencja do klatki animacji 
+\end{DoxyReturn}
+\hypertarget{class_animation_aa8dc627c1800fcad9b9e53c9a102ded3}{\index{Animation@{Animation}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!Animation@{Animation}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}std\-::size\-\_\-t Animation\-::get\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_animation_aa8dc627c1800fcad9b9e53c9a102ded3}
+
+
+zwraca ilość klatek w animacji 
+
+\begin{DoxyReturn}{Zwraca}
+ilość klatek 
+\end{DoxyReturn}
+\hypertarget{class_animation_aafed5696c35b893bb721aa1303d5e84f}{\index{Animation@{Animation}!get\-Sprite\-Sheet@{get\-Sprite\-Sheet}}
+\index{get\-Sprite\-Sheet@{get\-Sprite\-Sheet}!Animation@{Animation}}
+\subsubsection[{get\-Sprite\-Sheet}]{\setlength{\rightskip}{0pt plus 5cm}const sf\-::\-Texture $\ast$ Animation\-::get\-Sprite\-Sheet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_animation_aafed5696c35b893bb721aa1303d5e84f}
+
+
+zwraca tileset 
+
+\begin{DoxyReturn}{Zwraca}
+wskaźnik do tileseta 
+\end{DoxyReturn}
+\hypertarget{class_animation_a8528dea500d55c9849ab6d3c30ae15eb}{\index{Animation@{Animation}!set\-Tileset@{set\-Tileset}}
+\index{set\-Tileset@{set\-Tileset}!Animation@{Animation}}
+\subsubsection[{set\-Tileset}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\-::set\-Tileset (
+\begin{DoxyParamCaption}
+\item[{const sf\-::\-Texture \&}]{texture}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a8528dea500d55c9849ab6d3c30ae15eb}
+
+
+ustawia tileset z animacjami 
+
+
+\begin{DoxyParams}{Parametry}
+{\em texture} & tileset \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+Animated\-Sprite/Animation.\-hpp\item 
+Animated\-Sprite/Animation.\-cpp\end{DoxyCompactItemize}

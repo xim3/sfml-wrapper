@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>RPG: Dokumentacja klasy Animation</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RPG
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="class_animation-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy Animation</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Klasa przechowująca klatki animacji i ich teksture.  
+ <a href="class_animation.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_animation_8hpp_source.html">Animation.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:ada4bef5d91687cdd610a830bd90093f9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada4bef5d91687cdd610a830bd90093f9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#ada4bef5d91687cdd610a830bd90093f9">setTileSize</a> (unsigned int width, unsigned int height)</td></tr>
+<tr class="memdesc:ada4bef5d91687cdd610a830bd90093f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">ustawia wiekość kafla <br/></td></tr>
+<tr class="memitem:a486ee5fa2d40ae90f227a19866998c91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a486ee5fa2d40ae90f227a19866998c91">addFrame</a> (sf::IntRect rect)</td></tr>
+<tr class="memdesc:a486ee5fa2d40ae90f227a19866998c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">dodaje klatke animacji  <a href="#a486ee5fa2d40ae90f227a19866998c91"></a><br/></td></tr>
+<tr class="memitem:ad55efa0c04a03239a8c176f1710b7a9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#ad55efa0c04a03239a8c176f1710b7a9b">addFrameGID</a> (unsigned int i)</td></tr>
+<tr class="memdesc:ad55efa0c04a03239a8c176f1710b7a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">dodaje klatke  <a href="#ad55efa0c04a03239a8c176f1710b7a9b"></a><br/></td></tr>
+<tr class="memitem:a8528dea500d55c9849ab6d3c30ae15eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#a8528dea500d55c9849ab6d3c30ae15eb">setTileset</a> (const sf::Texture &amp;texture)</td></tr>
+<tr class="memdesc:a8528dea500d55c9849ab6d3c30ae15eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">ustawia tileset z animacjami  <a href="#a8528dea500d55c9849ab6d3c30ae15eb"></a><br/></td></tr>
+<tr class="memitem:aafed5696c35b893bb721aa1303d5e84f"><td class="memItemLeft" align="right" valign="top">const sf::Texture *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#aafed5696c35b893bb721aa1303d5e84f">getSpriteSheet</a> () const </td></tr>
+<tr class="memdesc:aafed5696c35b893bb721aa1303d5e84f"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca tileset  <a href="#aafed5696c35b893bb721aa1303d5e84f"></a><br/></td></tr>
+<tr class="memitem:aa8dc627c1800fcad9b9e53c9a102ded3"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#aa8dc627c1800fcad9b9e53c9a102ded3">getSize</a> () const </td></tr>
+<tr class="memdesc:aa8dc627c1800fcad9b9e53c9a102ded3"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca ilość klatek w animacji  <a href="#aa8dc627c1800fcad9b9e53c9a102ded3"></a><br/></td></tr>
+<tr class="memitem:ad587678b331518e926b19b807b153daa"><td class="memItemLeft" align="right" valign="top">const sf::IntRect &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_animation.html#ad587678b331518e926b19b807b153daa">getFrame</a> (std::size_t n) const </td></tr>
+<tr class="memdesc:ad587678b331518e926b19b807b153daa"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca klatke  <a href="#ad587678b331518e926b19b807b153daa"></a><br/></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa przechowująca klatki animacji i ich teksture. </p>
+</div><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a486ee5fa2d40ae90f227a19866998c91"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::addFrame </td>
+          <td>(</td>
+          <td class="paramtype">sf::IntRect&#160;</td>
+          <td class="paramname"><em>rect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dodaje klatke animacji </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>klatka animacji </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>null </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad55efa0c04a03239a8c176f1710b7a9b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::addFrameGID </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>GID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dodaje klatke </p>
+<p>dodaje klatke na podstawie GID(przeliczonych współrzędnych na wielkość w kaflach) a nie współrzędnych całej tekstury </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">GID</td><td>gid klatki </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>null </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad587678b331518e926b19b807b153daa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const sf::IntRect &amp; Animation::getFrame </td>
+          <td>(</td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwraca klatke </p>
+<p>zwraca klatke z vectora klatek </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">numer</td><td>klatki </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>referencja do klatki animacji </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa8dc627c1800fcad9b9e53c9a102ded3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t Animation::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwraca ilość klatek w animacji </p>
+<dl class="section return"><dt>Zwraca</dt><dd>ilość klatek </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aafed5696c35b893bb721aa1303d5e84f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const sf::Texture * Animation::getSpriteSheet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwraca tileset </p>
+<dl class="section return"><dt>Zwraca</dt><dd>wskaźnik do tileseta </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8528dea500d55c9849ab6d3c30ae15eb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animation::setTileset </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Texture &amp;&#160;</td>
+          <td class="paramname"><em>texture</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ustawia tileset z animacjami </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>tileset </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>AnimatedSprite/<a class="el" href="_animation_8hpp_source.html">Animation.hpp</a></li>
+<li>AnimatedSprite/Animation.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Pn, 2 mar 2015 16:03:05 dla RPG programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

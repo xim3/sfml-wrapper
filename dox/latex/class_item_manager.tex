@@ -1,0 +1,183 @@
+\hypertarget{class_item_manager}{\section{Dokumentacja klasy Item\-Manager}
+\label{class_item_manager}\index{Item\-Manager@{Item\-Manager}}
+}
+
+
+Manager itemów gracza.  
+
+
+
+
+{\ttfamily \#include $<$Item\-Manager.\-hpp$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_item_manager_a67fde2ac12d912e419ad0d92b4b12398}{void \hyperlink{class_item_manager_a67fde2ac12d912e419ad0d92b4b12398}{print\-Items} ()}\label{class_item_manager_a67fde2ac12d912e419ad0d92b4b12398}
+
+\begin{DoxyCompactList}\small\item\em Tylko do debugowania. \end{DoxyCompactList}\item 
+void \hyperlink{class_item_manager_ad62ffaa692d727adf551a0b6235b66b8}{update} (const sf\-::\-Vector2u \&)
+\begin{DoxyCompactList}\small\item\em aktualizuje współrzędne itemów \end{DoxyCompactList}\item 
+void \hyperlink{class_item_manager_a128c9c267f271881a68bbe49cfbfa2d8}{add\-Item} (const \hyperlink{struct_item}{Item})
+\begin{DoxyCompactList}\small\item\em dodaje item do plecaka \end{DoxyCompactList}\item 
+void \hyperlink{class_item_manager_a14f1f8717804441005683f3dc37fd10e}{set\-Picked} (size\-\_\-t)
+\begin{DoxyCompactList}\small\item\em ustawia flage picked dla danego I\-D \end{DoxyCompactList}\item 
+bool \hyperlink{class_item_manager_a57d93634c5347ef69e4cb7888564e852}{load\-Items} (const std\-::string)
+\begin{DoxyCompactList}\small\item\em ładuje dane itemów z pliku. \end{DoxyCompactList}\item 
+\hypertarget{class_item_manager_abda651aea3b37cb983e158b2b743a4ca}{bool \hyperlink{class_item_manager_abda651aea3b37cb983e158b2b743a4ca}{is\-Picked} (size\-\_\-t) const }\label{class_item_manager_abda651aea3b37cb983e158b2b743a4ca}
+
+\begin{DoxyCompactList}\small\item\em zwraca wartość czy dany item został już podniesiony \end{DoxyCompactList}\item 
+bool \hyperlink{class_item_manager_af9d62b0fb7a8a4d44ad5707be5451bfe}{delete\-Item} (const int)
+\begin{DoxyCompactList}\small\item\em usuwa item z plecaka \end{DoxyCompactList}\item 
+\hyperlink{struct_item}{Item} \hyperlink{class_item_manager_a670709d080a73fdb1872eb3790945325}{get\-Item} (const int id) const 
+\begin{DoxyCompactList}\small\item\em wyszukuje item o danym id \end{DoxyCompactList}\item 
+\hyperlink{struct_item_data}{Item\-Data} \hyperlink{class_item_manager_a81a09c9a689b40f8fe4d2d422fa5a4da}{get\-Data} (size\-\_\-t) const 
+\begin{DoxyCompactList}\small\item\em zwraca strukture \hyperlink{struct_item_data}{Item\-Data} zawierającą dane o przedmiocie \end{DoxyCompactList}\item 
+\hypertarget{class_item_manager_aac4440e4b21628d5e993f9f69411e675}{int \hyperlink{class_item_manager_aac4440e4b21628d5e993f9f69411e675}{get\-G\-I\-D} (size\-\_\-t) const }\label{class_item_manager_aac4440e4b21628d5e993f9f69411e675}
+
+\begin{DoxyCompactList}\small\item\em zwraca G\-I\-D itemu na podstawie I\-D \end{DoxyCompactList}\item 
+\hypertarget{class_item_manager_ac5660480a58cf8613abb70ce3aefcf30}{size\-\_\-t \hyperlink{class_item_manager_ac5660480a58cf8613abb70ce3aefcf30}{player\-Item\-Count} () const }\label{class_item_manager_ac5660480a58cf8613abb70ce3aefcf30}
+
+\begin{DoxyCompactList}\small\item\em zwraca liczbe itemów w 'plecaku' \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Manager itemów gracza. 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_item_manager_a128c9c267f271881a68bbe49cfbfa2d8}{\index{Item\-Manager@{Item\-Manager}!add\-Item@{add\-Item}}
+\index{add\-Item@{add\-Item}!ItemManager@{Item\-Manager}}
+\subsubsection[{add\-Item}]{\setlength{\rightskip}{0pt plus 5cm}void Item\-Manager\-::add\-Item (
+\begin{DoxyParamCaption}
+\item[{const {\bf Item}}]{itm}
+\end{DoxyParamCaption}
+)}}\label{class_item_manager_a128c9c267f271881a68bbe49cfbfa2d8}
+
+
+dodaje item do plecaka 
+
+wyszukuje w itema o danym id w vectorze, i jeśli item o takim id nie istnieje -\/ dodaje go 
+\begin{DoxyParams}{Parametry}
+{\em itm} & Itemek \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_item_manager_af9d62b0fb7a8a4d44ad5707be5451bfe}{\index{Item\-Manager@{Item\-Manager}!delete\-Item@{delete\-Item}}
+\index{delete\-Item@{delete\-Item}!ItemManager@{Item\-Manager}}
+\subsubsection[{delete\-Item}]{\setlength{\rightskip}{0pt plus 5cm}bool Item\-Manager\-::delete\-Item (
+\begin{DoxyParamCaption}
+\item[{const int}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_item_manager_af9d62b0fb7a8a4d44ad5707be5451bfe}
+
+
+usuwa item z plecaka 
+
+wyszukuje item o danym id w vectorze, i jeśli istnieje -\/ usuwa go 
+\begin{DoxyParams}{Parametry}
+{\em id} & id przedmiotu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+jeśli usunięty true, w przeciwnym wypadku false 
+\end{DoxyReturn}
+\hypertarget{class_item_manager_a81a09c9a689b40f8fe4d2d422fa5a4da}{\index{Item\-Manager@{Item\-Manager}!get\-Data@{get\-Data}}
+\index{get\-Data@{get\-Data}!ItemManager@{Item\-Manager}}
+\subsubsection[{get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item\-Data} Item\-Manager\-::get\-Data (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{gid}
+\end{DoxyParamCaption}
+) const}}\label{class_item_manager_a81a09c9a689b40f8fe4d2d422fa5a4da}
+
+
+zwraca strukture \hyperlink{struct_item_data}{Item\-Data} zawierającą dane o przedmiocie 
+
+wyszukuje itema o danym G\-I\-D (do jednej teksturki może być przypisana tylko jedna specyfikacja) 
+\begin{DoxyParams}{Parametry}
+{\em gid} & gid przedmiotu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+jeśli znaleziono to \hyperlink{struct_item_data}{Item\-Data} z danymi, jeśli nie to \hyperlink{struct_item_data}{Item\-Data} z wyzerowanymi polami i nazwą \char`\"{}undefined\char`\"{} 
+\end{DoxyReturn}
+\hypertarget{class_item_manager_a670709d080a73fdb1872eb3790945325}{\index{Item\-Manager@{Item\-Manager}!get\-Item@{get\-Item}}
+\index{get\-Item@{get\-Item}!ItemManager@{Item\-Manager}}
+\subsubsection[{get\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Item} Item\-Manager\-::get\-Item (
+\begin{DoxyParamCaption}
+\item[{const int}]{id}
+\end{DoxyParamCaption}
+) const}}\label{class_item_manager_a670709d080a73fdb1872eb3790945325}
+
+
+wyszukuje item o danym id 
+
+wyszukuje item o danym id i jeśli istnieje to zwraca go jeśli nie istnieje zwraca domyślny item 
+\begin{DoxyParams}{Parametry}
+{\em id} & id przedmiotu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+przedmiot 
+\end{DoxyReturn}
+\hypertarget{class_item_manager_a57d93634c5347ef69e4cb7888564e852}{\index{Item\-Manager@{Item\-Manager}!load\-Items@{load\-Items}}
+\index{load\-Items@{load\-Items}!ItemManager@{Item\-Manager}}
+\subsubsection[{load\-Items}]{\setlength{\rightskip}{0pt plus 5cm}bool Item\-Manager\-::load\-Items (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{class_item_manager_a57d93634c5347ef69e4cb7888564e852}
+
+
+ładuje dane itemów z pliku. 
+
+ładuje dane itemów z pliku oraz loguje informacje do pliku 
+\begin{DoxyParams}{Parametry}
+{\em nazwa} & pliku X\-M\-L z danymi itemów \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+powodzenie operacji 
+\end{DoxyReturn}
+\hypertarget{class_item_manager_a14f1f8717804441005683f3dc37fd10e}{\index{Item\-Manager@{Item\-Manager}!set\-Picked@{set\-Picked}}
+\index{set\-Picked@{set\-Picked}!ItemManager@{Item\-Manager}}
+\subsubsection[{set\-Picked}]{\setlength{\rightskip}{0pt plus 5cm}void Item\-Manager\-::set\-Picked (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{id}
+\end{DoxyParamCaption}
+)}}\label{class_item_manager_a14f1f8717804441005683f3dc37fd10e}
+
+
+ustawia flage picked dla danego I\-D 
+
+ustawia bool picked w wektorze 'picked' picked domyślnie ma 1000 slotów a pojedyńczy indeks odpowiada danemu id ma to na celu zablokowania istnienia przedmiotu który został wpisany do pliku mapy przy następnych ładowaniach mapy 
+\begin{DoxyParams}{Parametry}
+{\em id} & id przedmiotu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+null 
+\end{DoxyReturn}
+\hypertarget{class_item_manager_ad62ffaa692d727adf551a0b6235b66b8}{\index{Item\-Manager@{Item\-Manager}!update@{update}}
+\index{update@{update}!ItemManager@{Item\-Manager}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Item\-Manager\-::update (
+\begin{DoxyParamCaption}
+\item[{const sf\-::\-Vector2u \&}]{vct}
+\end{DoxyParamCaption}
+)}}\label{class_item_manager_ad62ffaa692d727adf551a0b6235b66b8}
+
+
+aktualizuje współrzędne itemów 
+
+aktualizuje współrzędne itemów tj. itemy \char`\"{}chodzą\char`\"{} za graczem, są im przypisywane współrzędne gracza 
+\begin{DoxyParams}{Parametry}
+{\em vct} & współrzędne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+null 
+\end{DoxyReturn}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\-:\begin{DoxyCompactItemize}
+\item 
+Map\-System/Item\-Manager.\-hpp\item 
+Map\-System/Item\-Manager.\-cpp\end{DoxyCompactItemize}
