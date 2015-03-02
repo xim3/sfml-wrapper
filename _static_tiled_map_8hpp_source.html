@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>RPG: Plik źródłowy MapSystem/StaticTiledMap.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RPG
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_5964b2c1d4843e8ec872196827f9c80c.html">MapSystem</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">StaticTiledMap.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;ItemManager.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../NpcManager/NpcManager.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">enum</span> TILETYPE{BG, BG_DECORATION, ITEM, PORTAL, M_NPC};</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="class_tile_map.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tile_map.html" title="Klasa renderująca mape.">TileMap</a> : <span class="keyword">public</span> sf::Drawable, <span class="keyword">public</span> sf::Transformable</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                <span class="keywordtype">void</span>             <a class="code" href="class_tile_map.html#a6e0ee732702ceb28a6f49052f6cf1126" title="Ustawia uchwyt do klasy ItemManager.">setItemManagerHandle</a>(<a class="code" href="class_item_manager.html" title="Manager itemów gracza.">ItemManager</a>* igr);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                <span class="comment">/*** \brief Zwraca liczbe itemów na mapie**/</span>           </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                <span class="keywordtype">size_t</span>           itemsOnMapCount()<span class="keyword"> const </span>{<span class="keywordflow">return</span> itemsOnMap.size();}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="comment">/*** \brief Zwraca liczbe solidnych kratek na mapie**/</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <span class="keywordtype">size_t</span>           solidTilesCount()<span class="keyword"> const </span>{<span class="keywordflow">return</span> solidTiles.size();}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                <span class="keywordtype">bool</span>             <a class="code" href="class_tile_map.html#ac084a4b6aea0e050ec4a8aeea760a515" title="Ładuje mape z pliku.">loadMap</a>(<span class="keyword">const</span> std::string name);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordtype">bool</span>             <a class="code" href="class_tile_map.html#ac5d4d6a3522663052bab1396b1116a89" title="Zwraca boola czy pod danym xy jest item.">isItem</a>(sf::Vector2u, <span class="keywordtype">int</span> &amp; _id) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keywordtype">bool</span>             <a class="code" href="class_tile_map.html#a9abb261e84ab1ce52d5f2cc6a9c43bbb" title="Zwraca bool czy xy jest portalem.">isPortal</a>(sf::Vector2u);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <span class="keywordtype">bool</span>             <a class="code" href="class_tile_map.html#aac072fd241cd09e88a256099055f7238" title="Usuwa item z mapy.">pickItem</a>(sf::Vector2u);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keywordtype">bool</span>             <a class="code" href="class_tile_map.html#ab6b915163f9462171d78d9265332c553" title="Dodaje item do mapy.">dropItem</a>(<span class="keyword">const</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordtype">bool</span>             <a class="code" href="class_tile_map.html#aed48e1dfdf55facc59cbf7e7b60a80d7" title="Zwraca bool czy xy jest solidną kratka.">isSolidTile</a>(sf::Vector2u) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                sf::Vector2f <a class="code" href="class_tile_map.html#a53c335525a76ce71c88404a73573500e" title="Przeładowywuje mapke jeśli dane xy jest portalem(linkiem)">reload</a>(sf::Vector2u&amp;);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keywordtype">int</span>                  <a class="code" href="class_tile_map.html#a3c64cb00cc8d0e38f7c24e16149fd987" title="Zwraca GID itemu na podstawie ID.">getGID</a>(<span class="keywordtype">size_t</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keyword">const</span> sf::Texture&amp; <a class="code" href="class_tile_map.html#ae9a8aa44841e001cad6414c517bde545" title="Zwraca referencje do tilesetu.">getTexture</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordtype">void</span>         <a class="code" href="class_tile_map.html#a995c3475a7451f9b449295fbe01509f0" title="Odswieża animacje.">refreshAnimations</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordtype">void</span>         <a class="code" href="class_tile_map.html#a28a3df759d609bc19688d48b26489718" title="Ustawia uchwyt do klasy NpcManager.">setNPCManagerHandle</a>(<a class="code" href="class_npc_manager.html">NpcManager</a> *);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="comment">// Tylko do debugowania //</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="comment">/*** \brief Funkcja do debugowania**/</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordtype">void</span> printSolidTiles(){<span class="keywordflow">for</span>(<span class="keyword">auto</span> it = solidTiles.begin();it!=solidTiles.end();++it){printf(<span class="stringliteral">&quot;x:%i, y:%i gid:%i\n&quot;</span>,it-&gt;x,it-&gt;y, it-&gt;gid);  }}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="comment">/*** \brief Funkcja do debugowania**/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordtype">void</span>    printItems1(){<span class="keywordtype">int</span> i=0;printf(<span class="stringliteral">&quot;==========MAPITEMS==========\n&quot;</span>);<span class="keywordflow">if</span>(itemsOnMapCount() == 0){      printf(<span class="stringliteral">&quot;No items On map\n&quot;</span>);    printf(<span class="stringliteral">&quot;===============================\n&quot;</span>);    return ;}<span class="keywordflow">for</span>(<span class="keyword">auto</span> item : itemsOnMap){printf(<span class="stringliteral">&quot;X:%i Y:%i \tGID:%i \tID:%i \tINDEX:%i\n&quot;</span>, item.x,item.y,item.gid,item.id,i);i++;}printf(<span class="stringliteral">&quot;============================\n&quot;</span>);}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordtype">void</span>            appendTile(<span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, TILETYPE bgLayer);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordtype">void</span>            loadObjects(TiXmlElement*, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keyword">virtual</span> <span class="keywordtype">void</span>    draw(sf::RenderTarget&amp; target, sf::RenderStates states) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordtype">bool</span>                loadTiles(TiXmlElement*, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="comment">/*** \brief Tablica vertexów tła*/</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            sf::VertexArray m_vertices; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">/*** \brief Tablica vertexów dekoracji oraz NPC*/</span>  </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            sf::VertexArray m_vertices_bg1; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="comment">/*** \brief Tablica vertexów itemów*/</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            sf::VertexArray m_other_vertices;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="comment">/*** \brief Tablica vertexów portali*/</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            sf::VertexArray m_portals;  </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">/*** \brief Tekstura kafli*/</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                sf::Texture     m_tileset;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    width_in_tiles;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    height_in_tiles;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    tile_width;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    tile_height;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>    max_item_id = 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="comment">/*** \brief Solidne kafle*/</span>     </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                std::vector&lt;SolidTile&gt; solidTiles;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="comment">/*** \brief Dekoracje */</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                std::vector&lt;BackgroundTile&gt; backgroundTiles;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="comment">/*** \brief Portale*/</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                std::vector&lt;PortalTile&gt; portals;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="comment">/*** \brief Animowane kafle*/</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                std::vector&lt;AnimatedTile&gt; animated;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                std::vector&lt;Item&gt; itemsOnMap;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                sf::Clock _clock;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <a class="code" href="class_npc_manager.html">NpcManager</a>  *nmgr = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <a class="code" href="class_item_manager.html" title="Manager itemów gracza.">ItemManager</a> *imgr = <span class="keyword">nullptr</span>;            </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Pn, 2 mar 2015 16:03:05 dla RPG programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

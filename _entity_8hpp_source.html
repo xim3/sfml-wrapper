@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>RPG: Plik źródłowy Person/Entity.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RPG
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_62d5289ba53e5776df07198ac545e9b5.html">Person</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Entity.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &quot;../AnimatedSprite/AnimatedTex.hpp&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="code" href="class_entity.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_entity.html" title="Klasa bytu, który może poruszać sie po mapie, i mieć animacje.">Entity</a> : <span class="keyword">public</span> sf::Drawable, <span class="keyword">public</span> sf::Transformable</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                <a class="code" href="class_entity.html#a8e13fe1a39745c6912d62e252edc0709" title="Konstruktor.">Entity</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x=32, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y=32);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="class_entity.html#a2d6182aff5fb37582bdb52abfd1d7fde" title="Ładuje animacje z pliku.">load</a>(<span class="keyword">const</span> std::string path);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a10f39c35a26c9a808676c70eb2742c7b" title="Porusza obiekt w dół i animuje ruch.">moveDown</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a7775cd62029bcba5875a6d9e28172d0e" title="Porusza obiekt w lewo i animuje ruch.">moveLeft</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a72d22f873f82e23e424f58d42a45162c" title="Porusza obiekt w prawo i animuje ruch.">moveRight</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_entity.html#ab72296eceda3417186ccdb2b2dd64ff8" title="Porusza obiekt w góre i animuje ruch.">moveUp</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a00b6eeaf99b35c8f8b10b5fbfc1baf4f" title="Odświeża animacje.">update</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a651d16aa7cc3046e9387912496685ead" title="idle">idle</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_entity.html#af6eeb3e2ab8bfe2885bab25f156ed78b" title="Ustawia pozycje ( w kaflach )">setPosition</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a727a12d714ee329c92b62f3ba60f79f9" title="Ustawia pozycje ( float )">setPositionFloat</a>(<span class="keywordtype">float</span>,<span class="keywordtype">float</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                sf::Vector2u <a class="code" href="class_entity.html#a60954d1d71c33104bf549f39c61dbb9f" title="Zwraca pozycje przeliczoną na kafle.">getPosition</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                sf::Vector2f <a class="code" href="class_entity.html#aa254c3e47aa6d3c4b9e2bbbcc786d93f" title="Zwraca pozycje w floatcie.">getPositionFloat</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_entity.html#a8a29089df65336842035e9a6b73677f6" title="Rysuje.">draw</a>(sf::RenderTarget&amp; target, sf::RenderStates states) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tile_width  = 32;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tile_height = 32;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="class_entity.html#adca44d97840ac7cff2d91d4d518edbcf">   27</a></span>&#160;                std::vector&lt;Animation&gt; <a class="code" href="class_entity.html#adca44d97840ac7cff2d91d4d518edbcf" title="Animacje.">anims</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="class_entity.html#a60767e4984ab5817623a970f40c51591">   29</a></span>&#160;                <a class="code" href="class_animation.html" title="Klasa przechowująca klatki animacji i ich teksture.">Animation</a> *<a class="code" href="class_entity.html#a60767e4984ab5817623a970f40c51591" title="Aktualna animacja.">c_anim</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="class_entity.html#ad968b2c732af4a7087842f31202438fc">   31</a></span>&#160;                <a class="code" href="class_animated_tex.html" title="Klasa animowanej tekstury, odpowiada za rysowanie i odswieżanie animacji.">AnimatedTex</a>  <a class="code" href="class_entity.html#ad968b2c732af4a7087842f31202438fc" title="Util.">anitex</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="class_entity.html#afc349ec89c2bffef70bf6a1d95603154">   33</a></span>&#160;                sf::Vector2f <a class="code" href="class_entity.html#afc349ec89c2bffef70bf6a1d95603154" title="Pozycja.">position</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="class_entity.html#a50a3dffcf26eb1950587414663951267">   35</a></span>&#160;                sf::Texture  <a class="code" href="class_entity.html#a50a3dffcf26eb1950587414663951267" title="Tekstura.">tiles</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="class_entity.html#a1de3d8d9ab8088f61e6726069b26fa60">   37</a></span>&#160;                <span class="keywordtype">float</span> <a class="code" href="class_entity.html#a1de3d8d9ab8088f61e6726069b26fa60" title="Szybkość przemieszczania się">speed</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="class_entity.html#a371e5de242da644dca5e90674eb0c1bc">   39</a></span>&#160;                sf::Clock <a class="code" href="class_entity.html#a371e5de242da644dca5e90674eb0c1bc" title="Zegarek.">_clock</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="class_entity.html#a819f25d4808e9e06d2e3af164b901350">   41</a></span>&#160;                <span class="keywordtype">bool</span> <a class="code" href="class_entity.html#a819f25d4808e9e06d2e3af164b901350" title="klawisz">nokeypressed</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Pn, 2 mar 2015 16:03:05 dla RPG programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>

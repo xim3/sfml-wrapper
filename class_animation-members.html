@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>RPG: Strona główna</title>
+<title>RPG: Lista składowych</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,9 +35,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
       <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
-      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
       <li><a href="files.html"><span>Pliki</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -57,7 +57,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,15 +79,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">RPG Dokumentacja</div>  </div>
+<div class="title">Animation Lista składowych</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+
+<p>To jest kompletna lista składowych dla <a class="el" href="class_animation.html">Animation</a>, uwzględniająca wszystkie dziedziczone składowe.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_animation.html#a486ee5fa2d40ae90f227a19866998c91">addFrame</a>(sf::IntRect rect)</td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_animation.html#ad55efa0c04a03239a8c176f1710b7a9b">addFrameGID</a>(unsigned int i)</td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"class="even"><td class="entry"><b>Animation</b>() (zdefiniowana w <a class="el" href="class_animation.html">Animation</a>)</td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_animation.html#ad587678b331518e926b19b807b153daa">getFrame</a>(std::size_t n) const </td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_animation.html#aa8dc627c1800fcad9b9e53c9a102ded3">getSize</a>() const </td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_animation.html#aafed5696c35b893bb721aa1303d5e84f">getSpriteSheet</a>() const </td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_animation.html#a8528dea500d55c9849ab6d3c30ae15eb">setTileset</a>(const sf::Texture &amp;texture)</td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_animation.html#ada4bef5d91687cdd610a830bd90093f9">setTileSize</a>(unsigned int width, unsigned int height)</td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Wygenerowano Pn, 2 mar 2015 16:03:06 dla RPG programem &#160;<a href="http://www.doxygen.org/index.html">
+Wygenerowano Pn, 2 mar 2015 16:03:05 dla RPG programem &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

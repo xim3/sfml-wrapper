@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>RPG: Strona główna</title>
+<title>RPG: Dokumentacja struktury Tile</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,9 +35,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
       <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
-      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
       <li><a href="files.html"><span>Pliki</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -57,7 +57,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,11 +79,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pub-attribs">Atrybuty publiczne</a> &#124;
+<a href="struct_tile-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
-<div class="title">RPG Dokumentacja</div>  </div>
+<div class="title">Dokumentacja struktury Tile</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>struktura bazowa kafla  
+ <a href="struct_tile.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_tiles_8h_source.html">Tiles.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla Tile</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="struct_tile.png" usemap="#Tile_map" alt=""/>
+  <map id="Tile_map" name="Tile_map">
+<area href="struct_animated_tile.html" title="struktura animowanego kafla" alt="AnimatedTile" shape="rect" coords="0,56,100,80"/>
+<area href="struct_background_tile.html" title="struktura dekoracyjnego kafla" alt="BackgroundTile" shape="rect" coords="110,56,210,80"/>
+<area href="struct_portal_tile.html" title="struktura portalu" alt="PortalTile" shape="rect" coords="220,56,320,80"/>
+<area href="struct_solid_tile.html" title="struktura solidnego kafla" alt="SolidTile" shape="rect" coords="330,56,430,80"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a60143acae451458a180267fdabfd80c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60143acae451458a180267fdabfd80c7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Tile</b> (unsigned int _x, unsigned int _y, unsigned int _gid)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
+Atrybuty publiczne</h2></td></tr>
+<tr class="memitem:ad8ba78a01a259b052e267c754f525413"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8ba78a01a259b052e267c754f525413"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>x</b></td></tr>
+<tr class="memitem:a33e9c4b212bbdec7eeac2f55b5b98223"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a33e9c4b212bbdec7eeac2f55b5b98223"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>y</b></td></tr>
+<tr class="memitem:ac72ddfe3b77d6332c089276a0a696490"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac72ddfe3b77d6332c089276a0a696490"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>gid</b></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>struktura bazowa kafla </p>
+</div><hr/>Dokumentacja dla tej struktury została wygenerowana z pliku:<ul>
+<li>MapSystem/<a class="el" href="_tiles_8h_source.html">Tiles.h</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

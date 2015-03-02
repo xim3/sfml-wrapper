@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>RPG: Strona główna</title>
+<title>RPG: Dokumentacja klasy Equipment</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -35,9 +35,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
       <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
-      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
       <li><a href="files.html"><span>Pliki</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -57,7 +57,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -72,15 +79,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="class_equipment-members.html">Lista wszystkich składowych</a>  </div>
   <div class="headertitle">
-<div class="title">RPG Dokumentacja</div>  </div>
+<div class="title">Dokumentacja klasy Equipment</div>  </div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:af18f784a9c9c38469a114748b08b47cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af18f784a9c9c38469a114748b08b47cb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Equipment</b> (sf::Texture &amp;txt, sf::Vector2f position)</td></tr>
+<tr class="memitem:a8a6f3280ee540b9b812688a1d6fbbb3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a6f3280ee540b9b812688a1d6fbbb3d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addItem</b> (<a class="el" href="class_equipment_item.html">EquipmentItem</a> new_item)</td></tr>
+<tr class="memitem:ad80e042eb307687437579e8a6a307955"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad80e042eb307687437579e8a6a307955"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>removeItem</b> (int id)</td></tr>
+<tr class="memitem:a0c4e6291ad7082d049a6d830df923a80"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c4e6291ad7082d049a6d830df923a80"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (sf::RenderWindow &amp;window)</td></tr>
+<tr class="memitem:aa10e2241bfd394059dd178e414583944"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa10e2241bfd394059dd178e414583944"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>loadTexture</b> (const std::string name)</td></tr>
+<tr class="memitem:a3921fcd8ded253cdcda46ea6b25c5013"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3921fcd8ded253cdcda46ea6b25c5013"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>showBox</b> (sf::RenderWindow &amp;window, sf::Event &amp;event)</td></tr>
+</table>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>DialogSystem/<a class="el" href="_equipment_8h_source.html">Equipment.h</a></li>
+<li>DialogSystem/Equipment.cpp</li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Wygenerowano Pn, 2 mar 2015 16:03:06 dla RPG programem &#160;<a href="http://www.doxygen.org/index.html">
+Wygenerowano Pn, 2 mar 2015 16:03:05 dla RPG programem &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

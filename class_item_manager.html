@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>RPG: Dokumentacja klasy ItemManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">RPG
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.1.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="pages.html"><span>Dodatkowe&#160;strony</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;klas</span></a></li>
+      <li><a href="classes.html"><span>Indeks&#160;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&#160;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&#160;klas</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Zmienne</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Strony</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="class_item_manager-members.html">Lista wszystkich składowych</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja klasy ItemManager</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Manager itemów gracza.  
+ <a href="class_item_manager.html#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_item_manager_8hpp_source.html">ItemManager.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a67fde2ac12d912e419ad0d92b4b12398"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67fde2ac12d912e419ad0d92b4b12398"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#a67fde2ac12d912e419ad0d92b4b12398">printItems</a> ()</td></tr>
+<tr class="memdesc:a67fde2ac12d912e419ad0d92b4b12398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tylko do debugowania. <br/></td></tr>
+<tr class="memitem:ad62ffaa692d727adf551a0b6235b66b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#ad62ffaa692d727adf551a0b6235b66b8">update</a> (const sf::Vector2u &amp;)</td></tr>
+<tr class="memdesc:ad62ffaa692d727adf551a0b6235b66b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">aktualizuje współrzędne itemów  <a href="#ad62ffaa692d727adf551a0b6235b66b8"></a><br/></td></tr>
+<tr class="memitem:a128c9c267f271881a68bbe49cfbfa2d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#a128c9c267f271881a68bbe49cfbfa2d8">addItem</a> (const <a class="el" href="struct_item.html">Item</a>)</td></tr>
+<tr class="memdesc:a128c9c267f271881a68bbe49cfbfa2d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">dodaje item do plecaka  <a href="#a128c9c267f271881a68bbe49cfbfa2d8"></a><br/></td></tr>
+<tr class="memitem:a14f1f8717804441005683f3dc37fd10e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#a14f1f8717804441005683f3dc37fd10e">setPicked</a> (size_t)</td></tr>
+<tr class="memdesc:a14f1f8717804441005683f3dc37fd10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ustawia flage picked dla danego ID  <a href="#a14f1f8717804441005683f3dc37fd10e"></a><br/></td></tr>
+<tr class="memitem:a57d93634c5347ef69e4cb7888564e852"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#a57d93634c5347ef69e4cb7888564e852">loadItems</a> (const std::string)</td></tr>
+<tr class="memdesc:a57d93634c5347ef69e4cb7888564e852"><td class="mdescLeft">&#160;</td><td class="mdescRight">ładuje dane itemów z pliku.  <a href="#a57d93634c5347ef69e4cb7888564e852"></a><br/></td></tr>
+<tr class="memitem:abda651aea3b37cb983e158b2b743a4ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abda651aea3b37cb983e158b2b743a4ca"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#abda651aea3b37cb983e158b2b743a4ca">isPicked</a> (size_t) const </td></tr>
+<tr class="memdesc:abda651aea3b37cb983e158b2b743a4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca wartość czy dany item został już podniesiony <br/></td></tr>
+<tr class="memitem:af9d62b0fb7a8a4d44ad5707be5451bfe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#af9d62b0fb7a8a4d44ad5707be5451bfe">deleteItem</a> (const int)</td></tr>
+<tr class="memdesc:af9d62b0fb7a8a4d44ad5707be5451bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">usuwa item z plecaka  <a href="#af9d62b0fb7a8a4d44ad5707be5451bfe"></a><br/></td></tr>
+<tr class="memitem:a670709d080a73fdb1872eb3790945325"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_item.html">Item</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#a670709d080a73fdb1872eb3790945325">getItem</a> (const int id) const </td></tr>
+<tr class="memdesc:a670709d080a73fdb1872eb3790945325"><td class="mdescLeft">&#160;</td><td class="mdescRight">wyszukuje item o danym id  <a href="#a670709d080a73fdb1872eb3790945325"></a><br/></td></tr>
+<tr class="memitem:a81a09c9a689b40f8fe4d2d422fa5a4da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_item_data.html">ItemData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#a81a09c9a689b40f8fe4d2d422fa5a4da">getData</a> (size_t) const </td></tr>
+<tr class="memdesc:a81a09c9a689b40f8fe4d2d422fa5a4da"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca strukture <a class="el" href="struct_item_data.html">ItemData</a> zawierającą dane o przedmiocie  <a href="#a81a09c9a689b40f8fe4d2d422fa5a4da"></a><br/></td></tr>
+<tr class="memitem:aac4440e4b21628d5e993f9f69411e675"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac4440e4b21628d5e993f9f69411e675"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#aac4440e4b21628d5e993f9f69411e675">getGID</a> (size_t) const </td></tr>
+<tr class="memdesc:aac4440e4b21628d5e993f9f69411e675"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca GID itemu na podstawie ID <br/></td></tr>
+<tr class="memitem:ac5660480a58cf8613abb70ce3aefcf30"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5660480a58cf8613abb70ce3aefcf30"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_item_manager.html#ac5660480a58cf8613abb70ce3aefcf30">playerItemCount</a> () const </td></tr>
+<tr class="memdesc:ac5660480a58cf8613abb70ce3aefcf30"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca liczbe itemów w 'plecaku' <br/></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Opis szczegółowy</h2>
+<div class="textblock"><p>Manager itemów gracza. </p>
+</div><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" id="a128c9c267f271881a68bbe49cfbfa2d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ItemManager::addItem </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_item.html">Item</a>&#160;</td>
+          <td class="paramname"><em>itm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dodaje item do plecaka </p>
+<p>wyszukuje w itema o danym id w vectorze, i jeśli item o takim id nie istnieje - dodaje go </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">itm</td><td>Itemek </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="af9d62b0fb7a8a4d44ad5707be5451bfe"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ItemManager::deleteItem </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>usuwa item z plecaka </p>
+<p>wyszukuje item o danym id w vectorze, i jeśli istnieje - usuwa go </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id przedmiotu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>jeśli usunięty true, w przeciwnym wypadku false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a81a09c9a689b40f8fe4d2d422fa5a4da"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_item_data.html">ItemData</a> ItemManager::getData </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>gid</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zwraca strukture <a class="el" href="struct_item_data.html">ItemData</a> zawierającą dane o przedmiocie </p>
+<p>wyszukuje itema o danym GID (do jednej teksturki może być przypisana tylko jedna specyfikacja) </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gid</td><td>gid przedmiotu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>jeśli znaleziono to <a class="el" href="struct_item_data.html">ItemData</a> z danymi, jeśli nie to <a class="el" href="struct_item_data.html">ItemData</a> z wyzerowanymi polami i nazwą "undefined" </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a670709d080a73fdb1872eb3790945325"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_item.html">Item</a> ItemManager::getItem </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>wyszukuje item o danym id </p>
+<p>wyszukuje item o danym id i jeśli istnieje to zwraca go jeśli nie istnieje zwraca domyślny item </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id przedmiotu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>przedmiot </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a57d93634c5347ef69e4cb7888564e852"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ItemManager::loadItems </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ładuje dane itemów z pliku. </p>
+<p>ładuje dane itemów z pliku oraz loguje informacje do pliku </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nazwa</td><td>pliku XML z danymi itemów </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>powodzenie operacji </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a14f1f8717804441005683f3dc37fd10e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ItemManager::setPicked </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ustawia flage picked dla danego ID </p>
+<p>ustawia bool picked w wektorze 'picked' picked domyślnie ma 1000 slotów a pojedyńczy indeks odpowiada danemu id ma to na celu zablokowania istnienia przedmiotu który został wpisany do pliku mapy przy następnych ładowaniach mapy </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>id przedmiotu </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>null </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad62ffaa692d727adf551a0b6235b66b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ItemManager::update </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2u &amp;&#160;</td>
+          <td class="paramname"><em>vct</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>aktualizuje współrzędne itemów </p>
+<p>aktualizuje współrzędne itemów tj. itemy "chodzą" za graczem, są im przypisywane współrzędne gracza </p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vct</td><td>współrzędne </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>null </dd></dl>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>MapSystem/<a class="el" href="_item_manager_8hpp_source.html">ItemManager.hpp</a></li>
+<li>MapSystem/ItemManager.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano Pn, 2 mar 2015 16:03:05 dla RPG programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1.2
+</small></address>
+</body>
+</html>
