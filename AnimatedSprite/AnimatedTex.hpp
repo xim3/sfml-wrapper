@@ -1,9 +1,13 @@
+#pragma once
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/Transformable.hpp>
 #include <SFML/System/Vector2.hpp>
 #include "Animation.hpp"
+/**
+ * \brief Klasa animowanej tekstury, odpowiada za rysowanie i odswieżanie animacji
+ **/
 class AnimatedTex : public sf::Drawable, public sf::Transformable
 {
 public:
@@ -33,8 +37,5 @@ private:
     bool m_isLooped;
     const sf::Texture* m_texture;
     sf::Vertex m_vertices[4];
-
-  
-
 };
-#include "AnimatedTex.cpp"
+

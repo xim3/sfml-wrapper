@@ -1,4 +1,5 @@
-#include "NPC.cpp"
+#pragma once
+#include "NPC.hpp"
 class NpcManager 
 {
 	public:
@@ -10,4 +11,4 @@ class NpcManager
 	private:
 		std::vector<NPC> m_npcs;
 };
-#include "NpcManager.cpp"
+

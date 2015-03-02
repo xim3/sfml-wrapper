@@ -1,61 +1,79 @@
 #pragma once
-struct SolidTile
+#include "../AnimatedSprite/AnimatedTex.hpp"
+//
+/**
+ * \brief struktura bazowa kafla
+ **/
+struct Tile
 {
-	unsigned int x;
-	unsigned int y;
-	unsigned int gid;
+	public:
+	    Tile(unsigned int _x, unsigned int _y, unsigned int _gid)
+	    : x(_x)
+	    , y(_y)
+	    , gid(_gid)
+	    {
+		}
+		unsigned int x;
+		unsigned int y;
+		unsigned int gid;
+};
+//
+/**
+ * \brief struktura solidnego kafla
+ **/
+struct SolidTile : Tile
+{
 	SolidTile(const sf::Uint32 _x, const sf::Uint32 _y, const sf::Uint32 _gid) 
-	: x(_x)
-	, y(_y)
-	, gid(_gid)
+	: Tile(_x,_y,_gid)
 	{
 	};
 };
-struct BackgroundTile
+//
+/**
+ * \brief struktura dekoracyjnego kafla
+ **/
+struct BackgroundTile : Tile
 {
-	unsigned int x;
-	unsigned int y;
-	unsigned int gid;
 	BackgroundTile(const sf::Uint32 _x, const sf::Uint32 _y, const sf::Uint32 _gid) 
-	: x(_x)
-	, y(_y)
-	, gid(_gid)
+    : Tile(_x,_y,_gid)
 	{
 	};
 };
-struct PortalTile
+//
+/**
+ * \brief struktura portalu
+ * \details rozszerza kafel o współrzędne spawnu, nazwe mapy, i informacje o tym czy została załadowana po raz pierwszy
+ **/
+struct PortalTile : Tile
 {
-	unsigned int x;
-	unsigned int y;
-	unsigned int gid;
 	sf::Vector2u spawn;
 	std::string file;
 	bool first_load;
 	PortalTile(unsigned int _x, unsigned int _y, unsigned int _gid, std::string &_file,sf::Vector2u _spawn)
-	: x(_x)
-	, y(_y)
-	, gid(_gid)
+    : Tile(_x,_y,_gid)
 	, spawn(_spawn)
 	{
 		file = _file;
 	};
 };
-struct AnimatedTile
+//
+/**
+ * \brief struktura animowanego kafla
+ * \details rozszerza kafel o możliwość animacji
+ **/
+struct AnimatedTile : Tile
 {
-	unsigned int x;
-	unsigned int y;
-	unsigned int gid;
 	unsigned int steps;
 	sf::Time	 speed;
 	Animation anim;
 	AnimatedTex txt;
-	AnimatedTile(unsigned int _x,unsigned int _y,double _speed, Animation _an) 
-	: x(_x)
-	, y(_y)
+	AnimatedTile(unsigned int _x,unsigned int _y,double _speed, Animation _an, unsigned int t_w,unsigned int t_h) 
+	: Tile(_x,_y,0)
 	, speed(sf::seconds(_speed))
 	, anim(_an)
 	{
-		txt.setPosition(sf::Vector2f((unsigned int)(x*32),(unsigned int)(y*32)));
+		txt.setPosition(sf::Vector2f((unsigned int)(x*t_w),(unsigned int)(y*t_h)));
 		txt.setFrameTime(speed);
 	} 
 };
+//

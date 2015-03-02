@@ -1,20 +1,22 @@
 #include <iostream>
 #include <string>
 #include <SFML/Graphics.hpp>
-#include "tinyxml/tinyxml.h"
-#include "easylogging++.h"
+#include "Resources/tinyxml/tinyxml.h"
+#include "Resources/easylogging++.h"
 INITIALIZE_EASYLOGGINGPP
+//
 #include "AnimatedSprite/AnimatedTex.hpp"
-#include "Person/Person.hpp"
-#include "Person/Player.hpp"
-#include "NpcManager/NpcManager.hpp"
 #include "MapSystem/ItemManager.hpp"
 #include "MapSystem/StaticTiledMap.hpp"
+#include "Person/Entity.hpp"
+#include "Person/Player.hpp"
+#include "NpcManager/NpcManager.hpp"
 #include "DialogSystem/Dialog.h"
 #include "DialogSystem/Button.h"
 #include "DialogSystem/Menu.h"
 #include "DialogSystem/EquipmentItem.h"
 #include "DialogSystem/Equipment.h"
+//
 int main()
 {
 	sf::Vector2i screenDimensions(800,800);
@@ -24,20 +26,20 @@ int main()
     el::Loggers::reconfigureLogger("default", conf);
     el::Loggers::reconfigureAllLoggers(conf);
     window.setFramerateLimit(60);
-    sf::Clock frameClock;
-    sf::Clock i_clock;
+
+
 
     ItemManager imgr;
     NpcManager nmgr;
-    TileMap map;    
+    TileMap map;
     Player gamer;
+    
     gamer.load("player.xml");
     map.setItemManagerHandle(&imgr);
     map.setNPCManagerHandle(&nmgr);
-    map.setTimeHandle(&i_clock);
 	map.loadMap("r.tmx");
 	imgr.loadItems("items.xml");
-	
+
 	gamer.setPosition(10,10);
 	sf::Vector2f aPos;
 	sf::Vector2u pzz;
@@ -49,33 +51,30 @@ int main()
     {
     sf::Vector2f movement(0.f, 0.f);
     sf::Event event;
-    while(window.pollEvent(event))
-    {
-		  if(event.type == sf::Event::Closed)
-           window.close();
-				if (event.type == sf::Event::MouseButtonPressed)
+		while(window.pollEvent(event))
 		{
-			if (event.mouseButton.button == sf::Mouse::Right )
+			if(event.type == sf::Event::Closed)
+			window.close();
+				if (event.type == sf::Event::MouseButtonPressed)
+				{
+					if (event.mouseButton.button == sf::Mouse::Right )
 								++iid;
-			if(event.mouseButton.button == sf::Mouse::Left && iid > 0)
-				--iid;
+					if(event.mouseButton.button == sf::Mouse::Left && iid > 0)
+								--iid;
+				}
 		}
-	}
     pzz = gamer.getPosition();
-
 	isit = map.isItem(pzz,itemId);
 	sol = map.isSolidTile(pzz);
 	por = map.isPortal(pzz);
-	printf("X:%f Y:%f X:%i Y:%i, solid:%i item:%i itemId:%i playerit:%i items:%i iid:%i portal:%i near:%i \n"
-	,aPos.x,aPos.y,pzz.x,pzz.y, sol, 
-	isit, itemId, imgr.playerItemCount(), map.itemsOnMapCount(),iid,por, nmgr.nearNPC(pzz));
+	printf("X:%i Y:%i, solid:%i item:%i itemId:%i playerit:%i items:%i iid:%i portal:%i near:%i \n",pzz.x,pzz.y, sol,isit, itemId, imgr.playerItemCount(), map.itemsOnMapCount(),iid,por, nmgr.nearNPC(pzz));
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
     {
 	  	if(isit == false && sol == false)
 	    {
 			if(map.dropItem(iid))
 				printf("Dropped!\n");
-			else 
+			else
 				printf("No Way\n");
 		}
 		else
@@ -84,9 +83,9 @@ int main()
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::R))
 	{
 		if(map.pickItem(pzz))
-			printf("Picked!\n");				
-		else 
-			printf("No Item\n");				
+			printf("Picked!\n");
+		else
+			printf("No Item\n");
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::N))
 		map.printItems1();
@@ -111,16 +110,16 @@ int main()
 		{
 			sf::Vector2f x1 = map.reload(pzz);
 			gamer.setPosition((unsigned int)(x1.x),(unsigned int)(x1.y));
-		}	
+		}
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && map.isSolidTile(sf::Vector2u(pzz.x,pzz.y-1)) == false)
-           gamer.walkUp();
+           gamer.moveUp();
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && map.isSolidTile(sf::Vector2u(pzz.x,pzz.y+1)) == false)
-           gamer.walkDown();
+           gamer.moveDown();
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && map.isSolidTile(sf::Vector2u(pzz.x-1,pzz.y)) == false)
-           gamer.walkLeft();
+           gamer.moveLeft();
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && map.isSolidTile(sf::Vector2u(pzz.x+1,pzz.y)) == false)
-           gamer.walkRight();
+           gamer.moveRight();
     if(itemId != -1)
     {
 		ItemData idat = imgr.getData(map.getGID(itemId));

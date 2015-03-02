@@ -1,58 +1,113 @@
-
+#include "AnimatedTex.hpp"
+/**
+ * \param frameTime - Czas wyświetlania klatki, paused - pauza
+ * looped - zapętlenie
+ */
 AnimatedTex::AnimatedTex(sf::Time frameTime, bool paused, bool looped) :
     m_animation(NULL), m_frameTime(frameTime), m_currentFrame(0), m_isPaused(paused), m_isLooped(looped), m_texture(NULL)
 {
 }
+/**
+ * \brief Ustawia animacje
+ * \param animation - animacja
+ * 
+ */
 void AnimatedTex::setAnimation(const Animation& animation){
     m_animation = &animation;
     m_texture = m_animation->getSpriteSheet();
     m_currentFrame = 0;
     setFrame(m_currentFrame);
 }
+/**
+ * \brief Ustawia czas między klatkami
+ * \param time - czas
+ */
 void AnimatedTex::setFrameTime(sf::Time time)
 {
     m_frameTime = time;
 }
+/**
+ * \brief Uruchamia animacje
+ */
 void AnimatedTex::play(){
     m_isPaused = false;
 }
+/**
+ * \brief Ustawia animacje i ją uruchamia
+ * \param animation - animacja
+ */
 void AnimatedTex::play(const Animation& animation){
     if (getAnimation() != &animation)
         setAnimation(animation);
     play();
 }
+/**
+ * \brief Zatrzymuje animacje
+ * 
+ */
 void AnimatedTex::pause(){
     m_isPaused = true;
 }
+/**
+ * \brief Zatrzymuje animacje i ustawia aktualną klatke na na pierwszą
+ */
 void AnimatedTex::stop(){
     m_isPaused = true;
     m_currentFrame = 0;
     setFrame(m_currentFrame);
 }
+/**
+ * \brief Ustawia zapętlenie animacji
+ * \param looped - zapętlenie
+ */
 void AnimatedTex::setLooped(bool looped){
     m_isLooped = looped;
 }
+/**
+ * \brief Ustawia kolor teksturki klatki
+ * \param color - kolor
+ */
 void AnimatedTex::setColor(const sf::Color& color){
     m_vertices[0].color = color;
     m_vertices[1].color = color;
     m_vertices[2].color = color;
     m_vertices[3].color = color;
 }
+/**
+ * \brief Zwraca wskaźnik na animacje
+ * \return Animacja
+ */
 const Animation* AnimatedTex::getAnimation() const{
     return m_animation;
 }
+/**
+ * \brief Zwraca zapętlenie animacji
+ * \return Zapętlenie
+ */
 bool AnimatedTex::isLooped() const
 {
     return m_isLooped;
 }
+/**
+ * \brief Zwraca wartość czy animacja aktualnie jest odgrywana
+ * \return Stan 
+ */
 bool AnimatedTex::isPlaying() const{
     return !m_isPaused;
 }
+/**
+ * \brief Zwraca czas między klatkami
+ * \return sf::Time - czas
+ */
 sf::Time AnimatedTex::getFrameTime() const{
     return m_frameTime;
 }
-void AnimatedTex::setFrame(std::size_t newFrame)
-{
+/**
+ * \brief Ustawia klatke 
+ * \details Przełącza klatke
+ * \param Numer klatki
+ */
+void AnimatedTex::setFrame(std::size_t newFrame){
     if (m_animation){
         sf::IntRect rect = m_animation->getFrame(newFrame);
         m_vertices[0].position = sf::Vector2f(0.f, 0.f);
@@ -68,8 +123,12 @@ void AnimatedTex::setFrame(std::size_t newFrame)
         m_vertices[2].texCoords = sf::Vector2f(right,bottom);
         m_vertices[3].texCoords = sf::Vector2f(right,top);
     }
-    //m_currentTime = sf::Time::Zero;
 }
+/**
+ * \brief Odświeża animacje
+ * \param deltaTime - delta
+ * \details Przełącza klatki animacji
+ */
 void AnimatedTex::update(sf::Time deltaTime){
     if (!m_isPaused && m_animation){
         m_currentTime += deltaTime;
@@ -87,6 +146,10 @@ void AnimatedTex::update(sf::Time deltaTime){
         }
     }
 }
+/**
+ * \brief Rysuje animacje
+ * 
+ */
 void AnimatedTex::draw(sf::RenderTarget& target, sf::RenderStates states) const{
     if (m_animation && m_texture){
         states.transform *= getTransform();

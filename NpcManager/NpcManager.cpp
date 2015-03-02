@@ -1,4 +1,5 @@
-#pragma once
+#include "NpcManager.hpp"
+//#include "NPC.cpp"
 // ugly
 // x|x|x
 // x|o|x <-- Sprawdzane są te pola, 'o' to NPC

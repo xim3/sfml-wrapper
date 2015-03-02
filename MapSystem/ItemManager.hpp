@@ -8,7 +8,10 @@
 #include <cassert>
 #include "Item.h"
 #include "Tiles.h"
-#include "Predicates.cpp"
+#include "Utils.cpp"
+/**
+ * \brief Manager itemów gracza
+ */
 class ItemManager
 {
 public:
@@ -17,10 +20,8 @@ public:
 		picked.resize(1000);
 	};
 	~ItemManager(){};
-	// Tylko do debugowania
+	/** \brief Tylko do debugowania */
 	void    printItems(){int index=0;printf("==========PLAYERITEMS==========\n");if(playerItemCount() == 0){	printf("No items in vct\n");	printf("===============================\n");	return;	}	for(auto item : playerItems)	{	printf("X:%i Y:%i \tGID:%i \tID:%i \tINDEX:%i\n", item.x,item.y,item.gid,item.id,index);	index++;}printf("===============================\n");}
-	///////////////
-	
 	void 	 update(const sf::Vector2u&);
 	void 	 addItem(const Item);
 	void     setPicked(size_t);
@@ -32,8 +33,10 @@ public:
 	int		 getGID(size_t)const;
 	size_t   playerItemCount() const;
 private:
+	/** \brief itemy w plecaku */
 	std::vector<Item> playerItems;
+	/** \brief informacje o itemach */
 	std::vector<ItemData> itemsinfo;
+	/** \brief flagi podniesienia */
 	std::vector<bool> picked;
 };
-#include "ItemManager.cpp"

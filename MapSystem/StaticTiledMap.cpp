@@ -1,4 +1,13 @@
-//#include "StaticTiledMap.hpp"
+#include "StaticTiledMap.hpp"
+#include "Item.h"
+#include "Utils.cpp"
+#include "../tinyxml/tinyxml.h"
+/**
+ * \brief Ładuje mape z pliku 
+ * \details Niepowodzenia zapisuje do pliku z logiem
+ * \param name nazwa mapy do załadowania
+ * \return Powodzenie operacji
+ **/
 bool TileMap::loadMap(const std::string name){	
 	std::chrono::time_point<std::chrono::system_clock> start,end;
 	start = std::chrono::system_clock::now();
@@ -33,11 +42,11 @@ bool TileMap::loadMap(const std::string name){
 	TiXmlElement *image;
 	image = tilesetElement->FirstChildElement("image");
 	std::string imgpath = image->Attribute("source");
-	LOG(INFO) << "Szerokość mapy:"<< width_in_tiles
-			  << " Wysokość mapy:" << height_in_tiles
+	LOG(INFO) << "Szerokość mapy:"   << width_in_tiles
+			  << " Wysokość mapy:"   << height_in_tiles
 			  << " Szerokość kafla:" << tile_width
-			  << " Wysokość kafla:" << tile_height
-			  << " Pierwsze ID:" << firstTID;
+			  << " Wysokość kafla:"  << tile_height
+			  << " Pierwsze ID:"     << firstTID;
 	if(!m_tileset.loadFromFile(imgpath)){
 		LOG(ERROR) << "Nie udało sie wczytać tilemapki" << std::endl;
 		return false;
@@ -56,6 +65,12 @@ bool TileMap::loadMap(const std::string name){
 	LOG(DEBUG) << "Załadowano mape, czas wykonania: " << elapsed.count();
 	return true;
 }
+/**
+ * \brief Ładuje statyczne kafle 
+ * \param layer warstwa kafli
+ * \return Powodzenie operacji
+ * \details stan loguje do pliku
+ **/
 bool TileMap::loadTiles(TiXmlElement *layer, unsigned int firstTID){
 	unsigned int layerNum, numz;
 	unsigned int x,y;
@@ -82,12 +97,12 @@ bool TileMap::loadTiles(TiXmlElement *layer, unsigned int firstTID){
 			if(lName == "other"){
 				appendTile(x,y,tileNumber, BG_DECORATION);
 			}
-			if(lName == "solid" && tileNumber != -1){	// Jeśli obiekt solid to zapisujemy jego 	
-														// x i y ( w kaflach )
+			if(lName == "solid" && tileNumber != -1){	
+														
 				appendTile(x,y,tileNumber, ITEM);
 				solidTiles.push_back(SolidTile(x,y,tileNumber));
 			}
-			tile = tile->NextSiblingElement("tile");    // Ustaw wskaźnik na następny kafel
+			tile = tile->NextSiblingElement("tile");    
 			x++;
 			if (x >= width_in_tiles){
 				x = 0;
@@ -104,6 +119,13 @@ bool TileMap::loadTiles(TiXmlElement *layer, unsigned int firstTID){
 	LOG(INFO) << "[loadTiles]Kafle załadowane poprawnie";
 	return true;
 }
+/**
+ * \brief Ładuje obiekty
+ * \param objectsGroup obiekty w xmlu
+ * \details Ładuje obiekty oraz rysuje je na mapie
+ * 	(obiekty tj. wszystko co nie jest kafelkiem)
+ * \return null
+ **/
 void TileMap::loadObjects(TiXmlElement *objectsGroup, unsigned int firstTID){
 	unsigned int id,ix, iy, i_gid;
 	id=ix=iy=i_gid=0;
@@ -146,7 +168,7 @@ void TileMap::loadObjects(TiXmlElement *objectsGroup, unsigned int firstTID){
 					_ani.setTileset(m_tileset);
 					for(size_t i = 0;i<steps;++i)
 						_ani.addFrameGID(i_gid + i);// Magic number, wybaczcie(iy-1)
-					animated.push_back(AnimatedTile(ix,iy-1,speed,_ani));
+					animated.push_back(AnimatedTile(ix,iy-1,speed,_ani,tile_width,tile_height));
 				}
 				if(name == "npc"){
 					if(object->Attribute("id") == NULL   || object->Attribute("gid") == NULL  ||
@@ -175,9 +197,13 @@ void TileMap::loadObjects(TiXmlElement *objectsGroup, unsigned int firstTID){
 	}
 	LOG(INFO) << "Obiekty załadowane";
 }
+/**
+ * \brief Odswieża animacje
+ * \details Resetuje zegar i zmienia klatki animacji na mapie
+ **/
 void TileMap::refreshAnimations()
 {
-	sf::Time frameTime = _thandle->restart();
+	sf::Time frameTime = _clock.restart();
 	std::vector<AnimatedTile>::iterator it = animated.begin();
 	for(;it!=animated.end();++it){
 		it->txt.play(it->anim);
@@ -185,6 +211,10 @@ void TileMap::refreshAnimations()
 	}
 }
 //blend
+/**
+ * \brief Rysuje mape
+ * \details Rysuje animacje i wszystko co jest na mapie
+ **/
 void TileMap::draw(sf::RenderTarget& target, sf::RenderStates states) const{
 	states.transform *= getTransform();
 	states.texture = &m_tileset;
@@ -196,6 +226,16 @@ void TileMap::draw(sf::RenderTarget& target, sf::RenderStates states) const{
 	for(;it!=animated.end();++it)
 		it->txt.draw(target,states);
 }
+/** \brief Usuwa item z mapy
+ *  \details Wyszukuje w wektorze itemów na mapie itema o danym xy i usuwa go,
+ *   dodaje item o danym id do ItemManagera i ustawia mu flage picked
+ *   w klasie ItemManager (oznacza to że item został podniesiony z mapy raz
+ *   i przy kolejnym załadowaniu mapy już nie zostanie wyrenderowany)
+ *   docelowo flagi picked będą zapisywane w save (ale to jest TODO)
+ *   \param xy wektor z pozycją gracza
+ *   \return Jeśli item podniesiony true, jeśli pod współrzędnymi nie ma 
+ *    itema to false
+ **/
 bool TileMap::pickItem(sf::Vector2u xy){
 	std::vector<Item>::iterator it = 
 	std::find_if(itemsOnMap.begin(),itemsOnMap.end(),std::bind(xyCompare<Item>, std::placeholders::_1,xy));
@@ -209,6 +249,14 @@ bool TileMap::pickItem(sf::Vector2u xy){
 	else
 		return false;
 }
+/**
+ * \brief Dodaje item do mapy
+ * \details Wyszukuje item o danym id (id są unikalne) w itemach gracza (Klasie 
+ *  ItemManager) i usuwa ją z vectora w tej klasie, a następnie dodaje 
+ * do itemków na mapie
+ * \param id id itemu
+ * \return Jeśli istnieje item o takim id true w przeciwnym wypadku false
+ **/
 bool TileMap::dropItem(const int id){
 	Item i = imgr->getItem(id);
 	if((i.x != 0 && i.y != 0 && i.valid != 0)){
@@ -219,6 +267,15 @@ bool TileMap::dropItem(const int id){
 	}
 	return false;
 }
+/**
+ * \brief Dodaje kratke do mapy na podstawie GID
+ * \details Dodaje do tablicy vertexów kafelek (item,obiekt - dla każdego typu
+ * osobna tablica vertexów)
+ * \param x,y współrzędne (po przeliczeniu na normalne współrzędne tj. podawane w kaflach)
+ * gid numer kafelka w tilemapce
+ * TILETYPE rodzaj 
+ *  \return null
+ **/
 void TileMap::appendTile(const unsigned int x,const unsigned int y, const unsigned int GID,TILETYPE bgLayer){
 	sf::Int32 tu = GID % (m_tileset.getSize().x / tile_width);
 	sf::Int32 tv = GID / (m_tileset.getSize().x / tile_height);
@@ -251,7 +308,16 @@ void TileMap::appendTile(const unsigned int x,const unsigned int y, const unsign
 	quad[2].texCoords = sf::Vector2f((tu + 1) * tile_width, (tv + 1) * tile_height);
 	quad[3].texCoords = sf::Vector2f(tu * tile_width, (tv + 1) * tile_height);
 }
-inline bool TileMap::isItem(const sf::Vector2u vct, int& _id) const{
+/**
+ * \brief Zwraca boola czy pod danym xy jest item
+ * \details Zwraca boola czy pod danym xy jest item, i jeśli tak
+ * ustawia przez referencje jego id, jeśli nie to przez referencje 
+ * zosanie ustawione -1
+ * \param vct współrzędne _id referencja do inta
+ * \return true i id w referencji jeśli xy to item
+ *         false i -1 w referencji jeśli xy nie jest itemem
+ **/
+bool TileMap::isItem(const sf::Vector2u vct, int& _id) const{
 	std::vector<Item>::const_iterator it = 
 	std::find_if(itemsOnMap.begin(), itemsOnMap.end(), std::bind(xyCompare<Item>, std::placeholders::_1,vct));
 	if(it != itemsOnMap.end()){
@@ -263,6 +329,12 @@ inline bool TileMap::isItem(const sf::Vector2u vct, int& _id) const{
 	return false;
 	}
 }
+/**
+ * \brief Zwraca bool czy xy jest solidną kratka
+ * \details Zwraca bool czy xy jest solidna kratka (taka na którą nie można wejść)
+ * \param vct współrzędne
+ * \return Jeśli xy solidne true, w przeciwnym wypadku false
+ **/
 bool TileMap::isSolidTile(sf::Vector2u vct) const{
 	std::vector<SolidTile>::const_iterator it = 
 	std::find_if(solidTiles.begin(), solidTiles.end(), std::bind(xyCompare<SolidTile>, std::placeholders::_1, vct));
@@ -272,6 +344,12 @@ bool TileMap::isSolidTile(sf::Vector2u vct) const{
 	else 
 		return false;
 }
+/**
+ * \brief Zwraca bool czy xy jest portalem
+ * \details Zwraca bool czy xy jest portalem ( linkiem do innej mapy )
+ * \param vct współrzędne
+ * \return true jeśli portal, w przeciwnym wypadku false
+ **/
 bool TileMap::isPortal(sf::Vector2u vct){
 	std::vector<PortalTile>::iterator it=
 	std::find_if(portals.begin(), portals.end(), std::bind(xyCompare<PortalTile>, std::placeholders::_1, vct));
@@ -281,6 +359,13 @@ bool TileMap::isPortal(sf::Vector2u vct){
 	}
 	else return false;
 }
+/**
+ * \brief Przeładowywuje mapke jeśli dane xy jest portalem(linkiem)
+ * \details Przeładowywuje mapke (czyści tablice vertexów, oraz itemy na mapie)
+ *  ustawia współrzędne gracza i wywołuje metode loadMap()
+ * \param vct Współrzędne
+ * \return Nowe współrzędne w których ma pojawić sie gracz lub wektor(0,0) jeśli błąd
+ **/
 sf::Vector2f TileMap::reload(sf::Vector2u &vct){
 	std::string name;
 	std::vector<PortalTile>::iterator it=
@@ -305,6 +390,13 @@ sf::Vector2f TileMap::reload(sf::Vector2u &vct){
 	}
 	return sf::Vector2f(0,0);
 }
+/**
+ * \brief Zwraca GID itemu na podstawie ID
+ * \details Wyszukuje w vectorze itemów na mapie itemu o danym id
+ * i zwraca jego GID
+ * \param id id przedmiotu
+ * \return GID przedmiotu jeśli istnieje item o takim id na mapie, w przeciwnym wypadku -1
+ **/
 int TileMap::getGID(size_t id) const{
 	std::vector<Item>::const_iterator it=
 	std::find(itemsOnMap.begin(),itemsOnMap.end(),Item(0,0,0,id,0));
@@ -313,15 +405,25 @@ int TileMap::getGID(size_t id) const{
 	}
 	else return -1;
 }
+/**
+ * \brief Zwraca referencje do tilesetu
+ * \return sf::Texture&
+ **/
 const sf::Texture& TileMap::getTexture() const{
 	return m_tileset;
 }
-void TileMap::setTimeHandle(sf::Clock* _handle){
-	_thandle = _handle;
-}
+/**
+ * \brief Ustawia uchwyt do klasy NpcManager
+ * \details Ustawia uchwyt do klasy NpcManager
+ **/
 void TileMap::setNPCManagerHandle(NpcManager * _hnd){
 	nmgr = _hnd;
 }
-inline void TileMap::setItemManagerHandle(ItemManager*  igr){
+/**
+ * \brief Ustawia uchwyt do klasy ItemManager
+ * \details Klasa mapy potrzebuje informacji o itemach
+ * i dlatego potrzebny jest tu uchwyt
+ **/
+void TileMap::setItemManagerHandle(ItemManager*  igr){
 	imgr = igr;
 }

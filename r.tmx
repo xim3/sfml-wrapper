@@ -1938,7 +1938,7 @@
   <object id="38" gid="1244" x="672" y="512" speed="0.4" steps="7"/>
  </objectgroup>
  <objectgroup name="npc">
-  <object id="1" name="zenek" gid="134" x="300" y="500" file="zenek.xml"/>
-  <object id="2" name="john"  gid="199" x="300" y="360" file="zenek.xml"/>
+  <object id="1" name="Mariusz" gid="134" x="300" y="500" file="zenek.xml"/>
+  <object id="2" name="Zbychu"  gid="199" x="300" y="360" file="zenek.xml"/>
  </objectgroup>
 </map>

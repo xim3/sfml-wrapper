@@ -1,6 +1,11 @@
 #pragma once
 #include <SFML/Graphics/Rect.hpp>
+#include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Texture.hpp>
+/**
+ * \brief Klasa przechowująca klatki animacji i ich teksture
+ * 
+ **/
 class Animation
 {
 public:
@@ -19,4 +24,3 @@ private:
     unsigned int tile_width = 32;
     unsigned int tile_height= 32;
 };
-#include "Animation.cpp"

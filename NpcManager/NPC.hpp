@@ -1,3 +1,8 @@
+#pragma once
+#include <string>
+#include <SFML/Graphics.hpp>
+#include "../Resources/tinyxml/tinyxml.h"
+#include "../Resources/easylogging++.h"
 struct NPC
 {
 		NPC();
