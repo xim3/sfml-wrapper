@@ -1,6 +1,6 @@
 #include "StaticTiledMap.hpp"
 #include "Item.h"
-#include "Utils.cpp"
+#include "../Resources/Utils.cpp"
 #include "../tinyxml/tinyxml.h"
 /**
  * \brief Ładuje mape z pliku 
@@ -139,8 +139,6 @@ void TileMap::loadObjects(TiXmlElement *objectsGroup, unsigned int firstTID){
 			ix    = (atoi(object->Attribute("x"))) / tile_width; 
 			iy 	  = (atoi(object->Attribute("y"))) / tile_width;
 			if(imgr != nullptr){
-			//std::vector<Item>::const_iterator it = 
-			//std::find(solidTiles.begin(), solidTiles.end(), std::bind(xyCompare<Item,SolidTile>, std::placeholders::_1,xy);
 				if(name == "obj"){
 					if(imgr->isPicked(id) == false){
 						appendTile(ix,iy,i_gid,ITEM);
@@ -404,6 +402,20 @@ int TileMap::getGID(size_t id) const{
 		return it->gid;
 	}
 	else return -1;
+}
+/**
+ * \brief Zwraca rozmiary mapy w kaflach
+ * \return Rozmiary mapy
+ */
+sf::Vector2u TileMap::getSize() const{
+	return sf::Vector2u(width_in_tiles,height_in_tiles);
+}
+/**
+ * \brief Zwraca rozmiary mapy w floacie
+ * \return Rozmiary w float
+ */
+sf::Vector2f TileMap::getSizeFloat()const{
+	return sf::Vector2f(width_in_tiles*tile_width,height_in_tiles*tile_height);
 }
 /**
  * \brief Zwraca referencje do tilesetu

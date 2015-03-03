@@ -8,7 +8,7 @@
 #include <cassert>
 #include "Item.h"
 #include "Tiles.h"
-#include "Utils.cpp"
+#include "../Resources/Utils.cpp"
 /**
  * \brief Manager itemów gracza
  */

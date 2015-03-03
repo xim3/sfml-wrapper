@@ -2,7 +2,7 @@
 #include "../Resources/tinyxml/tinyxml.h"
 #include "../Resources/easylogging++.h"
 /**
- * \brief zwraca liczbe itemów w 'plecaku'
+ * \brief zwraca liczbe itemów w plecaku
  * 
  **/
 std::size_t ItemManager::playerItemCount() const{
@@ -72,8 +72,7 @@ void ItemManager::update(const sf::Vector2u &vct){
  * \param nazwa pliku XML z danymi itemów
  * \return powodzenie operacji
  */
-bool ItemManager::loadItems(std::string name)
-{
+bool ItemManager::loadItems(std::string name){
 	TiXmlDocument doc(name.c_str());
 	if(!doc.LoadFile()){
 		LOG(ERROR) << "Nie udało sie wczytać pliku \"" << name << "\".";
@@ -146,8 +145,7 @@ bool ItemManager::loadItems(std::string name)
  * \return jeśli znaleziono to ItemData z danymi, jeśli nie to ItemData
  * z wyzerowanymi polami i nazwą "undefined"
  */
-ItemData ItemManager::getData(size_t gid) const
-{
+ItemData ItemManager::getData(size_t gid) const{
 	std::vector<ItemData>::const_iterator it = 
 	std::find(itemsinfo.begin(), itemsinfo.end(), ItemData(WEAPON,"","",0,0,0,0,0,0,gid));
 	if(it != itemsinfo.end())
@@ -157,8 +155,7 @@ ItemData ItemManager::getData(size_t gid) const
 /**
  * \brief zwraca GID itemu na podstawie ID
  */
-int ItemManager::getGID(size_t id) const
-{
+int ItemManager::getGID(size_t id) const{
 	return getItem(id).gid;
 }
 /**
@@ -179,4 +176,3 @@ void ItemManager::setPicked(size_t id){
 bool ItemManager::isPicked(size_t id) const{
 	return picked[id];
 }
-

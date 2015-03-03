@@ -4,6 +4,11 @@
 #include <SFML/Graphics.hpp>
 #include "ItemManager.hpp"
 #include "../NpcManager/NpcManager.hpp"
+/**
+ * \brief Typ kafla
+ * \details BG - Tło BG_DECORATION - Dekoracja, wyświetlane na warstwie tła
+ *   		ITEM - Przedmiot PORTAL - Portal, M_NPC - NPC
+ */
 enum TILETYPE{BG, BG_DECORATION, ITEM, PORTAL, M_NPC};
 /**
  * \brief Klasa renderująca mape
@@ -24,10 +29,12 @@ class TileMap : public sf::Drawable, public sf::Transformable
 		bool       	 dropItem(const int);
 		bool       	 isSolidTile(sf::Vector2u) const;
 		sf::Vector2f reload(sf::Vector2u&);
-		int		     getGID(size_t) const;
+		int          getGID(size_t) const;
 		const sf::Texture& getTexture() const;
-		void	     refreshAnimations();
-		void 	     setNPCManagerHandle(NpcManager *);
+		void         refreshAnimations();
+		void         setNPCManagerHandle(NpcManager *);
+		sf::Vector2u getSize() const;
+		sf::Vector2f getSizeFloat() const;
 		// Tylko do debugowania //
 		/*** \brief Funkcja do debugowania**/
 		void printSolidTiles(){for(auto it = solidTiles.begin();it!=solidTiles.end();++it){printf("x:%i, y:%i gid:%i\n",it->x,it->y, it->gid);  }}
@@ -38,17 +45,17 @@ class TileMap : public sf::Drawable, public sf::Transformable
 		void            appendTile(const unsigned int, const unsigned int, const unsigned int, TILETYPE bgLayer);
 		void            loadObjects(TiXmlElement*, unsigned int);
 		virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const;
-		bool		    loadTiles(TiXmlElement*, unsigned int);
+		bool            loadTiles(TiXmlElement*, unsigned int);
 		/*** \brief Tablica vertexów tła*/
-	    sf::VertexArray m_vertices;	
+        sf::VertexArray m_vertices;	
 	    /*** \brief Tablica vertexów dekoracji oraz NPC*/	
-	    sf::VertexArray m_vertices_bg1; 
+        sf::VertexArray m_vertices_bg1; 
 	    /*** \brief Tablica vertexów itemów*/
-	    sf::VertexArray m_other_vertices;
+        sf::VertexArray m_other_vertices;
 	    /*** \brief Tablica vertexów portali*/
 	    sf::VertexArray m_portals;	
 	    /*** \brief Tekstura kafli*/
-		sf::Texture     m_tileset;
+        sf::Texture     m_tileset;
 		unsigned int    width_in_tiles;
 		unsigned int    height_in_tiles;
 		unsigned int    tile_width;
@@ -66,6 +73,8 @@ class TileMap : public sf::Drawable, public sf::Transformable
 		std::vector<Item> itemsOnMap;
 		/** \brief Zegar mapy (do animacji)*/
 		sf::Clock _clock;
+		/** \brief Delegacja do NpcManagera */
 		NpcManager  *nmgr = nullptr;
+		/** \brief Delegacja do ItemManagera */
 		ItemManager *imgr = nullptr;		
 };
