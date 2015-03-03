@@ -27,13 +27,12 @@ int main()
     el::Loggers::reconfigureAllLoggers(conf);
     window.setFramerateLimit(60);
 
-
-
     ItemManager imgr;
     NpcManager nmgr;
     TileMap map;
     Player gamer;
-    
+    Entity a;
+    a.load("npc.xml");
     gamer.load("player.xml");
     map.setItemManagerHandle(&imgr);
     map.setNPCManagerHandle(&nmgr);
@@ -41,6 +40,7 @@ int main()
 	imgr.loadItems("items.xml");
 
 	gamer.setPosition(10,10);
+	a.setPosition(3,3);
 	sf::Vector2f aPos;
 	sf::Vector2u pzz;
 	sf::Int32 itemId = 0;
@@ -67,7 +67,7 @@ int main()
 	isit = map.isItem(pzz,itemId);
 	sol = map.isSolidTile(pzz);
 	por = map.isPortal(pzz);
-	printf("X:%i Y:%i, solid:%i item:%i itemId:%i playerit:%i items:%i iid:%i portal:%i near:%i \n",pzz.x,pzz.y, sol,isit, itemId, imgr.playerItemCount(), map.itemsOnMapCount(),iid,por, nmgr.nearNPC(pzz));
+	//printf("X:%i Y:%i, solid:%i item:%i itemId:%i playerit:%i items:%i iid:%i portal:%i near:%i \n",pzz.x,pzz.y, sol,isit, itemId, imgr.playerItemCount(), map.itemsOnMapCount(),iid,por, nmgr.nearNPC(pzz));
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
     {
 	  	if(isit == false && sol == false)
@@ -130,12 +130,15 @@ int main()
 		ItemData idat = imgr.getData(imgr.getGID(iid));
 		printf("Item %s %s\n", idat.description.c_str(),idat.name.c_str());
 	}
+	
     map.refreshAnimations();
 	imgr.update(pzz);
     window.setView(cam);
+    a.update();
     gamer.update();
     window.clear();
     window.draw(map);
+    window.draw(a);
     window.draw(gamer);
     window.display();
     }

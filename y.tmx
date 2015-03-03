@@ -2769,6 +2769,6 @@
   <object id="47" gid="882" x="448" y="384" speed="0.2" steps="4"/>
   <object id="48" gid="882" x="480" y="384" speed="0.2" steps="4"/>
   <object id="49" gid="882" x="512" y="384" speed="0.2" steps="4"/>
-  <object id="50" gid="769" x="64" y="320" speed="0.2" steps="11"/>
+  <object id="50" gid="769" x="64" y="320" speed="0.2" steps="115"/>
  </objectgroup>
 </map>

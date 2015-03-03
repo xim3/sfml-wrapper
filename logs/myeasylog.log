@@ -1,0 +1,22 @@
+2015-03-03 14:40:23,716 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:40:23,716 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 14:40:47,965 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:40:47,965 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 14:41:03,198 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:41:03,199 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 14:41:30,093 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:41:30,094 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 14:41:45,666 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:41:45,667 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 14:42:03,472 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:42:03,472 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 14:42:20,938 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:42:20,938 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 14:42:42,366 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:42:42,366 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 14:42:54,064 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:42:54,065 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 14:43:15,255 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:43:15,255 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 14:43:30,333 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 14:43:30,333 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]

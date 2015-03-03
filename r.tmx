@@ -1923,7 +1923,7 @@
   <object id="21" gid="1253" x="320" y="288" speed="0.2" steps="7"/>
   <object id="24" gid="1253" x="256" y="320" speed="0.1" steps="7"/>
   <object id="25" gid="1253" x="288" y="320" speed="0.5" steps="7"/>
-  <object id="26" gid="1253" x="320" y="320" speed="0.4" steps="7"/>
+  <object id="26" gid="1253" x="320" y="320" speed="0.001" steps="7"/>
   <object id="27" gid="1253" x="320" y="256" speed="0.3" steps="7"/>
   <object id="28" gid="1253" x="288" y="256" speed="0.2" steps="7"/>
   <object id="29" gid="1253" x="256" y="256" speed="0.6" steps="7"/>

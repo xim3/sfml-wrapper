@@ -1,22 +1,31 @@
-#ifndef EQUIPMENT_H
-#define EQUIPMENT_H
+#pragma once
 #include "EquipmentItem.h"
+#include <SFML/Graphics.hpp>
 
-class Equipment
+class Equipment : public sf::Drawable, public sf::Transformable
 {
     public:
-        Equipment(sf::Texture &txt, sf::Vector2f position);
-
+        Equipment(std::string,std::string,sf::RenderWindow*,int,int,
+        sf::Vector2f position, int tile_width , int tile_height );
         void addItem(EquipmentItem new_item);
         void removeItem(int id);
-        void draw(sf::RenderWindow &window);
-        void loadTexture(const std::string name);
-        void showBox(sf::RenderWindow &window, sf::Event &event); //dziala prawie jak metoda click z klasy EquipmentItem tylko ze na wielu elementach
+        void draw(sf::RenderTarget &, sf::RenderStates) const;
+        void loadTextureBg(const std::string);
+        void loadTextureItems(const std::string);
+        void appendItem(unsigned int,unsigned int,unsigned int);
+        void showBox() const; 
+        void setPosition(sf::Vector2f);
     private:
         std::vector <EquipmentItem> items;
-        sf::Sprite background; //background, it's can be for example: shop, player equipment, trading with npc
-        sf::Texture itemsTex;
+        sf::Sprite background; 
+        sf::Texture _bg1;
+        sf::Texture _it1;
+        sf::RenderWindow* window;
+        sf::VertexArray item_grid;
+        int width_in_tiles;
+        int height_in_tiles;
+        int tile_width;
+        int tile_height;
 
 };
 
-#endif // EQUIPMENT_H

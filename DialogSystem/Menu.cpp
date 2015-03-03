@@ -4,7 +4,7 @@ Menu::Menu(sf::Color default_, sf::Color second, int font_size)
 {
     position = 0;
     colors[0] = default_; colors[1] = second;
-    font.loadFromFile("mariofont.ttf"); //Unikaj wpisywania na sztywno wartoœci
+    font.loadFromFile("mariofont.ttf"); //nie wpisuj nic na sztywno..
     header[0].setString("Start"); header[1].setString("Informations"); header[2].setString("Exit");
     for(int x = 0; x < 3; x++)
     {

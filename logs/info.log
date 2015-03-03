@@ -1,1 +1,790 @@
-
+2015-03-03 16:19:47,123819 Ludzik załadowany
+2015-03-03 16:19:47,124187 Ludzik załadowany
+2015-03-03 16:19:47,126382 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:19:47,126441 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:19:47,240275 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:19:47,240372 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:19:47,240381 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:19:47,240385 Obiekty załadowane
+2015-03-03 16:19:47,240410 Załadowano mape, czas wykonania: 0.116183
+2015-03-03 16:19:47,240833 Załadowano dane7 itemów.
+2015-03-03 16:19:53,935955 Ludzik załadowany
+2015-03-03 16:19:53,936309 Ludzik załadowany
+2015-03-03 16:19:53,938460 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:19:53,938513 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:19:54,057531 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:19:54,057657 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:19:54,057666 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:19:54,057670 Obiekty załadowane
+2015-03-03 16:19:54,057695 Załadowano mape, czas wykonania: 0.121349
+2015-03-03 16:19:54,058195 Załadowano dane7 itemów.
+2015-03-03 16:19:57,939159 Ludzik załadowany
+2015-03-03 16:19:57,939508 Ludzik załadowany
+2015-03-03 16:19:57,941390 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:19:57,941439 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:19:58,052242 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:19:58,052339 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:19:58,052347 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:19:58,052351 Obiekty załadowane
+2015-03-03 16:19:58,052375 Załadowano mape, czas wykonania: 0.11283
+2015-03-03 16:19:58,052792 Załadowano dane7 itemów.
+2015-03-03 16:20:00,957707 Portal to "t.tmx".
+2015-03-03 16:20:00,974460 Portal to "t.tmx".
+2015-03-03 16:20:00,991170 Portal to "t.tmx".
+2015-03-03 16:20:01,007916 Portal to "t.tmx".
+2015-03-03 16:20:01,024632 Portal to "t.tmx".
+2015-03-03 16:20:01,041389 Portal to "t.tmx".
+2015-03-03 16:20:01,058139 Portal to "t.tmx".
+2015-03-03 16:20:01,074847 Portal to "t.tmx".
+2015-03-03 16:20:01,091621 Portal to "t.tmx".
+2015-03-03 16:20:01,108322 Portal to "t.tmx".
+2015-03-03 16:20:01,125058 Portal to "t.tmx".
+2015-03-03 16:20:01,141816 Portal to "t.tmx".
+2015-03-03 16:20:01,158530 Portal to "t.tmx".
+2015-03-03 16:20:01,175276 Portal to "t.tmx".
+2015-03-03 16:20:01,192008 Portal to "t.tmx".
+2015-03-03 16:20:01,208719 Portal to "t.tmx".
+2015-03-03 16:20:01,225474 Portal to "t.tmx".
+2015-03-03 16:20:01,242206 Portal to "t.tmx".
+2015-03-03 16:20:01,258927 Portal to "t.tmx".
+2015-03-03 16:20:01,275660 Portal to "t.tmx".
+2015-03-03 16:20:01,292394 Portal to "t.tmx".
+2015-03-03 16:20:01,309124 Portal to "t.tmx".
+2015-03-03 16:20:01,325862 Portal to "t.tmx".
+2015-03-03 16:20:01,342606 Portal to "t.tmx".
+2015-03-03 16:20:01,359330 Portal to "t.tmx".
+2015-03-03 16:20:01,376068 Portal to "t.tmx".
+2015-03-03 16:20:01,392819 Portal to "t.tmx".
+2015-03-03 16:20:01,409554 Portal to "t.tmx".
+2015-03-03 16:20:01,426279 Portal to "t.tmx".
+2015-03-03 16:20:01,443004 Portal to "t.tmx".
+2015-03-03 16:20:01,459745 Portal to "t.tmx".
+2015-03-03 16:20:01,476469 Portal to "t.tmx".
+2015-03-03 16:20:01,493223 Portal to "t.tmx".
+2015-03-03 16:20:01,509957 Portal to "t.tmx".
+2015-03-03 16:20:01,526715 Portal to "t.tmx".
+2015-03-03 16:20:01,530733 Wczytano poprawnie plik "t.tmx".
+2015-03-03 16:20:01,530847 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:01,645042 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:01,645068 Obiekty załadowane
+2015-03-03 16:20:01,645082 Załadowano mape, czas wykonania: 0.117814
+2015-03-03 16:20:01,646201 Portal to "r.tmx".
+2015-03-03 16:20:01,662939 Portal to "r.tmx".
+2015-03-03 16:20:01,679684 Portal to "r.tmx".
+2015-03-03 16:20:01,696409 Portal to "r.tmx".
+2015-03-03 16:20:01,713146 Portal to "r.tmx".
+2015-03-03 16:20:01,729865 Portal to "r.tmx".
+2015-03-03 16:20:01,746610 Portal to "r.tmx".
+2015-03-03 16:20:01,763335 Portal to "r.tmx".
+2015-03-03 16:20:01,780067 Portal to "r.tmx".
+2015-03-03 16:20:01,796797 Portal to "r.tmx".
+2015-03-03 16:20:01,813534 Portal to "r.tmx".
+2015-03-03 16:20:01,830265 Portal to "r.tmx".
+2015-03-03 16:20:01,847008 Portal to "r.tmx".
+2015-03-03 16:20:01,863734 Portal to "r.tmx".
+2015-03-03 16:20:01,880461 Portal to "r.tmx".
+2015-03-03 16:20:01,897196 Portal to "r.tmx".
+2015-03-03 16:20:01,913931 Portal to "r.tmx".
+2015-03-03 16:20:01,930653 Portal to "r.tmx".
+2015-03-03 16:20:01,947386 Portal to "r.tmx".
+2015-03-03 16:20:01,964111 Portal to "r.tmx".
+2015-03-03 16:20:01,980839 Portal to "r.tmx".
+2015-03-03 16:20:01,997575 Portal to "r.tmx".
+2015-03-03 16:20:02,014310 Portal to "r.tmx".
+2015-03-03 16:20:02,031027 Portal to "r.tmx".
+2015-03-03 16:20:02,047787 Portal to "r.tmx".
+2015-03-03 16:20:02,064514 Portal to "r.tmx".
+2015-03-03 16:20:02,081242 Portal to "r.tmx".
+2015-03-03 16:20:02,097978 Portal to "r.tmx".
+2015-03-03 16:20:02,114707 Portal to "r.tmx".
+2015-03-03 16:20:02,131432 Portal to "r.tmx".
+2015-03-03 16:20:02,148148 Portal to "r.tmx".
+2015-03-03 16:20:02,164867 Portal to "r.tmx".
+2015-03-03 16:20:02,181597 Portal to "r.tmx".
+2015-03-03 16:20:02,198332 Portal to "r.tmx".
+2015-03-03 16:20:02,215060 Portal to "r.tmx".
+2015-03-03 16:20:02,231785 Portal to "r.tmx".
+2015-03-03 16:20:02,248527 Portal to "r.tmx".
+2015-03-03 16:20:02,265245 Portal to "r.tmx".
+2015-03-03 16:20:02,281975 Portal to "r.tmx".
+2015-03-03 16:20:02,298704 Portal to "r.tmx".
+2015-03-03 16:20:02,315442 Portal to "r.tmx".
+2015-03-03 16:20:02,332169 Portal to "r.tmx".
+2015-03-03 16:20:02,348865 Portal to "r.tmx".
+2015-03-03 16:20:02,365597 Portal to "r.tmx".
+2015-03-03 16:20:02,382323 Portal to "r.tmx".
+2015-03-03 16:20:02,399057 Portal to "r.tmx".
+2015-03-03 16:20:02,415788 Portal to "r.tmx".
+2015-03-03 16:20:02,432512 Portal to "r.tmx".
+2015-03-03 16:20:02,449251 Portal to "r.tmx".
+2015-03-03 16:20:02,465971 Portal to "r.tmx".
+2015-03-03 16:20:02,482711 Portal to "r.tmx".
+2015-03-03 16:20:02,499460 Portal to "r.tmx".
+2015-03-03 16:20:02,516171 Portal to "r.tmx".
+2015-03-03 16:20:02,532903 Portal to "r.tmx".
+2015-03-03 16:20:02,549634 Portal to "r.tmx".
+2015-03-03 16:20:02,566384 Portal to "r.tmx".
+2015-03-03 16:20:02,583126 Portal to "r.tmx".
+2015-03-03 16:20:02,599833 Portal to "r.tmx".
+2015-03-03 16:20:02,616563 Portal to "r.tmx".
+2015-03-03 16:20:02,633293 Portal to "r.tmx".
+2015-03-03 16:20:02,650013 Portal to "r.tmx".
+2015-03-03 16:20:02,666738 Portal to "r.tmx".
+2015-03-03 16:20:02,683469 Portal to "r.tmx".
+2015-03-03 16:20:02,700203 Portal to "r.tmx".
+2015-03-03 16:20:02,716929 Portal to "r.tmx".
+2015-03-03 16:20:02,733663 Portal to "r.tmx".
+2015-03-03 16:20:02,750398 Portal to "r.tmx".
+2015-03-03 16:20:02,767118 Portal to "r.tmx".
+2015-03-03 16:20:02,783859 Portal to "r.tmx".
+2015-03-03 16:20:02,800588 Portal to "r.tmx".
+2015-03-03 16:20:02,817325 Portal to "r.tmx".
+2015-03-03 16:20:02,834056 Portal to "r.tmx".
+2015-03-03 16:20:02,850791 Portal to "r.tmx".
+2015-03-03 16:20:02,867521 Portal to "r.tmx".
+2015-03-03 16:20:02,884282 Portal to "r.tmx".
+2015-03-03 16:20:02,900982 Portal to "r.tmx".
+2015-03-03 16:20:02,917716 Portal to "r.tmx".
+2015-03-03 16:20:02,934449 Portal to "r.tmx".
+2015-03-03 16:20:02,951177 Portal to "r.tmx".
+2015-03-03 16:20:02,967907 Portal to "r.tmx".
+2015-03-03 16:20:02,984657 Portal to "r.tmx".
+2015-03-03 16:20:03,001367 Portal to "r.tmx".
+2015-03-03 16:20:03,018096 Portal to "r.tmx".
+2015-03-03 16:20:03,034822 Portal to "r.tmx".
+2015-03-03 16:20:03,051561 Portal to "r.tmx".
+2015-03-03 16:20:03,068288 Portal to "r.tmx".
+2015-03-03 16:20:03,085022 Portal to "r.tmx".
+2015-03-03 16:20:03,101746 Portal to "r.tmx".
+2015-03-03 16:20:03,118473 Portal to "r.tmx".
+2015-03-03 16:20:03,135207 Portal to "r.tmx".
+2015-03-03 16:20:03,151938 Portal to "r.tmx".
+2015-03-03 16:20:03,168682 Portal to "r.tmx".
+2015-03-03 16:20:03,173090 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:20:03,173208 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:03,288984 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:03,289062 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:03,289069 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:03,289073 Obiekty załadowane
+2015-03-03 16:20:03,289086 Załadowano mape, czas wykonania: 0.119716
+2015-03-03 16:20:03,289768 Portal to "t.tmx".
+2015-03-03 16:20:03,291899 Wczytano poprawnie plik "t.tmx".
+2015-03-03 16:20:03,291953 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:03,402037 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:03,402062 Obiekty załadowane
+2015-03-03 16:20:03,402076 Załadowano mape, czas wykonania: 0.111981
+2015-03-03 16:20:03,402686 Portal to "r.tmx".
+2015-03-03 16:20:03,406954 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:20:03,407018 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:03,521466 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:03,521549 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:03,521558 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:03,521562 Obiekty załadowane
+2015-03-03 16:20:03,521575 Załadowano mape, czas wykonania: 0.118314
+2015-03-03 16:20:03,522251 Portal to "t.tmx".
+2015-03-03 16:20:03,524387 Wczytano poprawnie plik "t.tmx".
+2015-03-03 16:20:03,524440 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:03,638050 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:03,638078 Obiekty załadowane
+2015-03-03 16:20:03,638093 Załadowano mape, czas wykonania: 0.115505
+2015-03-03 16:20:03,638622 Portal to "r.tmx".
+2015-03-03 16:20:03,640999 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:20:03,641055 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:03,752076 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:03,752157 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:03,752165 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:03,752168 Obiekty załadowane
+2015-03-03 16:20:03,752183 Załadowano mape, czas wykonania: 0.113029
+2015-03-03 16:20:03,752820 Portal to "t.tmx".
+2015-03-03 16:20:03,756733 Wczytano poprawnie plik "t.tmx".
+2015-03-03 16:20:03,756843 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:03,871984 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:03,872010 Obiekty załadowane
+2015-03-03 16:20:03,872024 Załadowano mape, czas wykonania: 0.118776
+2015-03-03 16:20:03,872719 Portal to "r.tmx".
+2015-03-03 16:20:03,875034 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:20:03,875088 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:03,985228 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:03,985304 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:03,985312 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:03,985316 Obiekty załadowane
+2015-03-03 16:20:03,985328 Załadowano mape, czas wykonania: 0.112162
+2015-03-03 16:20:03,986464 Portal to "t.tmx".
+2015-03-03 16:20:03,988760 Wczytano poprawnie plik "t.tmx".
+2015-03-03 16:20:03,988816 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:04,098742 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:04,098770 Obiekty załadowane
+2015-03-03 16:20:04,098785 Załadowano mape, czas wykonania: 0.111813
+2015-03-03 16:20:04,099510 Portal to "r.tmx".
+2015-03-03 16:20:04,101728 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:20:04,101782 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:04,211027 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:04,211104 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:04,211112 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:04,211116 Obiekty załadowane
+2015-03-03 16:20:04,211128 Załadowano mape, czas wykonania: 0.111186
+2015-03-03 16:20:04,211814 Portal to "t.tmx".
+2015-03-03 16:20:04,228557 Portal to "t.tmx".
+2015-03-03 16:20:04,245282 Portal to "t.tmx".
+2015-03-03 16:20:04,262006 Portal to "t.tmx".
+2015-03-03 16:20:04,278737 Portal to "t.tmx".
+2015-03-03 16:20:04,295464 Portal to "t.tmx".
+2015-03-03 16:20:04,312196 Portal to "t.tmx".
+2015-03-03 16:20:04,328933 Portal to "t.tmx".
+2015-03-03 16:20:04,345663 Portal to "t.tmx".
+2015-03-03 16:20:04,362402 Portal to "t.tmx".
+2015-03-03 16:20:04,379126 Portal to "t.tmx".
+2015-03-03 16:20:04,395858 Portal to "t.tmx".
+2015-03-03 16:20:04,412591 Portal to "t.tmx".
+2015-03-03 16:20:04,429322 Portal to "t.tmx".
+2015-03-03 16:20:04,446049 Portal to "t.tmx".
+2015-03-03 16:20:04,462787 Portal to "t.tmx".
+2015-03-03 16:20:04,479512 Portal to "t.tmx".
+2015-03-03 16:20:04,496255 Portal to "t.tmx".
+2015-03-03 16:20:04,512974 Portal to "t.tmx".
+2015-03-03 16:20:04,529711 Portal to "t.tmx".
+2015-03-03 16:20:04,546442 Portal to "t.tmx".
+2015-03-03 16:20:04,563171 Portal to "t.tmx".
+2015-03-03 16:20:04,579903 Portal to "t.tmx".
+2015-03-03 16:20:04,596635 Portal to "t.tmx".
+2015-03-03 16:20:04,613366 Portal to "t.tmx".
+2015-03-03 16:20:04,630099 Portal to "t.tmx".
+2015-03-03 16:20:04,646833 Portal to "t.tmx".
+2015-03-03 16:20:04,663569 Portal to "t.tmx".
+2015-03-03 16:20:04,680292 Portal to "t.tmx".
+2015-03-03 16:20:04,697027 Portal to "t.tmx".
+2015-03-03 16:20:04,713762 Portal to "t.tmx".
+2015-03-03 16:20:04,730481 Portal to "t.tmx".
+2015-03-03 16:20:04,747217 Portal to "t.tmx".
+2015-03-03 16:20:04,763946 Portal to "t.tmx".
+2015-03-03 16:20:04,780677 Portal to "t.tmx".
+2015-03-03 16:20:04,797406 Portal to "t.tmx".
+2015-03-03 16:20:04,814811 Portal to "t.tmx".
+2015-03-03 16:20:04,818900 Wczytano poprawnie plik "t.tmx".
+2015-03-03 16:20:04,819012 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:04,931031 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:04,931057 Obiekty załadowane
+2015-03-03 16:20:04,931071 Załadowano mape, czas wykonania: 0.115818
+2015-03-03 16:20:04,931724 Portal to "r.tmx".
+2015-03-03 16:20:04,948451 Portal to "r.tmx".
+2015-03-03 16:20:04,965191 Portal to "r.tmx".
+2015-03-03 16:20:04,981920 Portal to "r.tmx".
+2015-03-03 16:20:04,998645 Portal to "r.tmx".
+2015-03-03 16:20:05,015377 Portal to "r.tmx".
+2015-03-03 16:20:05,032119 Portal to "r.tmx".
+2015-03-03 16:20:05,048848 Portal to "r.tmx".
+2015-03-03 16:20:05,065587 Portal to "r.tmx".
+2015-03-03 16:20:05,082306 Portal to "r.tmx".
+2015-03-03 16:20:05,099066 Portal to "r.tmx".
+2015-03-03 16:20:05,115788 Portal to "r.tmx".
+2015-03-03 16:20:05,132519 Portal to "r.tmx".
+2015-03-03 16:20:05,149267 Portal to "r.tmx".
+2015-03-03 16:20:05,165985 Portal to "r.tmx".
+2015-03-03 16:20:05,182710 Portal to "r.tmx".
+2015-03-03 16:20:05,199446 Portal to "r.tmx".
+2015-03-03 16:20:05,216178 Portal to "r.tmx".
+2015-03-03 16:20:05,232907 Portal to "r.tmx".
+2015-03-03 16:20:05,249864 Portal to "r.tmx".
+2015-03-03 16:20:05,266584 Portal to "r.tmx".
+2015-03-03 16:20:05,283316 Portal to "r.tmx".
+2015-03-03 16:20:05,300063 Portal to "r.tmx".
+2015-03-03 16:20:05,316770 Portal to "r.tmx".
+2015-03-03 16:20:05,333503 Portal to "r.tmx".
+2015-03-03 16:20:05,350240 Portal to "r.tmx".
+2015-03-03 16:20:05,366961 Portal to "r.tmx".
+2015-03-03 16:20:05,384689 Portal to "r.tmx".
+2015-03-03 16:20:05,401413 Portal to "r.tmx".
+2015-03-03 16:20:05,418154 Portal to "r.tmx".
+2015-03-03 16:20:05,434875 Portal to "r.tmx".
+2015-03-03 16:20:05,451608 Portal to "r.tmx".
+2015-03-03 16:20:05,468336 Portal to "r.tmx".
+2015-03-03 16:20:05,485068 Portal to "r.tmx".
+2015-03-03 16:20:05,501802 Portal to "r.tmx".
+2015-03-03 16:20:05,518527 Portal to "r.tmx".
+2015-03-03 16:20:05,535278 Portal to "r.tmx".
+2015-03-03 16:20:05,551989 Portal to "r.tmx".
+2015-03-03 16:20:05,568720 Portal to "r.tmx".
+2015-03-03 16:20:05,585446 Portal to "r.tmx".
+2015-03-03 16:20:05,602178 Portal to "r.tmx".
+2015-03-03 16:20:05,618908 Portal to "r.tmx".
+2015-03-03 16:20:05,635640 Portal to "r.tmx".
+2015-03-03 16:20:05,652374 Portal to "r.tmx".
+2015-03-03 16:20:05,669112 Portal to "r.tmx".
+2015-03-03 16:20:05,685840 Portal to "r.tmx".
+2015-03-03 16:20:05,702576 Portal to "r.tmx".
+2015-03-03 16:20:05,719311 Portal to "r.tmx".
+2015-03-03 16:20:05,736033 Portal to "r.tmx".
+2015-03-03 16:20:05,752763 Portal to "r.tmx".
+2015-03-03 16:20:05,769492 Portal to "r.tmx".
+2015-03-03 16:20:05,786222 Portal to "r.tmx".
+2015-03-03 16:20:05,802955 Portal to "r.tmx".
+2015-03-03 16:20:05,819701 Portal to "r.tmx".
+2015-03-03 16:20:05,836417 Portal to "r.tmx".
+2015-03-03 16:20:05,853152 Portal to "r.tmx".
+2015-03-03 16:20:05,869880 Portal to "r.tmx".
+2015-03-03 16:20:05,886607 Portal to "r.tmx".
+2015-03-03 16:20:05,903341 Portal to "r.tmx".
+2015-03-03 16:20:05,920075 Portal to "r.tmx".
+2015-03-03 16:20:05,936797 Portal to "r.tmx".
+2015-03-03 16:20:05,953584 Portal to "r.tmx".
+2015-03-03 16:20:05,970328 Portal to "r.tmx".
+2015-03-03 16:20:05,987050 Portal to "r.tmx".
+2015-03-03 16:20:06,003786 Portal to "r.tmx".
+2015-03-03 16:20:06,020519 Portal to "r.tmx".
+2015-03-03 16:20:06,037242 Portal to "r.tmx".
+2015-03-03 16:20:06,053980 Portal to "r.tmx".
+2015-03-03 16:20:06,070701 Portal to "r.tmx".
+2015-03-03 16:20:06,087433 Portal to "r.tmx".
+2015-03-03 16:20:06,104180 Portal to "r.tmx".
+2015-03-03 16:20:06,108673 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:20:06,108788 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:06,223024 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:06,223103 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:06,223111 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:06,223115 Obiekty załadowane
+2015-03-03 16:20:06,223128 Załadowano mape, czas wykonania: 0.118194
+2015-03-03 16:20:06,223780 Portal to "t.tmx".
+2015-03-03 16:20:06,240523 Portal to "t.tmx".
+2015-03-03 16:20:06,257266 Portal to "t.tmx".
+2015-03-03 16:20:06,273992 Portal to "t.tmx".
+2015-03-03 16:20:06,290725 Portal to "t.tmx".
+2015-03-03 16:20:06,307459 Portal to "t.tmx".
+2015-03-03 16:20:06,324198 Portal to "t.tmx".
+2015-03-03 16:20:06,340926 Portal to "t.tmx".
+2015-03-03 16:20:06,357652 Portal to "t.tmx".
+2015-03-03 16:20:06,374385 Portal to "t.tmx".
+2015-03-03 16:20:06,391125 Portal to "t.tmx".
+2015-03-03 16:20:06,407857 Portal to "t.tmx".
+2015-03-03 16:20:06,424593 Portal to "t.tmx".
+2015-03-03 16:20:06,441315 Portal to "t.tmx".
+2015-03-03 16:20:06,458054 Portal to "t.tmx".
+2015-03-03 16:20:06,474774 Portal to "t.tmx".
+2015-03-03 16:20:06,491514 Portal to "t.tmx".
+2015-03-03 16:20:06,508269 Portal to "t.tmx".
+2015-03-03 16:20:06,524982 Portal to "t.tmx".
+2015-03-03 16:20:06,541706 Portal to "t.tmx".
+2015-03-03 16:20:06,558442 Portal to "t.tmx".
+2015-03-03 16:20:06,575165 Portal to "t.tmx".
+2015-03-03 16:20:06,591916 Portal to "t.tmx".
+2015-03-03 16:20:06,608634 Portal to "t.tmx".
+2015-03-03 16:20:06,625362 Portal to "t.tmx".
+2015-03-03 16:20:06,642097 Portal to "t.tmx".
+2015-03-03 16:20:06,658823 Portal to "t.tmx".
+2015-03-03 16:20:06,675553 Portal to "t.tmx".
+2015-03-03 16:20:06,692282 Portal to "t.tmx".
+2015-03-03 16:20:06,709014 Portal to "t.tmx".
+2015-03-03 16:20:06,725751 Portal to "t.tmx".
+2015-03-03 16:20:06,742475 Portal to "t.tmx".
+2015-03-03 16:20:06,759211 Portal to "t.tmx".
+2015-03-03 16:20:07,947316 Portal to "y.tmx".
+2015-03-03 16:20:07,964040 Portal to "y.tmx".
+2015-03-03 16:20:07,980763 Portal to "y.tmx".
+2015-03-03 16:20:07,997498 Portal to "y.tmx".
+2015-03-03 16:20:08,014232 Portal to "y.tmx".
+2015-03-03 16:20:08,030963 Portal to "y.tmx".
+2015-03-03 16:20:08,047695 Portal to "y.tmx".
+2015-03-03 16:20:08,064426 Portal to "y.tmx".
+2015-03-03 16:20:08,081149 Portal to "y.tmx".
+2015-03-03 16:20:08,097915 Portal to "y.tmx".
+2015-03-03 16:20:08,114617 Portal to "y.tmx".
+2015-03-03 16:20:08,131345 Portal to "y.tmx".
+2015-03-03 16:20:08,148092 Portal to "y.tmx".
+2015-03-03 16:20:08,151168 Wczytano poprawnie plik "y.tmx".
+2015-03-03 16:20:08,151221 Szerokość mapy:30 Wysokość mapy:30 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:08,261216 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:08,261290 Obiekty załadowane
+2015-03-03 16:20:08,261305 Załadowano mape, czas wykonania: 0.112753
+2015-03-03 16:20:08,262272 Portal to "r.tmx".
+2015-03-03 16:20:08,279013 Portal to "r.tmx".
+2015-03-03 16:20:08,295752 Portal to "r.tmx".
+2015-03-03 16:20:08,312475 Portal to "r.tmx".
+2015-03-03 16:20:08,329212 Portal to "r.tmx".
+2015-03-03 16:20:08,345946 Portal to "r.tmx".
+2015-03-03 16:20:08,362686 Portal to "r.tmx".
+2015-03-03 16:20:08,379415 Portal to "r.tmx".
+2015-03-03 16:20:08,396146 Portal to "r.tmx".
+2015-03-03 16:20:08,412878 Portal to "r.tmx".
+2015-03-03 16:20:08,429608 Portal to "r.tmx".
+2015-03-03 16:20:08,446342 Portal to "r.tmx".
+2015-03-03 16:20:08,463073 Portal to "r.tmx".
+2015-03-03 16:20:08,479803 Portal to "r.tmx".
+2015-03-03 16:20:08,496546 Portal to "r.tmx".
+2015-03-03 16:20:08,513273 Portal to "r.tmx".
+2015-03-03 16:20:08,530000 Portal to "r.tmx".
+2015-03-03 16:20:08,546737 Portal to "r.tmx".
+2015-03-03 16:20:08,563474 Portal to "r.tmx".
+2015-03-03 16:20:08,580203 Portal to "r.tmx".
+2015-03-03 16:20:08,596932 Portal to "r.tmx".
+2015-03-03 16:20:08,613663 Portal to "r.tmx".
+2015-03-03 16:20:08,630394 Portal to "r.tmx".
+2015-03-03 16:20:08,647128 Portal to "r.tmx".
+2015-03-03 16:20:08,663882 Portal to "r.tmx".
+2015-03-03 16:20:08,680590 Portal to "r.tmx".
+2015-03-03 16:20:08,697324 Portal to "r.tmx".
+2015-03-03 16:20:08,714056 Portal to "r.tmx".
+2015-03-03 16:20:08,730791 Portal to "r.tmx".
+2015-03-03 16:20:08,747520 Portal to "r.tmx".
+2015-03-03 16:20:08,764257 Portal to "r.tmx".
+2015-03-03 16:20:08,781008 Portal to "r.tmx".
+2015-03-03 16:20:08,797742 Portal to "r.tmx".
+2015-03-03 16:20:08,814475 Portal to "r.tmx".
+2015-03-03 16:20:08,831201 Portal to "r.tmx".
+2015-03-03 16:20:08,847939 Portal to "r.tmx".
+2015-03-03 16:20:08,864675 Portal to "r.tmx".
+2015-03-03 16:20:08,881405 Portal to "r.tmx".
+2015-03-03 16:20:08,898137 Portal to "r.tmx".
+2015-03-03 16:20:08,914870 Portal to "r.tmx".
+2015-03-03 16:20:09,199307 Portal to "r.tmx".
+2015-03-03 16:20:09,216030 Portal to "r.tmx".
+2015-03-03 16:20:09,232760 Portal to "r.tmx".
+2015-03-03 16:20:09,249487 Portal to "r.tmx".
+2015-03-03 16:20:09,266265 Portal to "r.tmx".
+2015-03-03 16:20:09,282963 Portal to "r.tmx".
+2015-03-03 16:20:09,299704 Portal to "r.tmx".
+2015-03-03 16:20:09,316449 Portal to "r.tmx".
+2015-03-03 16:20:09,333158 Portal to "r.tmx".
+2015-03-03 16:20:09,349883 Portal to "r.tmx".
+2015-03-03 16:20:09,366617 Portal to "r.tmx".
+2015-03-03 16:20:09,383348 Portal to "r.tmx".
+2015-03-03 16:20:09,400076 Portal to "r.tmx".
+2015-03-03 16:20:09,416801 Portal to "r.tmx".
+2015-03-03 16:20:09,433532 Portal to "r.tmx".
+2015-03-03 16:20:09,450286 Portal to "r.tmx".
+2015-03-03 16:20:09,467021 Portal to "r.tmx".
+2015-03-03 16:20:09,483749 Portal to "r.tmx".
+2015-03-03 16:20:09,500473 Portal to "r.tmx".
+2015-03-03 16:20:09,517200 Portal to "r.tmx".
+2015-03-03 16:20:09,533955 Portal to "r.tmx".
+2015-03-03 16:20:09,550660 Portal to "r.tmx".
+2015-03-03 16:20:09,567398 Portal to "r.tmx".
+2015-03-03 16:20:09,584128 Portal to "r.tmx".
+2015-03-03 16:20:09,600883 Portal to "r.tmx".
+2015-03-03 16:20:09,617613 Portal to "r.tmx".
+2015-03-03 16:20:09,634344 Portal to "r.tmx".
+2015-03-03 16:20:09,651077 Portal to "r.tmx".
+2015-03-03 16:20:09,667838 Portal to "r.tmx".
+2015-03-03 16:20:09,672323 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:20:09,672438 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:09,785996 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:09,786072 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:09,786080 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:09,786084 Obiekty załadowane
+2015-03-03 16:20:09,786096 Załadowano mape, czas wykonania: 0.117591
+2015-03-03 16:20:09,787210 Portal to "y.tmx".
+2015-03-03 16:20:09,803966 Portal to "y.tmx".
+2015-03-03 16:20:09,820677 Portal to "y.tmx".
+2015-03-03 16:20:09,837415 Portal to "y.tmx".
+2015-03-03 16:20:09,855316 Portal to "y.tmx".
+2015-03-03 16:20:09,872040 Portal to "y.tmx".
+2015-03-03 16:20:09,888773 Portal to "y.tmx".
+2015-03-03 16:20:09,905511 Portal to "y.tmx".
+2015-03-03 16:20:09,922222 Portal to "y.tmx".
+2015-03-03 16:20:09,938976 Portal to "y.tmx".
+2015-03-03 16:20:09,955699 Portal to "y.tmx".
+2015-03-03 16:20:09,972437 Portal to "y.tmx".
+2015-03-03 16:20:09,989177 Portal to "y.tmx".
+2015-03-03 16:20:10,005912 Portal to "y.tmx".
+2015-03-03 16:20:10,022664 Portal to "y.tmx".
+2015-03-03 16:20:10,039405 Portal to "y.tmx".
+2015-03-03 16:20:10,056128 Portal to "y.tmx".
+2015-03-03 16:20:10,072871 Portal to "y.tmx".
+2015-03-03 16:20:10,089608 Portal to "y.tmx".
+2015-03-03 16:20:10,106341 Portal to "y.tmx".
+2015-03-03 16:20:10,123067 Portal to "y.tmx".
+2015-03-03 16:20:10,139790 Portal to "y.tmx".
+2015-03-03 16:20:10,156531 Portal to "y.tmx".
+2015-03-03 16:20:10,173273 Portal to "y.tmx".
+2015-03-03 16:20:10,190017 Portal to "y.tmx".
+2015-03-03 16:20:10,206759 Portal to "y.tmx".
+2015-03-03 16:20:10,223479 Portal to "y.tmx".
+2015-03-03 16:20:10,240215 Portal to "y.tmx".
+2015-03-03 16:20:10,256942 Portal to "y.tmx".
+2015-03-03 16:20:10,273674 Portal to "y.tmx".
+2015-03-03 16:20:10,290394 Portal to "y.tmx".
+2015-03-03 16:20:10,307141 Portal to "y.tmx".
+2015-03-03 16:20:10,323866 Portal to "y.tmx".
+2015-03-03 16:20:10,340628 Portal to "y.tmx".
+2015-03-03 16:20:10,357331 Portal to "y.tmx".
+2015-03-03 16:20:10,374062 Portal to "y.tmx".
+2015-03-03 16:20:10,390813 Portal to "y.tmx".
+2015-03-03 16:20:10,407526 Portal to "y.tmx".
+2015-03-03 16:20:10,424263 Portal to "y.tmx".
+2015-03-03 16:20:10,440985 Portal to "y.tmx".
+2015-03-03 16:20:10,457721 Portal to "y.tmx".
+2015-03-03 16:20:10,474484 Portal to "y.tmx".
+2015-03-03 16:20:10,491184 Portal to "y.tmx".
+2015-03-03 16:20:10,507926 Portal to "y.tmx".
+2015-03-03 16:20:10,524684 Portal to "y.tmx".
+2015-03-03 16:20:10,541377 Portal to "y.tmx".
+2015-03-03 16:20:10,558112 Portal to "y.tmx".
+2015-03-03 16:20:10,574869 Portal to "y.tmx".
+2015-03-03 16:20:10,591581 Portal to "y.tmx".
+2015-03-03 16:20:10,608318 Portal to "y.tmx".
+2015-03-03 16:20:10,625065 Portal to "y.tmx".
+2015-03-03 16:20:10,641772 Portal to "y.tmx".
+2015-03-03 16:20:10,658500 Portal to "y.tmx".
+2015-03-03 16:20:10,675232 Portal to "y.tmx".
+2015-03-03 16:20:10,691964 Portal to "y.tmx".
+2015-03-03 16:20:10,708725 Portal to "y.tmx".
+2015-03-03 16:20:10,725425 Portal to "y.tmx".
+2015-03-03 16:20:10,742161 Portal to "y.tmx".
+2015-03-03 16:20:10,758904 Portal to "y.tmx".
+2015-03-03 16:20:10,764636 Wczytano poprawnie plik "y.tmx".
+2015-03-03 16:20:10,764789 Szerokość mapy:30 Wysokość mapy:30 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:10,878804 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:10,878880 Obiekty załadowane
+2015-03-03 16:20:10,878894 Załadowano mape, czas wykonania: 0.119567
+2015-03-03 16:20:10,880230 Portal to "r.tmx".
+2015-03-03 16:20:10,896937 Portal to "r.tmx".
+2015-03-03 16:20:10,913664 Portal to "r.tmx".
+2015-03-03 16:20:10,930405 Portal to "r.tmx".
+2015-03-03 16:20:10,947136 Portal to "r.tmx".
+2015-03-03 16:20:10,964303 Portal to "r.tmx".
+2015-03-03 16:20:10,981026 Portal to "r.tmx".
+2015-03-03 16:20:10,997760 Portal to "r.tmx".
+2015-03-03 16:20:11,014482 Portal to "r.tmx".
+2015-03-03 16:20:11,031214 Portal to "r.tmx".
+2015-03-03 16:20:11,047948 Portal to "r.tmx".
+2015-03-03 16:20:11,064688 Portal to "r.tmx".
+2015-03-03 16:20:11,081412 Portal to "r.tmx".
+2015-03-03 16:20:11,098147 Portal to "r.tmx".
+2015-03-03 16:20:11,114871 Portal to "r.tmx".
+2015-03-03 16:20:11,131598 Portal to "r.tmx".
+2015-03-03 16:20:11,148333 Portal to "r.tmx".
+2015-03-03 16:20:11,165067 Portal to "r.tmx".
+2015-03-03 16:20:11,181798 Portal to "r.tmx".
+2015-03-03 16:20:11,198538 Portal to "r.tmx".
+2015-03-03 16:20:11,215258 Portal to "r.tmx".
+2015-03-03 16:20:11,231987 Portal to "r.tmx".
+2015-03-03 16:20:11,248721 Portal to "r.tmx".
+2015-03-03 16:20:11,265448 Portal to "r.tmx".
+2015-03-03 16:20:11,282180 Portal to "r.tmx".
+2015-03-03 16:20:11,298917 Portal to "r.tmx".
+2015-03-03 16:20:11,315648 Portal to "r.tmx".
+2015-03-03 16:20:11,332387 Portal to "r.tmx".
+2015-03-03 16:20:11,349140 Portal to "r.tmx".
+2015-03-03 16:20:11,365870 Portal to "r.tmx".
+2015-03-03 16:20:11,382592 Portal to "r.tmx".
+2015-03-03 16:20:11,399324 Portal to "r.tmx".
+2015-03-03 16:20:11,416027 Portal to "r.tmx".
+2015-03-03 16:20:11,432757 Portal to "r.tmx".
+2015-03-03 16:20:11,449484 Portal to "r.tmx".
+2015-03-03 16:20:11,466213 Portal to "r.tmx".
+2015-03-03 16:20:11,482932 Portal to "r.tmx".
+2015-03-03 16:20:11,499666 Portal to "r.tmx".
+2015-03-03 16:20:11,516387 Portal to "r.tmx".
+2015-03-03 16:20:11,533120 Portal to "r.tmx".
+2015-03-03 16:20:11,549850 Portal to "r.tmx".
+2015-03-03 16:20:11,566578 Portal to "r.tmx".
+2015-03-03 16:20:11,583303 Portal to "r.tmx".
+2015-03-03 16:20:11,600034 Portal to "r.tmx".
+2015-03-03 16:20:11,616765 Portal to "r.tmx".
+2015-03-03 16:20:11,633503 Portal to "r.tmx".
+2015-03-03 16:20:11,650229 Portal to "r.tmx".
+2015-03-03 16:20:11,666955 Portal to "r.tmx".
+2015-03-03 16:20:11,683686 Portal to "r.tmx".
+2015-03-03 16:20:11,700417 Portal to "r.tmx".
+2015-03-03 16:20:11,717148 Portal to "r.tmx".
+2015-03-03 16:20:11,733884 Portal to "r.tmx".
+2015-03-03 16:20:11,750626 Portal to "r.tmx".
+2015-03-03 16:20:11,767357 Portal to "r.tmx".
+2015-03-03 16:20:11,784083 Portal to "r.tmx".
+2015-03-03 16:20:11,800817 Portal to "r.tmx".
+2015-03-03 16:20:11,817577 Portal to "r.tmx".
+2015-03-03 16:20:11,834280 Portal to "r.tmx".
+2015-03-03 16:20:11,851003 Portal to "r.tmx".
+2015-03-03 16:20:11,867741 Portal to "r.tmx".
+2015-03-03 16:20:11,884468 Portal to "r.tmx".
+2015-03-03 16:20:11,901196 Portal to "r.tmx".
+2015-03-03 16:20:11,917920 Portal to "r.tmx".
+2015-03-03 16:20:11,934672 Portal to "r.tmx".
+2015-03-03 16:20:11,951390 Portal to "r.tmx".
+2015-03-03 16:20:11,968119 Portal to "r.tmx".
+2015-03-03 16:20:11,984851 Portal to "r.tmx".
+2015-03-03 16:20:12,001579 Portal to "r.tmx".
+2015-03-03 16:20:12,018314 Portal to "r.tmx".
+2015-03-03 16:20:12,035048 Portal to "r.tmx".
+2015-03-03 16:20:12,051778 Portal to "r.tmx".
+2015-03-03 16:20:12,068502 Portal to "r.tmx".
+2015-03-03 16:20:12,085255 Portal to "r.tmx".
+2015-03-03 16:20:12,101997 Portal to "r.tmx".
+2015-03-03 16:20:12,118723 Portal to "r.tmx".
+2015-03-03 16:20:12,135448 Portal to "r.tmx".
+2015-03-03 16:20:12,152184 Portal to "r.tmx".
+2015-03-03 16:20:12,168921 Portal to "r.tmx".
+2015-03-03 16:20:12,185652 Portal to "r.tmx".
+2015-03-03 16:20:12,202391 Portal to "r.tmx".
+2015-03-03 16:20:12,219109 Portal to "r.tmx".
+2015-03-03 16:20:12,235837 Portal to "r.tmx".
+2015-03-03 16:20:12,252570 Portal to "r.tmx".
+2015-03-03 16:20:12,269318 Portal to "r.tmx".
+2015-03-03 16:20:12,286049 Portal to "r.tmx".
+2015-03-03 16:20:12,302780 Portal to "r.tmx".
+2015-03-03 16:20:12,319512 Portal to "r.tmx".
+2015-03-03 16:20:12,336267 Portal to "r.tmx".
+2015-03-03 16:20:12,352999 Portal to "r.tmx".
+2015-03-03 16:20:12,369736 Portal to "r.tmx".
+2015-03-03 16:20:12,386469 Portal to "r.tmx".
+2015-03-03 16:20:12,403201 Portal to "r.tmx".
+2015-03-03 16:20:12,419931 Portal to "r.tmx".
+2015-03-03 16:20:12,436663 Portal to "r.tmx".
+2015-03-03 16:20:12,453393 Portal to "r.tmx".
+2015-03-03 16:20:12,470119 Portal to "r.tmx".
+2015-03-03 16:20:12,486846 Portal to "r.tmx".
+2015-03-03 16:20:12,503581 Portal to "r.tmx".
+2015-03-03 16:20:12,520301 Portal to "r.tmx".
+2015-03-03 16:20:12,537037 Portal to "r.tmx".
+2015-03-03 16:20:12,553768 Portal to "r.tmx".
+2015-03-03 16:20:12,570492 Portal to "r.tmx".
+2015-03-03 16:20:12,587220 Portal to "r.tmx".
+2015-03-03 16:20:12,603961 Portal to "r.tmx".
+2015-03-03 16:20:12,620683 Portal to "r.tmx".
+2015-03-03 16:20:12,637423 Portal to "r.tmx".
+2015-03-03 16:20:12,654154 Portal to "r.tmx".
+2015-03-03 16:20:12,670884 Portal to "r.tmx".
+2015-03-03 16:20:12,687615 Portal to "r.tmx".
+2015-03-03 16:20:12,704355 Portal to "r.tmx".
+2015-03-03 16:20:12,721084 Portal to "r.tmx".
+2015-03-03 16:20:12,737847 Portal to "r.tmx".
+2015-03-03 16:20:12,754580 Portal to "r.tmx".
+2015-03-03 16:20:12,771308 Portal to "r.tmx".
+2015-03-03 16:20:12,788037 Portal to "r.tmx".
+2015-03-03 16:20:12,804767 Portal to "r.tmx".
+2015-03-03 16:20:12,821487 Portal to "r.tmx".
+2015-03-03 16:20:12,838253 Portal to "r.tmx".
+2015-03-03 16:20:12,854983 Portal to "r.tmx".
+2015-03-03 16:20:12,871720 Portal to "r.tmx".
+2015-03-03 16:20:12,888451 Portal to "r.tmx".
+2015-03-03 16:20:12,905221 Portal to "r.tmx".
+2015-03-03 16:20:12,921954 Portal to "r.tmx".
+2015-03-03 16:20:12,938679 Portal to "r.tmx".
+2015-03-03 16:20:12,955418 Portal to "r.tmx".
+2015-03-03 16:20:12,972156 Portal to "r.tmx".
+2015-03-03 16:20:12,988886 Portal to "r.tmx".
+2015-03-03 16:20:13,005628 Portal to "r.tmx".
+2015-03-03 16:20:13,022357 Portal to "r.tmx".
+2015-03-03 16:20:13,039093 Portal to "r.tmx".
+2015-03-03 16:20:13,055822 Portal to "r.tmx".
+2015-03-03 16:20:13,072559 Portal to "r.tmx".
+2015-03-03 16:20:13,089317 Portal to "r.tmx".
+2015-03-03 16:20:13,106053 Portal to "r.tmx".
+2015-03-03 16:20:13,122784 Portal to "r.tmx".
+2015-03-03 16:20:13,139517 Portal to "r.tmx".
+2015-03-03 16:20:13,156249 Portal to "r.tmx".
+2015-03-03 16:20:13,172980 Portal to "r.tmx".
+2015-03-03 16:20:13,189710 Portal to "r.tmx".
+2015-03-03 16:20:13,206450 Portal to "r.tmx".
+2015-03-03 16:20:13,223170 Portal to "r.tmx".
+2015-03-03 16:20:13,239906 Portal to "r.tmx".
+2015-03-03 16:20:13,256647 Portal to "r.tmx".
+2015-03-03 16:20:13,273384 Portal to "r.tmx".
+2015-03-03 16:20:13,290116 Portal to "r.tmx".
+2015-03-03 16:20:13,306856 Portal to "r.tmx".
+2015-03-03 16:20:13,323583 Portal to "r.tmx".
+2015-03-03 16:20:13,340314 Portal to "r.tmx".
+2015-03-03 16:20:13,357041 Portal to "r.tmx".
+2015-03-03 16:20:13,373810 Portal to "r.tmx".
+2015-03-03 16:20:13,390502 Portal to "r.tmx".
+2015-03-03 16:20:13,407238 Portal to "r.tmx".
+2015-03-03 16:20:13,423959 Portal to "r.tmx".
+2015-03-03 16:20:13,440695 Portal to "r.tmx".
+2015-03-03 16:20:13,457422 Portal to "r.tmx".
+2015-03-03 16:20:13,474161 Portal to "r.tmx".
+2015-03-03 16:20:13,490891 Portal to "r.tmx".
+2015-03-03 16:20:13,507634 Portal to "r.tmx".
+2015-03-03 16:20:13,524361 Portal to "r.tmx".
+2015-03-03 16:20:13,541093 Portal to "r.tmx".
+2015-03-03 16:20:13,557816 Portal to "r.tmx".
+2015-03-03 16:20:13,574545 Portal to "r.tmx".
+2015-03-03 16:20:13,591269 Portal to "r.tmx".
+2015-03-03 16:20:13,608009 Portal to "r.tmx".
+2015-03-03 16:20:13,624738 Portal to "r.tmx".
+2015-03-03 16:20:13,641465 Portal to "r.tmx".
+2015-03-03 16:20:13,658185 Portal to "r.tmx".
+2015-03-03 16:20:13,674923 Portal to "r.tmx".
+2015-03-03 16:20:13,691652 Portal to "r.tmx".
+2015-03-03 16:20:13,708380 Portal to "r.tmx".
+2015-03-03 16:20:13,725114 Portal to "r.tmx".
+2015-03-03 16:20:13,741856 Portal to "r.tmx".
+2015-03-03 16:20:13,758584 Portal to "r.tmx".
+2015-03-03 16:20:13,775325 Portal to "r.tmx".
+2015-03-03 16:20:13,792053 Portal to "r.tmx".
+2015-03-03 16:20:13,808786 Portal to "r.tmx".
+2015-03-03 16:20:13,825520 Portal to "r.tmx".
+2015-03-03 16:20:13,842214 Portal to "r.tmx".
+2015-03-03 16:20:13,858943 Portal to "r.tmx".
+2015-03-03 16:20:13,875680 Portal to "r.tmx".
+2015-03-03 16:20:13,892409 Portal to "r.tmx".
+2015-03-03 16:20:13,909143 Portal to "r.tmx".
+2015-03-03 16:20:13,925865 Portal to "r.tmx".
+2015-03-03 16:20:13,942594 Portal to "r.tmx".
+2015-03-03 16:20:13,959326 Portal to "r.tmx".
+2015-03-03 16:20:13,976060 Portal to "r.tmx".
+2015-03-03 16:20:13,992792 Portal to "r.tmx".
+2015-03-03 16:20:14,009525 Portal to "r.tmx".
+2015-03-03 16:20:14,026258 Portal to "r.tmx".
+2015-03-03 16:20:14,042997 Portal to "r.tmx".
+2015-03-03 16:20:14,059726 Portal to "r.tmx".
+2015-03-03 16:20:14,076467 Portal to "r.tmx".
+2015-03-03 16:20:14,093214 Portal to "r.tmx".
+2015-03-03 16:20:14,109953 Portal to "r.tmx".
+2015-03-03 16:20:14,126682 Portal to "r.tmx".
+2015-03-03 16:20:14,143445 Portal to "r.tmx".
+2015-03-03 16:20:14,160172 Portal to "r.tmx".
+2015-03-03 16:20:14,176909 Portal to "r.tmx".
+2015-03-03 16:20:14,193643 Portal to "r.tmx".
+2015-03-03 16:20:14,210383 Portal to "r.tmx".
+2015-03-03 16:20:14,227107 Portal to "r.tmx".
+2015-03-03 16:20:14,243845 Portal to "r.tmx".
+2015-03-03 16:20:14,260576 Portal to "r.tmx".
+2015-03-03 16:20:14,277312 Portal to "r.tmx".
+2015-03-03 16:20:14,294044 Portal to "r.tmx".
+2015-03-03 16:20:14,310776 Portal to "r.tmx".
+2015-03-03 16:20:14,327506 Portal to "r.tmx".
+2015-03-03 16:20:14,344245 Portal to "r.tmx".
+2015-03-03 16:20:14,360965 Portal to "r.tmx".
+2015-03-03 16:20:14,377696 Portal to "r.tmx".
+2015-03-03 16:20:14,394430 Portal to "r.tmx".
+2015-03-03 16:20:14,411160 Portal to "r.tmx".
+2015-03-03 16:20:14,427883 Portal to "r.tmx".
+2015-03-03 16:20:14,444638 Portal to "r.tmx".
+2015-03-03 16:20:14,449208 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:20:14,449324 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:20:14,562555 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:20:14,562631 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:14,562639 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:20:14,562643 Obiekty załadowane
+2015-03-03 16:20:14,562656 Załadowano mape, czas wykonania: 0.117258
+2015-03-03 16:20:14,563433 Portal to "y.tmx".
+2015-03-03 16:20:14,580180 Portal to "y.tmx".
+2015-03-03 16:20:14,597203 Portal to "y.tmx".
+2015-03-03 16:20:14,613933 Portal to "y.tmx".
+2015-03-03 16:20:14,630667 Portal to "y.tmx".
+2015-03-03 16:20:14,647400 Portal to "y.tmx".
+2015-03-03 16:20:14,664122 Portal to "y.tmx".
+2015-03-03 16:20:14,680859 Portal to "y.tmx".
+2015-03-03 16:20:14,697590 Portal to "y.tmx".
+2015-03-03 16:20:14,714325 Portal to "y.tmx".
+2015-03-03 16:20:14,731200 Portal to "y.tmx".
+2015-03-03 16:20:14,747939 Portal to "y.tmx".
+2015-03-03 16:20:14,764664 Portal to "y.tmx".
+2015-03-03 16:20:14,781384 Portal to "y.tmx".
+2015-03-03 16:20:14,798113 Portal to "y.tmx".
+2015-03-03 16:20:14,814854 Portal to "y.tmx".
+2015-03-03 16:20:14,831574 Portal to "y.tmx".
+2015-03-03 16:20:14,848309 Portal to "y.tmx".
+2015-03-03 16:20:14,865033 Portal to "y.tmx".
+2015-03-03 16:20:14,881768 Portal to "y.tmx".
+2015-03-03 16:20:14,898530 Portal to "y.tmx".
+2015-03-03 16:20:14,915263 Portal to "y.tmx".
+2015-03-03 16:20:14,932014 Portal to "y.tmx".
+2015-03-03 16:42:19,960516 Ludzik załadowany
+2015-03-03 16:42:19,984938 Ludzik załadowany
+2015-03-03 16:42:20,022130 Wczytano poprawnie plik "r.tmx".
+2015-03-03 16:42:20,022240 Szerokość mapy:25 Wysokość mapy:25 Szerokość kafla:32 Wysokość kafla:32 Pierwsze ID:1
+2015-03-03 16:42:20,204172 [loadTiles]Kafle załadowane poprawnie
+2015-03-03 16:42:20,204281 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:42:20,204290 Nie udało sie wczytać pliku NPC zenek.xml 
+2015-03-03 16:42:20,204294 Obiekty załadowane
+2015-03-03 16:42:20,204317 Załadowano mape, czas wykonania: 0.219335
+2015-03-03 16:42:20,204954 Załadowano dane7 itemów.
