@@ -20,3 +20,21 @@
 2015-03-03 14:43:15,255 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
 2015-03-03 14:43:30,333 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
 2015-03-03 14:43:30,333 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 21:39:49,838 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 21:39:49,838 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-03 21:41:06,891 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-03 21:41:06,891 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-04 09:40:22,855 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-04 09:40:22,869 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-04 09:40:34,408 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-04 09:40:34,408 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-04 09:40:37,806 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-04 09:40:37,807 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-04 09:41:04,785 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-04 09:41:04,785 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-04 09:42:11,568 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGFPE] signal
+2015-03-04 09:42:11,568 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-04 09:46:40,815 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-04 09:46:40,815 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
+2015-03-04 09:46:49,860 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-04 09:46:49,860 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]

@@ -14,8 +14,7 @@ INITIALIZE_EASYLOGGINGPP
 #include "DialogSystem/Dialog.h"
 #include "DialogSystem/Button.h"
 #include "DialogSystem/Menu.h"
-#include "DialogSystem/EquipmentItem.h"
-#include "DialogSystem/Equipment.h"
+#include "DialogSystem/GridWindow.hpp"
 //
 int main()
 {
@@ -67,6 +66,7 @@ int main()
 	isit = map.isItem(pzz,itemId);
 	sol = map.isSolidTile(pzz);
 	por = map.isPortal(pzz);
+	nmgr.nearNPC(pzz);
 	//printf("X:%i Y:%i, solid:%i item:%i itemId:%i playerit:%i items:%i iid:%i portal:%i near:%i \n",pzz.x,pzz.y, sol,isit, itemId, imgr.playerItemCount(), map.itemsOnMapCount(),iid,por, nmgr.nearNPC(pzz));
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
     {
