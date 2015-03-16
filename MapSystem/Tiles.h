@@ -13,6 +13,11 @@ struct Tile
 	    , gid(_gid)
 	    {
 		}
+		bool operator==(const Tile& rhs){
+		    if ((this->x) == (rhs.x) && (this->y) == (rhs.y))
+                return true;
+            else return false;
+		}
 		unsigned int x;
 		unsigned int y;
 		unsigned int gid;
@@ -23,7 +28,7 @@ struct Tile
  **/
 struct SolidTile : Tile
 {
-	SolidTile(const sf::Uint32 _x, const sf::Uint32 _y, const sf::Uint32 _gid) 
+	SolidTile(const sf::Uint32 _x, const sf::Uint32 _y, const sf::Uint32 _gid)
 	: Tile(_x,_y,_gid)
 	{
 	};
@@ -34,7 +39,7 @@ struct SolidTile : Tile
  **/
 struct BackgroundTile : Tile
 {
-	BackgroundTile(const sf::Uint32 _x, const sf::Uint32 _y, const sf::Uint32 _gid) 
+	BackgroundTile(const sf::Uint32 _x, const sf::Uint32 _y, const sf::Uint32 _gid)
     : Tile(_x,_y,_gid)
 	{
 	};
@@ -67,13 +72,13 @@ struct AnimatedTile : Tile
 	sf::Time	 speed;
 	Animation anim;
 	AnimatedTex txt;
-	AnimatedTile(unsigned int _x,unsigned int _y,double _speed, Animation _an, unsigned int t_w,unsigned int t_h) 
+	AnimatedTile(unsigned int _x,unsigned int _y,double _speed, Animation _an, unsigned int t_w,unsigned int t_h)
 	: Tile(_x,_y,0)
 	, speed(sf::seconds(_speed))
 	, anim(_an)
 	{
 		txt.setPosition(sf::Vector2f((unsigned int)(x*t_w),(unsigned int)(y*t_h)));
 		txt.setFrameTime(speed);
-	} 
+	}
 };
 //

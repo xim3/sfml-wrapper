@@ -1,12 +1,12 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <items>
     <item gid="1734" name="xd xd" type="0">
         <desc>ac ac</desc>
-        <data attack="5" speed="1" quality="1" price="50" />
+        <data attack="5" defence="10" speed="1" quality="1" price="50" power="0" />
     </item>
     <item gid="1732" name="wand" type="0">
         <desc>fajny wand</desc>
-        <data attack="15" speed="0.5" quality="2" price="200" />
+        <data attack="15" defence="3" speed="0.5" quality="2" price="200" power="1"/>
     </item>
     <item gid="1602" name="Mikstura many" type="2">
         <desc>Odnawia 10 mp</desc>
@@ -14,18 +14,19 @@
     </item>
     <item gid="1472" name="Magic Book" type="1">
         <desc>Bardzo dobry item</desc>
-        <data defence="10" quality="2" price="600" />
+        <data defence="10" quality="2" price="600" power="1"/>
     </item>
     <item gid="1604" name="Heal potion" type="2">
         <desc>Odnawia 10 hp</desc>
         <data power="2" price="600" />
     </item>
     <item gid="1357" name="Rękawica Chwały" type="1">
-		<desc>Ukradziona Karmazynowemu Mścicielowi</desc>
-		<data defence="20" quality="3" price="5000"/>
+		<desc> Ukradziona Karmazynowemu Mścicielowi \\nPodczas gdy siedział na toalecie.\\nPonoć bardzo sie zdenerwował i do dziś szuka sprawcy.</desc>
+		<data defence="20" quality="3" price="5000" power="0.3"/>
     </item>
     <item gid="2945" name="Rózga druida" type="0">
-		<desc>Dla początkującego druida</desc>
-		<data attack="20" speed="1" quality="1" price="20"/>
+		<desc> Dla początkującego druida jest to bardzo \\nDobra różdżka \\nStworzył ją sam Kótonus, wielki mag,\\nktóry aktualnie
+		\\nSiedzi w więzieniu za wykroczenia i niezapłacone \\nMandaty otrzymane podczas prowadzenia \\nPowozu konnego.</desc>
+		<data attack="20" defence="2" speed="25" quality="2" price="20" power="0.3"/>
     </item>
 </items>

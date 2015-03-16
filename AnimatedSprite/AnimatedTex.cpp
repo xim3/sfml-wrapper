@@ -10,7 +10,7 @@ AnimatedTex::AnimatedTex(sf::Time frameTime, bool paused, bool looped) :
 /**
  * \brief Ustawia animacje
  * \param animation - animacja
- * 
+ *
  */
 void AnimatedTex::setAnimation(const Animation& animation){
     m_animation = &animation;
@@ -43,7 +43,7 @@ void AnimatedTex::play(const Animation& animation){
 }
 /**
  * \brief Zatrzymuje animacje
- * 
+ *
  */
 void AnimatedTex::pause(){
     m_isPaused = true;
@@ -80,6 +80,7 @@ void AnimatedTex::setColor(const sf::Color& color){
 const Animation* AnimatedTex::getAnimation() const{
     return m_animation;
 }
+#include <iostream>
 /**
  * \brief Zwraca zapętlenie animacji
  * \return Zapętlenie
@@ -90,7 +91,7 @@ bool AnimatedTex::isLooped() const
 }
 /**
  * \brief Zwraca wartość czy animacja aktualnie jest odgrywana
- * \return Stan 
+ * \return Stan
  */
 bool AnimatedTex::isPlaying() const{
     return !m_isPaused;
@@ -103,13 +104,22 @@ sf::Time AnimatedTex::getFrameTime() const{
     return m_frameTime;
 }
 /**
- * \brief Ustawia klatke 
+ * \brief Ustawia klatke
  * \details Przełącza klatke
  * \param Numer klatki
  */
+ #include <iostream>
+ #include <stdexcept>
 void AnimatedTex::setFrame(std::size_t newFrame){
     if (m_animation){
-        sf::IntRect rect = m_animation->getFrame(newFrame);
+        sf::IntRect rect;
+        try{
+        rect = m_animation->getFrame(newFrame);
+        }
+        catch (const std::out_of_range& oor)
+        {
+        std::cout << "Out of Range error: " << oor.what() << '\n';
+        }
         m_vertices[0].position = sf::Vector2f(0.f, 0.f);
         m_vertices[1].position = sf::Vector2f(0.f, static_cast<unsigned int>(rect.height));
         m_vertices[2].position = sf::Vector2f(static_cast<unsigned int>(rect.width), static_cast<unsigned int>(rect.height));
@@ -148,7 +158,7 @@ void AnimatedTex::update(sf::Time deltaTime){
 }
 /**
  * \brief Rysuje animacje
- * 
+ *
  */
 void AnimatedTex::draw(sf::RenderTarget& target, sf::RenderStates states) const{
     if (m_animation && m_texture){

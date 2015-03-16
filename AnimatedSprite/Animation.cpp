@@ -30,13 +30,23 @@ std::size_t Animation::getSize() const{
     return m_frames.size();
 }
 /**
- * \brief zwraca klatke 
+ * \brief zwraca klatke
  * \details zwraca klatke z vectora klatek
  * \param numer klatki
  * \return referencja do klatki animacji
  */
 const sf::IntRect& Animation::getFrame(std::size_t n) const{
-    return m_frames[n];
+    /* tu jest SIGSEGV ale nie wiem gdzie bo sie schował cwaniak
+     CALL TRACE
+     0x804ddeb Animation::getFrame(this=0xb7e14237,n=0)
+     0x804d4e1 AnimatedTex::setFrame(this=0xbffff170, newFrame=0)
+     0x804d54b AnimatedTex::setAnimation(this=0xbffff170, animation=...)
+     0x804d53b AnimatedTex::play(this=0xbffff170, animation=...)
+     0x8083b11 Entity::update(this=0xbffff0b8)
+     0x80773d0 main()
+     Kiedyś go znajde, znajde go, i go naprawie :D
+    */
+    return m_frames.at(n);
 }
 /**
  * \brief ustawia wiekość kafla

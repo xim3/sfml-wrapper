@@ -18,8 +18,6 @@ void Button::draw(sf::RenderWindow& window)
 bool Button::click(sf::RenderWindow& window, sf::Sprite sprite, sf::Event &event)
 {
     sf::Vector2f mouse(sf::Mouse::getPosition(window));
-    // a co tu sie wyrabia panie kolego?
-    // fixnij to.
     if( sprite.getGlobalBounds().contains(mouse) && event.type == sf::Event::MouseButtonReleased && event.key.code == sf::Mouse::Left )
         return true;
     else

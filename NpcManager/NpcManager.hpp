@@ -1,6 +1,6 @@
 #pragma once
 #include "NPC.hpp"
-class NpcManager 
+class NpcManager
 {
 	public:
 		NpcManager();

@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<player file="kupiec.png" width="32" height="32" speed="500" datatype="gid" frametime="0.03">
+	<tex dir="down">
+		<data gid="7"/>
+		<data gid="7"/>
+		<data gid="8"/>
+		<data gid="6"/>
+	</tex>
+	<tex dir="left">
+		<data gid="18"/>
+		<data gid="19"/>
+		<data gid="20"/>
+		<data gid="18"/>
+	</tex>
+	<tex dir="right">
+		<data gid="30"/>
+		<data gid="31"/>
+		<data gid="32"/>
+		<data gid="30"/>
+	</tex>
+	<tex dir="up">
+		<data gid="42"/>
+		<data gid="43"/>
+		<data gid="44"/>
+		<data gid="42"/>
+	</tex>
+</player>

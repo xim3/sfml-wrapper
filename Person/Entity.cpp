@@ -1,9 +1,10 @@
 #include "Entity.hpp"
 #include "../Resources/easylogging++.h"
 #include "../Resources/tinyxml/tinyxml.h"
+#include <stdexcept>
 /**
  * \brief Konstruktor
- * \param x,y współrzędne 
+ * \param x,y współrzędne
  */
 Entity::Entity(unsigned int x, unsigned int y)
 {
@@ -18,27 +19,36 @@ Entity::Entity(unsigned int x, unsigned int y)
  * \param path - ścieżka do pliku XML
  * \return Powodzenie operacji
  */
+sf::Vector2f Entity::getPositionFixed(DIR UanDirekszyn, float fix) const{
+    switch(UanDirekszyn){
+        case D_LEFT:  return sf::Vector2f(getPositionFloat().x-fix, getPositionFloat().y);
+        case D_RIGHT: return sf::Vector2f(getPositionFloat().x+fix, getPositionFloat().y);
+        case D_UP:    return sf::Vector2f(getPositionFloat().x, getPositionFloat().y-fix);
+        case D_DOWN:  return sf::Vector2f(getPositionFloat().x, getPositionFloat().y+fix);
+        default:      return sf::Vector2f(0,0);
+    }
+}
 bool Entity::load(const std::string path)
 {
 	TiXmlDocument doc(path.c_str());
 	if(!doc.LoadFile()){
-		LOG(ERROR) << "Nie udało sie wczytać pliku ludzika \"" << path << "\".";
+		LOG(ERROR) << "Nie udało sie wczytać pliku bytu \"" << path << "\".";
 		return false;
 	}
 	TiXmlElement *pla = doc.FirstChildElement("player");
 	if(pla->Attribute("file") == NULL || pla->Attribute("width") == NULL ||
 	   pla->Attribute("height") == NULL  ||  pla->Attribute("speed") == NULL ||
 	   pla->Attribute("datatype") == NULL || pla->Attribute("frametime") == NULL){
-		   LOG(ERROR) << "Brakuje atrybutu w pliku ludzika";
+		   LOG(ERROR) << "Brakuje atrybutu w pliku bytu";
 		   return false;
 	}
 	std::string tileset = pla->Attribute("file");
 	std::string datatype = pla->Attribute("datatype");
 	anitex.setFrameTime(sf::seconds(atof(pla->Attribute("frametime"))));
 	if(!tiles.loadFromFile(tileset)){
-		LOG(ERROR) << "Nie udalo sie wczytać tilemapy ludzika";
+		LOG(ERROR) << "Nie udalo sie wczytać tilemapy bytu";
 		return false;
-	}	
+	}
 	unsigned int width, height;
 	width = atoi(pla->Attribute("width"));
 	height = atoi(pla->Attribute("height"));
@@ -46,11 +56,11 @@ bool Entity::load(const std::string path)
 	TiXmlElement *tex = pla->FirstChildElement();
 	while(tex){
 		TiXmlElement* data = tex->FirstChildElement();
-		if(tex->Attribute("dir") == NULL){
-			LOG(ERROR) << "Brak atrybutu dir w pliku \"" << path << "\"";
+		if(tex->Attribute("action") == NULL){
+			LOG(ERROR) << "Brak atrybutu action w pliku \"" << path << "\"";
 			return false;
 		}
-		std::string dir = tex->Attribute("dir");
+		std::string action = tex->Attribute("action");
 		Animation _anim;
 		_anim.setTileset(tiles);
 		while(data){
@@ -75,44 +85,49 @@ bool Entity::load(const std::string path)
 			}
 			data = data->NextSiblingElement("data");
 		}
-		anims.push_back(_anim);
+		_anims[action] = _anim;
 		tex = tex->NextSiblingElement("tex");
 	}
-	c_anim = &anims[0];
-	LOG(DEBUG) << "Ludzik załadowany";
+	try{
+    c_anim = &_anims.at("down");
+	}
+	catch(const std::out_of_range& oou){
+	    LOG(ERROR) << "Nie znaleziono animacji";
+	    return false;
+	}
+	LOG(DEBUG) << "Byt załadowany";
 	return true;
 }
 /**
  * \brief Porusza obiekt w dół i animuje ruch
  */
-void Entity::moveDown(){
-	nokeypressed = false;
-	c_anim = &anims[0];
-	position.y += (unsigned int)speed;
+void Entity::move(std::string action){
+    nokeypressed = false;
+	try{
+	c_anim = &_anims.at(action);
+	}
+	catch(const std::out_of_range& oou){
+	    LOG(ERROR) << "Nie znaleziono animacji " << "\"" << action << "\"";
+	    return;
+	}
+	if(action == "down")
+        position.y += speed;
+    else if(action == "up")
+        position.y -= speed;
+    else if(action == "left")
+        position.x -= speed;
+    else if(action == "right")
+        position.x += speed;
 }
-/**
- * \brief Porusza obiekt w lewo i animuje ruch
- */
-void Entity::moveLeft(){
-	nokeypressed = false;
-	c_anim = &anims[1];
-	position.x -= (unsigned int)speed;
-}
-/**
- * \brief Porusza obiekt w prawo i animuje ruch
- */
-void Entity::moveRight(){
-	nokeypressed = false;
-	c_anim = &anims[2];
-	position.x += (unsigned int)speed;
-}
-/**
- * \brief Porusza obiekt w góre i animuje ruch
- */
-void Entity::moveUp(){
-	nokeypressed = false;
-	c_anim = &anims[3];
-	position.y -= (unsigned int)speed;
+void Entity::action(std::string action){
+    try{
+    c_anim = &_anims.at(action);
+    }
+    catch(const std::out_of_range& oou){
+        LOG(ERROR) << "Nie znaleziono animacji " << "\"" << action << "\"";
+        return;
+    }
+    nokeypressed = false;
 }
 /**
  * \brief Odświeża animacje
@@ -158,12 +173,15 @@ void Entity::idle(){
  * \brief Zwraca pozycje przeliczoną na kafle
  * \return Pozycja
  */
-sf::Vector2u Entity::getPosition(){
+sf::Vector2u Entity::getPosition() const{
 	return sf::Vector2u((anitex.getPosition().x)/tile_width,(anitex.getPosition().y)/tile_height);
+}
+sf::Vector2i Entity::getPositionInt() const{
+    return sf::Vector2i((anitex.getPosition().x)/tile_width,(anitex.getPosition().y)/tile_height);
 }
 /**
  * \brief Zwraca pozycje w floatcie
  */
-sf::Vector2f Entity::getPositionFloat(){
-	return sf::Vector2f(anitex.getPosition().x,anitex.getPosition().y);
+sf::Vector2f Entity::getPositionFloat()const {
+	return sf::Vector2f((anitex.getPosition().x)/tile_width,(anitex.getPosition().y)/tile_height);
 }

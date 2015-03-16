@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="4prp" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/4prp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++0x" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add directory="../SFML-2.1/include" />
+				</Compiler>
+				<Linker>
+					<Add library="sfml-system" />
+					<Add library="sfml-window" />
+					<Add library="sfml-graphics" />
+					<Add directory="../SFML-2.1/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/4prp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="AnimatedSprite/AnimatedTex.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="AnimatedSprite/AnimatedTex.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="AnimatedSprite/Animation.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="AnimatedSprite/Animation.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="DialogSystem/EquipWindow.cpp" />
+		<Unit filename="DialogSystem/EquipWindow.hpp" />
+		<Unit filename="DialogSystem/GridWindow.cpp" />
+		<Unit filename="DialogSystem/GridWindow.hpp" />
+		<Unit filename="DialogSystem/ItemGrid.cpp" />
+		<Unit filename="DialogSystem/ItemGrid.hpp" />
+		<Unit filename="DialogSystem/Window.cpp" />
+		<Unit filename="DialogSystem/Window.hpp" />
+		<Unit filename="Main.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="MapSystem/Item.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="MapSystem/ItemManager.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="MapSystem/ItemManager.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="MapSystem/StaticTiledMap.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="MapSystem/StaticTiledMap.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="MapSystem/Tiles.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="NpcManager/NPC.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="NpcManager/NPC.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="NpcManager/NpcManager.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="NpcManager/NpcManager.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Person/Entity.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Person/Entity.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Person/Player.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Person/Player.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Resources/Utils.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Resources/easylogging++.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Resources/tinyxml/tinystr.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Resources/tinyxml/tinystr.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Resources/tinyxml/tinyxml.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Resources/tinyxml/tinyxml.h">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Resources/tinyxml/tinyxmlerror.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="Resources/tinyxml/tinyxmlparser.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="easylogging++.h">
+			<Option target="Debug" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

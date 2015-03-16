@@ -4,7 +4,7 @@
 #include <SFML/Graphics/Texture.hpp>
 /**
  * \brief Klasa przechowująca klatki animacji i ich teksture
- * 
+ *
  **/
 class Animation
 {
@@ -19,7 +19,6 @@ public:
     const sf::IntRect& getFrame(std::size_t n) const;
 private:
     std::vector<sf::IntRect> m_frames;
-    std::vector<sf::Vertex> frames;
     const sf::Texture* m_texture;
     unsigned int tile_width = 32;
     unsigned int tile_height= 32;

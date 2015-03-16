@@ -5,38 +5,55 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/VertexArray.hpp>
 #include <vector>
-#include <cassert>
 #include "Item.h"
 #include "Tiles.h"
-#include "../Resources/Utils.cpp"
+#include "../Resources/Utils.hpp"
 /**
  * \brief Manager itemów gracza
- */
+**/
 class ItemManager
 {
 public:
-	ItemManager()
-	{
-		picked.resize(1000);
-	};
-	~ItemManager(){};
-	/** \brief Tylko do debugowania */
-	void    printItems(){int index=0;printf("==========PLAYERITEMS==========\n");if(playerItemCount() == 0){	printf("No items in vct\n");	printf("===============================\n");	return;	}	for(auto item : playerItems)	{	printf("X:%i Y:%i \tGID:%i \tID:%i \tINDEX:%i\n", item.x,item.y,item.gid,item.id,index);	index++;}printf("===============================\n");}
-	void 	 update(const sf::Vector2u&);
-	void 	 addItem(const Item);
-	void     setPicked(size_t);
-	bool 	 loadItems(const std::string);
-	bool	 isPicked(size_t) const;
-	bool	 deleteItem(const int);
-	Item	 getItem(const int id) const;
-	ItemData getData(size_t) const;
-	int		 getGID(size_t)const;
-	size_t   playerItemCount() const;
-private:
-	/** \brief itemy w plecaku */
-	std::vector<Item> playerItems;
-	/** \brief informacje o itemach */
-	std::vector<ItemData> itemsinfo;
-	/** \brief flagi podniesienia */
-	std::vector<bool> picked;
+    ItemManager();
+    virtual ~ItemManager();
+    /** \brief Tylko do debugowania */
+    void     printItems()
+    {
+        int index=0;
+        printf("==========PLAYERITEMS==========\n");
+        if(playerItemCount() == 0)
+        {
+            printf("No items in vct\n");
+            printf("===============================\n");
+            return;
+        }
+for(auto item : playerItems)
+        {
+            printf("X:%i Y:%i \tGID:%i \tID:%i \tINDEX:%i\n", item.x,item.y,item.gid,item.id,index);
+            index++;
+        }
+        printf("===============================\n");
+    }
+    void 	 update(const sf::Vector2u&);
+    void 	 addItem(const Item);
+    void     setPicked(size_t);
+    bool	 isPicked(size_t) const;
+    bool	 deleteItem(const int);
+    Item	 getItem(const int id) const;
+    bool     loadItems(const std::string);
+    const    ItemData& getData(size_t) const;
+    int		 getGID(size_t)const;
+    void     setCapacity(size_t);
+    size_t   getCapacity();
+    const std::vector<Item>& getItemsVector() const;
+    size_t   playerItemCount() const;
+protected:
+    /** \brief itemy w plecaku */
+    std::vector<ItemData> itemsinfo;
+    std::vector<Item> playerItems;
+    /** \brief flagi podniesienia */
+    std::vector<bool> picked;
+    /** \brief ilość pól w plecaku*/
+    size_t           capacity;
+    ItemData         undef;
 };

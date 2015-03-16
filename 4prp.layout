@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="AnimatedSprite/AnimatedTex.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="2554" topLine="97" />
+	</File>
+	<File name="AnimatedSprite/Animation.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="566" topLine="3" />
+	</File>
+	<File name="AnimatedSprite/Animation.hpp" open="0" top="0" tabpos="0">
+		<Cursor position="704" topLine="0" />
+	</File>
+	<File name="DialogSystem/EquipWindow.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="494" topLine="0" />
+	</File>
+	<File name="DialogSystem/EquipWindow.hpp" open="0" top="0" tabpos="0">
+		<Cursor position="638" topLine="0" />
+	</File>
+	<File name="DialogSystem/GridWindow.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="2547" topLine="32" />
+	</File>
+	<File name="DialogSystem/GridWindow.hpp" open="0" top="0" tabpos="0">
+		<Cursor position="407" topLine="0" />
+	</File>
+	<File name="DialogSystem/ItemGrid.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="374" topLine="0" />
+	</File>
+	<File name="Main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="1178" topLine="18" />
+	</File>
+	<File name="MapSystem/Item.h" open="1" top="0" tabpos="4">
+		<Cursor position="1616" topLine="0" />
+	</File>
+	<File name="MapSystem/ItemManager.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="289" topLine="0" />
+	</File>
+	<File name="MapSystem/ItemManager.hpp" open="1" top="0" tabpos="3">
+		<Cursor position="1503" topLine="0" />
+	</File>
+	<File name="MapSystem/StaticTiledMap.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="14813" topLine="382" />
+	</File>
+	<File name="MapSystem/StaticTiledMap.hpp" open="0" top="0" tabpos="0">
+		<Cursor position="544" topLine="40" />
+	</File>
+	<File name="NpcManager/NpcManager.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="Person/Entity.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="4153" topLine="97" />
+	</File>
+	<File name="Resources/Utils.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="278" topLine="0" />
+	</File>
+	<File name="Resources/easylogging++.h" open="0" top="0" tabpos="0">
+		<Cursor position="245145" topLine="5569" />
+	</File>
+</CodeBlocks_layout_file>

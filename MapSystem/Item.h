@@ -1,10 +1,12 @@
 #pragma once
+#include <string>
 enum ITEM_TYPE{WEAPON, ARMOR, RECOVERY};
-struct ItemData
+class ItemData
 {
+public:
 	ITEM_TYPE type;
-	std::string description;
-	std::string name;
+	std::wstring description;
+	std::wstring name;
 	unsigned int attack;
 	unsigned int defence;
 	unsigned int quality;
@@ -12,22 +14,37 @@ struct ItemData
 	unsigned int power;
 	double 		 speed;
 	unsigned int gid;
-	ItemData(ITEM_TYPE _type,std::string _desc,std::string _nam,
-			 unsigned int _att, unsigned int _def, unsigned int _qua,
-			 unsigned int _pri, unsigned int _pow, unsigned int _spe,
-			 unsigned int _gid)
-			 : type(_type)
-			 , description(_desc)
-			 , name(_nam)
-			 , attack(_att)
-			 , defence(_def)
-			 , quality(_qua)
-			 , price(_pri)
-			 , power(_pow)
-			 , speed(_spe)
-			 , gid(_gid)
-			 {
-			 };
+	ItemData
+	(ITEM_TYPE _type,std::wstring _desc,std::wstring _nam,
+	 unsigned int _att, unsigned int _def, unsigned int _qua,
+	 unsigned int _pri, unsigned int _pow, unsigned int _spe,
+	 unsigned int _gid)
+	 : type(_type)
+	 , description(_desc)
+	 , name(_nam)
+	 , attack(_att)
+	 , defence(_def)
+	 , quality(_qua)
+	 , price(_pri)
+	 , power(_pow)
+	 , speed(_spe)
+	 , gid(_gid)
+	 {
+	 };
+    ItemData()
+     : type(WEAPON)
+	 , description(L"undefined")
+	 , name(L"undefined")
+	 , attack(0)
+	 , defence(0)
+	 , quality(0)
+	 , price(0)
+	 , power(0)
+	 , speed(0)
+	 , gid(0)
+    {
+
+    }
 	ItemData(const ItemData& rhs)
 	: type(rhs.type)
 	, description(rhs.description)
@@ -40,7 +57,7 @@ struct ItemData
 	, speed(rhs.speed)
 	, gid(rhs.gid)
 	{
-	}	
+	}
 	ItemData& operator=(const ItemData& rhs)
 	{
 		this->type 		  = rhs.type;
@@ -70,39 +87,34 @@ struct Item
 	unsigned int y;
 	unsigned int gid;
 	int  		 id;
-	bool	     valid;
 	Item()
-	    : x(0)
-	    , y(0)
-	    , gid(0)
-	    , id(0)
-	    , valid(0)
-	    {
-		};
-	Item(unsigned int _x,unsigned int _y,unsigned int _gid,unsigned int _id, bool _v)
-		: x(_x)
-		, y(_y)
-		, gid(_gid)
-		, id(_id)
-		, valid(_v)
-		{
-		};
-	Item(const Item& tmp) 
-	    : x(tmp.x)
-	    , y(tmp.y)
-	    , gid(tmp.gid)
-	    , id(tmp.id)
-	    , valid(tmp.valid)
-	    {
-	    };
+    : x(0)
+	, y(0)
+	, gid(0)
+	, id(0)
+	{
+	};
+	Item(unsigned int _x,unsigned int _y,unsigned int _gid,unsigned int _id)
+	: x(_x)
+	, y(_y)
+	, gid(_gid)
+	, id(_id)
+	{
+	};
+	Item(const Item& tmp)
+	: x(tmp.x)
+	, y(tmp.y)
+	, gid(tmp.gid)
+	, id(tmp.id)
+	{
+	};
 	Item& operator=(const Item& rhs)
-	{	
+	{
 		this->x = rhs.x;
 		this->y = rhs.y;
 		this->gid = rhs.gid;
 		this->id = rhs.id;
-		this->valid = rhs.valid;
-		return *this;	
+		return *this;
 	}
 	bool operator==(const Item& rhs) const
 	{

@@ -10,7 +10,8 @@ struct NPC
 		std::string name;
 		std::string file;
 		std::vector<std::string> talky;
-		sf::Vector2u m_pos;
+		unsigned int x;
+		unsigned int y;
 		unsigned int id;
 		unsigned int gid;
 		bool load();

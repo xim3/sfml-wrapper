@@ -1,9 +1,10 @@
 #include "NPC.hpp"
 NPC::NPC() {}
-NPC::NPC(std::string _name, unsigned int _id, unsigned int _gid, sf::Vector2u _pos, std::string _file) 
+NPC::NPC(std::string _name, unsigned int _id, unsigned int _gid, sf::Vector2u _pos, std::string _file)
 : name(_name)
 , file(_file)
-, m_pos(_pos)
+, x(_pos.x)
+, y(_pos.y)
 , id(_id)
 , gid(_gid)
 {
@@ -23,6 +24,6 @@ bool NPC::load(){
 		talky.push_back(dialog->GetText());
 		dialog = dialog->NextSiblingElement("dialog");
 	}
-	
-	
+
+
 }

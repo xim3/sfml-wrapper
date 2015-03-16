@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
-<player file="kupiec.png" width="32" height="32" speed="120" datatype="gid" frametime="0.11">
+<player file="playerx.png" width="32" height="32" speed="120" datatype="gid" frametime="0.11">
 	<tex dir="down">
-		<data gid="0"/>
 		<data gid="1"/>
-		<data gid="2"/>
 		<data gid="0"/>
+		<data gid="2"/>
+		<data gid="1"/>
 	</tex>
 	<tex dir="left">
 		<data gid="3"/>
@@ -16,12 +16,18 @@
 		<data gid="6"/>
 		<data gid="7"/>
 		<data gid="8"/>
-		<data gid="6"/>
+		<data gid="7"/>
 	</tex>
 	<tex dir="up">
 		<data gid="9"/>
 		<data gid="10"/>
 		<data gid="11"/>
-		<data gid="9"/>				
+		<data gid="10"/>				
 	</tex>		
+	<tex dir="insane">
+		<data gid="12"/>
+		<data gid="13"/>
+		<data gid="14"/>
+		<data gid="12"/>
+	</tex>
 </player>
