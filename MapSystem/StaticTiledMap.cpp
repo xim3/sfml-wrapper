@@ -12,6 +12,25 @@ TileMap::TileMap(ItemManager & _del0,NpcManager & _del1)
  * \param name nazwa mapy do załadowania
  * \return Powodzenie operacji
  **/
+bool TileMap::resizeVertexArrays(size_t width_in_tiles, size_t height_in_tiles){
+    if(width_in_tiles < 0 || height_in_tiles < 0)
+    {
+        LOG(ERROR) << "Nieprawidlowy rozmiar mapy";
+        return false;
+    }
+    m_vertices.setPrimitiveType(sf::Quads);
+    m_vertices.resize(width_in_tiles * height_in_tiles * 4);
+
+    m_other_vertices.setPrimitiveType(sf::Quads);
+    m_other_vertices.resize(width_in_tiles * height_in_tiles * 4);
+
+    m_vertices_bg1.setPrimitiveType(sf::Quads);
+    m_vertices_bg1.resize(width_in_tiles * height_in_tiles * 4);
+
+    m_portals.setPrimitiveType(sf::Quads);
+    m_portals.resize(width_in_tiles * height_in_tiles * 4);
+    return true;
+}
 bool TileMap::loadMap(const std::string name)
 {
     std::chrono::time_point<std::chrono::system_clock> start,end;
@@ -30,17 +49,8 @@ bool TileMap::loadMap(const std::string name)
     tile_width		  = atoi(map->Attribute("tilewidth"));
     tile_height       = atoi(map->Attribute("tileheight"));
 
-    m_vertices.setPrimitiveType(sf::Quads);
-    m_vertices.resize(width_in_tiles * height_in_tiles * 4);
-
-    m_other_vertices.setPrimitiveType(sf::Quads);
-    m_other_vertices.resize(width_in_tiles * height_in_tiles * 4);
-
-    m_vertices_bg1.setPrimitiveType(sf::Quads);
-    m_vertices_bg1.resize(width_in_tiles * height_in_tiles * 4);
-
-    m_portals.setPrimitiveType(sf::Quads);
-    m_portals.resize(width_in_tiles * height_in_tiles * 4);
+    if(!resizeVertexArrays(width_in_tiles, height_in_tiles))
+        return false;
 
     TiXmlElement *tilesetElement;
     tilesetElement = map->FirstChildElement("tileset");
@@ -202,13 +212,12 @@ void TileMap::loadObjects(TiXmlElement *objectsGroup, unsigned int firstTID)
             {
                 if(object->Attribute("id") == NULL   || object->Attribute("gid") == NULL  ||
                         object->Attribute("x") == NULL    || object->Attribute("y") == NULL    ||
-                        object->Attribute("name") == NULL || object->Attribute("file") == NULL  )
+                        object->Attribute("name") == NULL   )
                     LOG(ERROR) << "Brakuje atrybutu w NPC " << id << " ";
 
                 nmgr.addNPC(NPC(object->Attribute("name"),atoi(object->Attribute("id")),
                                 atoi(object->Attribute("gid")),sf::Vector2u
-                                (atoi(object->Attribute("x"))/tile_width,atoi(object->Attribute("y"))/tile_height),
-                                object->Attribute("file")));
+                                (atoi(object->Attribute("x"))/tile_width,atoi(object->Attribute("y"))/tile_height)));
 
                 appendTile(atoi(object->Attribute("x"))/ tile_width,
                            atoi(object->Attribute("y"))/ tile_height,
@@ -403,6 +412,17 @@ bool TileMap::isPortal(const sf::Vector2u& vct) const
     }
     else return false;
 }
+void TileMap::cleanMap(){
+    m_vertices.clear();
+    m_other_vertices.clear();
+    m_vertices_bg1.clear();
+    m_portals.clear();
+    solidTiles.clear();
+    backgroundTiles.clear();
+    itemsOnMap.clear();
+    animated.clear();
+    nmgr.clean();
+}
 /**
  * \brief Przeładowywuje mapke jeśli dane xy jest portalem(linkiem)
  * \details Przeładowywuje mapke (czyści tablice vertexów, oraz itemy na mapie)
@@ -417,15 +437,7 @@ sf::Vector2f TileMap::reload(sf::Vector2u &vct)
         std::find_if(portals.begin(), portals.end(), std::bind(xyCompare<PortalTile>, std::placeholders::_1,vct));
     if(it!=portals.end())
     {
-        m_vertices.clear();
-        m_other_vertices.clear();
-        m_vertices_bg1.clear();
-        m_portals.clear();
-        solidTiles.clear();
-        backgroundTiles.clear();
-        itemsOnMap.clear();
-        animated.clear();
-        nmgr.clean();
+        cleanMap();
         std::string f = it->file;
         sf::Vector2f spawnn(it->spawn.x,it->spawn.y);
         vct.x = it->spawn.x;

@@ -52,14 +52,16 @@
 		<Unit filename="AnimatedSprite/Animation.hpp">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="DialogSystem/DataFormat.cpp" />
+		<Unit filename="DialogSystem/DataFormat.hpp" />
 		<Unit filename="DialogSystem/EquipWindow.cpp" />
 		<Unit filename="DialogSystem/EquipWindow.hpp" />
 		<Unit filename="DialogSystem/GridWindow.cpp" />
 		<Unit filename="DialogSystem/GridWindow.hpp" />
 		<Unit filename="DialogSystem/ItemGrid.cpp" />
 		<Unit filename="DialogSystem/ItemGrid.hpp" />
-		<Unit filename="DialogSystem/Window.cpp" />
-		<Unit filename="DialogSystem/Window.hpp" />
+		<Unit filename="DialogSystem/TextWindow.cpp" />
+		<Unit filename="DialogSystem/TextWindow.hpp" />
 		<Unit filename="Main.cpp">
 			<Option target="Debug" />
 		</Unit>
@@ -81,6 +83,8 @@
 		<Unit filename="MapSystem/Tiles.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="NpcManager/DataReader.cpp" />
+		<Unit filename="NpcManager/DataReader.hpp" />
 		<Unit filename="NpcManager/NPC.cpp">
 			<Option target="Debug" />
 		</Unit>
@@ -105,9 +109,7 @@
 		<Unit filename="Person/Player.hpp">
 			<Option target="Debug" />
 		</Unit>
-		<Unit filename="Resources/Utils.cpp">
-			<Option target="Debug" />
-		</Unit>
+		<Unit filename="Resources/Utils.hpp" />
 		<Unit filename="Resources/easylogging++.h">
 			<Option target="Debug" />
 		</Unit>
@@ -127,9 +129,6 @@
 			<Option target="Debug" />
 		</Unit>
 		<Unit filename="Resources/tinyxml/tinyxmlparser.cpp">
-			<Option target="Debug" />
-		</Unit>
-		<Unit filename="easylogging++.h">
 			<Option target="Debug" />
 		</Unit>
 		<Extensions>

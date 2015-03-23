@@ -1,8 +1,9 @@
 #pragma once
-#include "Window.hpp"
 #include "ItemGrid.hpp"
 #include "../MapSystem/Item.h"
 #include <SFML/Graphics.hpp>
+// TODO
+// Zła architektura
 class GridWindow : public sf::Drawable, public sf::Transformable
 {
 public:

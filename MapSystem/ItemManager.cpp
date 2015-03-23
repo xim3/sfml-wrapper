@@ -1,8 +1,9 @@
 #include "ItemManager.hpp"
 #include "../Resources/tinyxml/tinyxml.h"
 #include "../Resources/easylogging++.h"
+
 ItemManager::ItemManager()
-    : capacity(0)
+: capacity(0)
 {
     // 1024 - for data align.
     picked.resize(1024);

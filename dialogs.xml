@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dialogs>
+	<npc id="1">
+     <reply text="Witaj!">
+      <player text="Witaj magu!">
+       <reply text="Chcesz questa?">
+        <player text="Tak">
+         <reply text="Na moczarach są złote kalesony, przynieś je!">
+          <player text="Podejme się!" condition="level > 10">
+           <reply text="A więc idź, czekam!" action="3" questname="moczary0">
+           </reply>
+          </player>
+          <player text="Nie interesuje mnie to zadanie">
+           <reply text="Cóż, szkoda" >
+           </reply>
+          </player>
+         </reply>
+        </player>
+        <player text="Nie">
+         <reply text="Twoja strata :P">
+         </reply>
+        </player>
+        <player text="Co dostane w zamian?">
+         <reply text="Nagrode, bardzo chojną">
+         </reply>
+        </player>
+       </reply>
+      </player>
+      <player text="Dawaj itemy" >
+       <reply text="Czy to napad?">
+        <player text="Tak" condition="strength > 50">
+         <reply text="Okej koksie nie bij, masz" action="1" params="103,22,45,125,1024">
+         </reply>
+        </player>
+        <player text="Nie">
+         <reply text="Uff, to dobrze">
+         </reply>
+        </player>
+        <player text="Być może">
+         <reply text="Żadam dokładnej odpowiedzi">
+          <player text="Tak">
+           <reply text="Więc walcz!">
+           </reply>
+          </player>
+          <player text="Nie">
+           <reply text="Uff, to dobrze">
+            <player text="Nom">
+             <reply text="Hiho">
+              <player text="Co?">
+               <reply text="Nic">
+                <player text="Może jednak coś?">
+                 <reply text="Nie, nic">
+                  <player text="Na pewno?">
+                   <reply text="No, na pewno">
+                   </reply>
+                  </player>
+                  <player text="Daj piniążek">
+                   <reply text="Nie mam :(">
+                    <player text="Masz masz">
+                     <reply text="Jakbym miał, i tak bym nie dał">
+                     </reply>
+                    </player>
+                    <player text="No rozumiem, bida w krainie">
+                     <reply text="Niestety">
+                      <player text="No daj dolara">
+                       <reply text="No nie mam, serio">
+                        <player text="maszmaszmaszmasz">
+                         <reply text="Dobra żebraku, masz 10 golda i ić sobie">
+                          <player text="Dziękuje Ci">
+                           <reply text="Idź już">
+                           </reply>
+                          </player>
+                          <player text="A dej jescze 10 golda">
+                           <reply text="O ty chamie, walcz!">
+                           </reply>
+                          </player>
+                          <player text="Daj jescze plix">
+                           <reply text="Ile?">
+                            <player text="1 zet">
+                             <reply text="Tyle Ci moge dać">
+                             </reply>
+                            </player>
+                            <player text="3 zeta">
+                             <reply text="Okej, ale nie pokazuj sie tu przez tydzień!">
+                             </reply>
+                            </player>
+                            <player text="10 zeta">
+                             <reply text="O ty chamie!">
+                             </reply>
+                            </player>
+                           </reply>
+                          </player>
+                         </reply>
+                        </player>
+                       </reply>
+                      </player>
+                      <player text="Żegnaj">
+                       <reply text="3m sie">
+                       </reply>
+                      </player>
+                     </reply>
+                    </player>
+                   </reply>
+                  </player>
+                 </reply>
+                </player>
+               </reply>
+              </player>
+              <player text="Test1">
+               <reply text="Test3">
+               </reply>
+              </player>
+              <player text="Test2">
+               <reply text="Test4">
+               </reply>
+              </player>
+             </reply>
+            </player>
+           </reply>
+          </player>
+         </reply>
+        </player>
+       </reply>
+      </player>
+      <player text="Żegnaj">
+	   <reply text="trzym sie">
+	   </reply>
+     </player>
+     </reply>
+	</npc>
+
+	<npc id="2">
+	 <reply text="Witaj w sklepie u Zbycha">
+	  <player text="Witaj, co masz do sprzedania?">
+	   <reply text="Spójrz">
+	   </reply>
+	  </player>
+	  <player text="Co skupujesz?">
+	   <reply text="Spójrz">
+	   </reply>
+	  </player>
+	  <player text="Żegnaj!">
+	   <reply text="Cześć">
+	   </reply>
+	  </player>
+	 </reply>
+	</npc>
+
+	<npc id="3">
+	 <reply text="Witaj :P">
+	  <player text="Siema, co tam?">
+	   <reply text="A dobrze, dobrze">
+	   </reply>
+	  </player>
+	  <player text="Test">
+	   <reply text="Git Test">
+	   </reply>
+	  </player>
+	  <player text="Testowy tekst">
+	   <reply text="Testowa odpowiedź ;)">
+	   </reply>
+	  </player>
+	 </reply>
+	</npc>
+</dialogs>

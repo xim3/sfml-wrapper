@@ -17,7 +17,7 @@
 		<Cursor position="638" topLine="0" />
 	</File>
 	<File name="DialogSystem/GridWindow.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="2547" topLine="32" />
+		<Cursor position="2497" topLine="32" />
 	</File>
 	<File name="DialogSystem/GridWindow.hpp" open="0" top="0" tabpos="0">
 		<Cursor position="407" topLine="0" />
@@ -25,7 +25,7 @@
 	<File name="DialogSystem/ItemGrid.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="374" topLine="0" />
 	</File>
-	<File name="Main.cpp" open="1" top="1" tabpos="1">
+	<File name="Main.cpp" open="1" top="0" tabpos="1">
 		<Cursor position="1178" topLine="18" />
 	</File>
 	<File name="MapSystem/Item.h" open="1" top="0" tabpos="4">
@@ -48,9 +48,6 @@
 	</File>
 	<File name="Person/Entity.cpp" open="0" top="0" tabpos="0">
 		<Cursor position="4153" topLine="97" />
-	</File>
-	<File name="Resources/Utils.cpp" open="0" top="0" tabpos="2">
-		<Cursor position="278" topLine="0" />
 	</File>
 	<File name="Resources/easylogging++.h" open="0" top="0" tabpos="0">
 		<Cursor position="245145" topLine="5569" />

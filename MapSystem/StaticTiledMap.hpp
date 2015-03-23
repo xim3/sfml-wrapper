@@ -75,9 +75,11 @@ for(auto item : itemsOnMap)
     ////////debugend/////////////
 private:
     void            appendTile(const unsigned int, const unsigned int, const unsigned int, TILETYPE bgLayer);
+    bool            resizeVertexArrays(size_t, size_t);
     void            loadObjects(TiXmlElement*, unsigned int);
     virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     bool            loadTiles(TiXmlElement*, unsigned int);
+    void            cleanMap();
     /*** \brief Tablica vertexów tła*/
     sf::VertexArray m_vertices;
     /*** \brief Tablica vertexów dekoracji oraz NPC*/
