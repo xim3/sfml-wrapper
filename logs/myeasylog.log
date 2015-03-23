@@ -1,0 +1,52 @@
+2015-03-16 19:07:56,420 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-16 19:07:56,421 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-16 20:48:27,029 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-16 20:48:27,029 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 08:33:59,739 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 08:33:59,760 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 09:23:11,892 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 09:23:11,892 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 09:28:54,624 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 09:28:54,624 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 09:31:06,474 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 09:31:06,474 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 09:35:34,937 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 09:35:34,937 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 11:02:18,789 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 11:02:18,790 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 14:26:42,128 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 14:26:42,128 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 14:28:34,087 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 14:28:34,087 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 14:29:11,655 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 14:29:11,655 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 14:31:06,918 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 14:31:06,918 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 14:36:19,324 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 14:36:19,324 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 14:37:26,876 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 14:37:26,876 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 14:39:16,770 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 14:39:16,770 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 14:48:44,769 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 14:48:44,769 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 14:51:41,686 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 14:51:41,686 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 15:03:31,201 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 15:03:31,201 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 21:33:23,986 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 21:33:23,986 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 21:33:50,557 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 21:33:50,557 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 21:34:33,812 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 21:34:33,813 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 21:37:00,555 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 21:37:00,556 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 21:41:06,971 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 21:41:06,971 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-17 21:44:12,176 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-17 21:44:12,177 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-18 07:34:57,940 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-18 07:34:57,966 WARN  [default] Aborting application. Reason: Fatal log at [/home/b30/codes/git/Resources/easylogging++.h:5583]
+2015-03-22 09:14:32,701 FATAL [default] CRASH HANDLED; Application has crashed due to [SIGSEGV] signal
+2015-03-22 09:14:32,730 WARN  [default] Aborting application. Reason: Fatal log at [Resources/easylogging++.h:5583]
