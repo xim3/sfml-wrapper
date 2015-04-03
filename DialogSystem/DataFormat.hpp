@@ -23,6 +23,7 @@ public:
     void transformToReadable(std::string, std::string, sf::Color&);
     void transformProperties(std::string, std::string,std::string);
     void solveType(ITEM_TYPE, sf::Text&);
+    inline void newFunc(){};
 private:
     MemoryManager* mmgr;
     std::basic_string<sf::Uint32> utf32;
