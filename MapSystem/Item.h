@@ -1,10 +1,12 @@
 #pragma once
 #include <string>
-enum ITEM_TYPE{WEAPON, ARMOR, RECOVERY};
+#include <vector>
+#include <utility>
+enum ITEM_TYPE{WEAPON = 0, HELMET = 1, ARMOR = 2, PANTS = 3, BOOTS = 4, SHIELD = 5, AMULET = 6, POTION = 7, NOT_WEAR = 8};
 class ItemData
 {
 public:
-	ITEM_TYPE type;
+	ITEM_TYPE    type;
 	std::wstring description;
 	std::wstring name;
 	unsigned int attack;
@@ -12,8 +14,11 @@ public:
 	unsigned int quality;
 	unsigned int price;
 	unsigned int power;
+    unsigned int gid;
 	double 		 speed;
-	unsigned int gid;
+	std::vector<std::pair<std::string, int>>  addit_data;
+	std::vector<std::pair<std::pair<std::string, std::string>, std::string>> conditions;
+	std::vector<std::pair<std::pair<std::string, std::string>, std::string>> properties;
 	ItemData
 	(ITEM_TYPE _type,std::wstring _desc,std::wstring _nam,
 	 unsigned int _att, unsigned int _def, unsigned int _qua,
@@ -27,8 +32,8 @@ public:
 	 , quality(_qua)
 	 , price(_pri)
 	 , power(_pow)
-	 , speed(_spe)
 	 , gid(_gid)
+	 , speed(_spe)
 	 {
 	 };
     ItemData()
@@ -40,8 +45,8 @@ public:
 	 , quality(0)
 	 , price(0)
 	 , power(0)
-	 , speed(0)
 	 , gid(0)
+     , speed(0)
     {
 
     }
@@ -54,8 +59,11 @@ public:
 	, quality(rhs.quality)
 	, price(rhs.price)
 	, power(rhs.power)
-	, speed(rhs.speed)
 	, gid(rhs.gid)
+	, speed(rhs.speed)
+	, addit_data(rhs.addit_data)
+	, conditions(rhs.conditions)
+	, properties(rhs.properties)
 	{
 	}
 	ItemData& operator=(const ItemData& rhs)
@@ -70,7 +78,18 @@ public:
 		this->power 	  = rhs.power;
 		this->speed 	  = rhs.speed;
 		this->gid 	      = rhs.gid;
+		this->addit_data  = rhs.addit_data;
+		this->conditions  = rhs.conditions;
+		this->properties  = rhs.properties;
 		return *this;
+	}
+	void setConditions(std::vector<std::pair<std::pair<std::string, std::string>, std::string>> c)
+	{
+	    conditions = c;
+	}
+	void setProperties(std::vector<std::pair<std::pair<std::string, std::string>, std::string>> p)
+	{
+	    properties = p;
 	}
 	bool operator==(const ItemData& rhs) const
 	{

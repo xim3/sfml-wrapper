@@ -66,7 +66,10 @@ void DataRead::read(TiXmlElement* ent)
         }
         current_processed.type_action = type;
         if(ent->Attribute("condition") != NULL)
+        {
             current_processed.ad_info.helpstring = ent->Attribute("condition");
+            current_processed.has_condition = true;
+        }
     }
 }
 void DataRead::parseParams(const std::string params, std::vector<int>& v, char delim)

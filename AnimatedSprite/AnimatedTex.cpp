@@ -1,4 +1,5 @@
 #include "AnimatedTex.hpp"
+#include <stdexcept>
 /**
  * \param frameTime - Czas wyświetlania klatki, paused - pauza
  * looped - zapętlenie
@@ -80,7 +81,6 @@ void AnimatedTex::setColor(const sf::Color& color){
 const Animation* AnimatedTex::getAnimation() const{
     return m_animation;
 }
-#include <iostream>
 /**
  * \brief Zwraca zapętlenie animacji
  * \return Zapętlenie
@@ -108,17 +108,15 @@ sf::Time AnimatedTex::getFrameTime() const{
  * \details Przełącza klatke
  * \param Numer klatki
  */
- #include <iostream>
- #include <stdexcept>
 void AnimatedTex::setFrame(std::size_t newFrame){
     if (m_animation){
         sf::IntRect rect;
-        try{
-        rect = m_animation->getFrame(newFrame);
+        try
+        {
+            rect = m_animation->getFrame(newFrame);
         }
         catch (const std::out_of_range& oor)
         {
-        std::cout << "Out of Range error: " << oor.what() << '\n';
         }
         m_vertices[0].position = sf::Vector2f(0.f, 0.f);
         m_vertices[1].position = sf::Vector2f(0.f, static_cast<unsigned int>(rect.height));

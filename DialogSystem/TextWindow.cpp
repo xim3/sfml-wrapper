@@ -4,8 +4,11 @@
 #include <string>
 #include "../Resources/easylogging++.h"
 #include "../Resources/Utils.hpp"
-TextWindow::TextWindow(sf::Vector2f pos, sf::Vector2f size,sf::Vector2i& _mouse, sf::Font* f, unsigned int f_size)
-: mousev(_mouse)
+#include <iostream>
+using namespace std;
+TextWindow::TextWindow(sf::Vector2f pos, sf::Vector2f size ,sf::Vector2i& _mouse, sf::Font* f, unsigned int f_size)
+: IWindow()
+, mousev(_mouse)
 , font(f)
 , visible(true)
 , font_size(f_size)
@@ -58,15 +61,12 @@ int TextWindow::underAnwser(sf::Vector2i& vct, int start)
     }
     else return -1;
 }
-#include <iostream>
-using namespace std;
 bool TextWindow::buttonHold(int n_msec)
 {
     sf::Time time_button_hold;
     if( sf::Mouse::isButtonPressed(sf::Mouse::Left) )
     {
         time_button_hold += sf::Time(click_clock.getElapsedTime());
-        std::cout << time_button_hold.asMilliseconds() << std::endl;
         if( time_button_hold > sf::milliseconds(n_msec) )
         {
             time_button_hold = sf::Time::Zero;
@@ -85,10 +85,9 @@ bool TextWindow::buttonHold(int n_msec)
 int TextWindow::selectAnwser(int start)
 {
     int anw = underAnwser(mousev,start);
-    if( buttonHold(250) && anw != -1 )
+    if( buttonHold(200) && anw != -1 )
         return anw;
-    else
-        return -1;
+    else return -1;
 }
 void TextWindow::refresh()
 {
@@ -107,7 +106,7 @@ void TextWindow::setIdleColor(sf::Color i_c)
 {
     idle_color = i_c;
 }
-bool TextWindow::isVisible()
+bool TextWindow::isVisible() const
 {
     return visible;
 }

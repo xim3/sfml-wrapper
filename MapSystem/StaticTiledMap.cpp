@@ -34,7 +34,6 @@ bool TileMap::resizeVertexArrays(size_t width_in_tiles, size_t height_in_tiles){
 bool TileMap::loadMap(const std::string name)
 {
     std::chrono::time_point<std::chrono::system_clock> start,end;
-
     start = std::chrono::system_clock::now();
     TiXmlDocument mapFile(name.c_str());
     if(!mapFile.LoadFile())
@@ -182,6 +181,7 @@ void TileMap::loadObjects(TiXmlElement *objectsGroup, unsigned int firstTID)
                     appendTile(ix,iy,i_gid,ITEM);
                     itemsOnMap.push_back(Item(ix,iy,i_gid,id));
                 }
+
             }
             if(name == "portal")
             {
@@ -205,7 +205,7 @@ void TileMap::loadObjects(TiXmlElement *objectsGroup, unsigned int firstTID)
                 Animation _ani;
                 _ani.setTileset(m_tileset);
                 for(size_t i = 0; i<steps; ++i)
-                    _ani.addFrameGID(i_gid + i);// Magic number, wybaczcie(iy-1)
+                    _ani.addFrameGID(i_gid + i);
                 animated.push_back(AnimatedTile(ix,iy-1,speed,_ani,tile_width,tile_height));
             }
             if(name == "npc")
@@ -246,7 +246,6 @@ void TileMap::refreshAnimations()
         it->txt.update(frameTime);
     }
 }
-//blend
 /**
  * \brief Rysuje mape
  * \details Rysuje animacje i wszystko co jest na mapie
@@ -278,7 +277,7 @@ bool TileMap::pickItem(const sf::Vector2u& xy)
     if(imgr.playerItemCount() < imgr.getCapacity())
     {
         std::vector<Item>::iterator it =
-            std::find_if(itemsOnMap.begin(),itemsOnMap.end(),std::bind(xyCompare<Item>, std::placeholders::_1,xy));
+        std::find_if(itemsOnMap.begin(),itemsOnMap.end(),std::bind(xyCompare<Item>, std::placeholders::_1,xy));
         if(it != itemsOnMap.end())
         {
             imgr.addItem(*it);
@@ -289,8 +288,7 @@ bool TileMap::pickItem(const sf::Vector2u& xy)
         }
         return false;
     }
-    else
-        return false;
+    else return false;
 }
 /**
  * \brief Dodaje item do mapy
@@ -366,7 +364,7 @@ void TileMap::appendTile(const unsigned int x,const unsigned int y, const unsign
 bool TileMap::isItem(const sf::Vector2u& vct, int& _id) const
 {
     std::vector<Item>::const_iterator it =
-        std::find_if(itemsOnMap.cbegin(), itemsOnMap.cend(), std::bind(xyCompare<Item>, std::placeholders::_1,vct));
+    std::find_if(itemsOnMap.cbegin(), itemsOnMap.cend(), std::bind(xyCompare<Item>, std::placeholders::_1,vct));
     if(it != itemsOnMap.end())
     {
         _id = it->id;
@@ -392,8 +390,7 @@ bool TileMap::isSolidTile(sf::Vector2f vct) const
     {
         return true;
     }
-    else
-        return false;
+    else return false;
 }
 /**
  * \brief Zwraca bool czy xy jest portalem
@@ -406,10 +403,7 @@ bool TileMap::isPortal(const sf::Vector2u& vct) const
     std::vector<PortalTile>::const_iterator it=
         std::find_if(portals.cbegin(), portals.cend(), std::bind(xyCompare<PortalTile>, std::placeholders::_1, vct));
     if(it!=portals.end())
-    {
-        LOG(DEBUG) << "Portal to \""<< it->file <<"\".";
         return true;
-    }
     else return false;
 }
 void TileMap::cleanMap(){

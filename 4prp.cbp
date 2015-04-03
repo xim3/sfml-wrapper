@@ -60,6 +60,12 @@
 		<Unit filename="DialogSystem/GridWindow.hpp" />
 		<Unit filename="DialogSystem/ItemGrid.cpp" />
 		<Unit filename="DialogSystem/ItemGrid.hpp" />
+		<Unit filename="DialogSystem/PlayerDataWindow.cpp" />
+		<Unit filename="DialogSystem/PlayerDataWindow.hpp" />
+		<Unit filename="DialogSystem/PlayerEquip.cpp" />
+		<Unit filename="DialogSystem/PlayerEquip.hpp" />
+		<Unit filename="DialogSystem/PopupMenu.cpp" />
+		<Unit filename="DialogSystem/PopupMenu.hpp" />
 		<Unit filename="DialogSystem/TextWindow.cpp" />
 		<Unit filename="DialogSystem/TextWindow.hpp" />
 		<Unit filename="Main.cpp">
@@ -68,6 +74,8 @@
 		<Unit filename="MapSystem/Item.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="MapSystem/ItemLoader.cpp" />
+		<Unit filename="MapSystem/ItemLoader.hpp" />
 		<Unit filename="MapSystem/ItemManager.cpp">
 			<Option target="Debug" />
 		</Unit>
@@ -103,6 +111,8 @@
 		<Unit filename="Person/Entity.hpp">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="Person/MemoryBridge.cpp" />
+		<Unit filename="Person/MemoryBridge.hpp" />
 		<Unit filename="Person/Player.cpp">
 			<Option target="Debug" />
 		</Unit>

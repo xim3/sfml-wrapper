@@ -3,6 +3,7 @@
 #include <ctime>
 #include <queue>
 #include <SFML/Graphics.hpp>
+#include <stack>
 #include "ItemManager.hpp"
 #include "../NpcManager/NpcManager.hpp"
 /**
@@ -19,31 +20,27 @@ class TileMap : public sf::Drawable, public sf::Transformable
 {
 public:
     TileMap(ItemManager& , NpcManager & );
-    void       	 setItemManagerHandle(ItemManager* igr);
     /*** \brief Zwraca liczbe itemów na mapie**/
     size_t     	 itemsOnMapCount() const
     {
         return itemsOnMap.size();
     }
-    /*** \brief Zwraca liczbe solidnych kratek na mapie**/
-    size_t     	 solidTilesCount() const
-    {
-        return solidTiles.size();
-    }
-    bool       	 loadMap(const std::string name);
-    bool       	 isItem(const sf::Vector2u&, int & _id) const;
+    bool       	 loadMap(const std::string);
+    bool       	 isItem(const sf::Vector2u&, int&) const;
     bool 	   	 isPortal(const sf::Vector2u&) const ;
     bool       	 pickItem(const sf::Vector2u&);
     bool       	 dropItem(const int);
     bool       	 isSolidTile(sf::Vector2f) const;
+    bool isPointOutOfMap(sf::Vector2u) const;
     sf::Vector2f reload(sf::Vector2u&);
     int          getGID(size_t) const;
     const sf::Texture& getTexture() const;
     void         refreshAnimations();
-    void         setNPCManagerHandle(NpcManager *);
+    void         setNPCManagerHandle(NpcManager*);
+    void       	 setItemManagerHandle(ItemManager* igr);
     sf::Vector2u getSize() const;
     sf::Vector2f getSizeFloat() const;
-    bool isPointOutOfMap(sf::Vector2u) const;
+
     // Tylko do debugowania //
     /*** \brief Funkcja do debugowania**/
     void printSolidTiles()
@@ -54,32 +51,15 @@ public:
         }
     }
     /*** \brief Funkcja do debugowania**/
-    void            fillMap();
-    void    printItems1()
-    {
-        int i=0;
-        printf("==========MAPITEMS==========\n");
-        if(itemsOnMapCount() == 0)
-        {
-            printf("No items On map\n");
-            printf("===============================\n");
-            return ;
-        }
-for(auto item : itemsOnMap)
-        {
-            printf("X:%i Y:%i \tGID:%i \tID:%i \tINDEX:%i\n", item.x,item.y,item.gid,item.id,i);
-            i++;
-        }
-        printf("============================\n");
-    }
+
     ////////debugend/////////////
 private:
-    void            appendTile(const unsigned int, const unsigned int, const unsigned int, TILETYPE bgLayer);
-    bool            resizeVertexArrays(size_t, size_t);
-    void            loadObjects(TiXmlElement*, unsigned int);
     virtual void    draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-    bool            loadTiles(TiXmlElement*, unsigned int);
+    void            appendTile(const unsigned int, const unsigned int, const unsigned int, TILETYPE bgLayer);
+    void            loadObjects(TiXmlElement*, unsigned int);
     void            cleanMap();
+    bool            resizeVertexArrays(size_t, size_t);
+    bool            loadTiles(TiXmlElement*, unsigned int);
     /*** \brief Tablica vertexów tła*/
     sf::VertexArray m_vertices;
     /*** \brief Tablica vertexów dekoracji oraz NPC*/

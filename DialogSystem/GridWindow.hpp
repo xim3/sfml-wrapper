@@ -1,10 +1,9 @@
 #pragma once
+#include "../Resources/Utils.hpp"
 #include "ItemGrid.hpp"
 #include "../MapSystem/Item.h"
 #include <SFML/Graphics.hpp>
-// TODO
-// Zła architektura
-class GridWindow : public sf::Drawable, public sf::Transformable
+class GridWindow : public IWindow
 {
 public:
     GridWindow(sf::Texture*,sf::Vector2f, unsigned int,unsigned int,
@@ -14,13 +13,19 @@ public:
     void update(const std::vector<Item>&);
     void refresh(unsigned int);
     void move(const sf::Vector2f&);
+    void appendBackground();
+    void cleanBg();
+    void resizeBg();
+    void appendItem(const int,const int,const int,const int);
+    void setVisible(bool);
     unsigned int getGID(sf::Vector2i);
+    unsigned int getID(sf::Vector2i);
+    bool intersects(sf::Vector2i&);
+    bool isVisible() const;
+    bool buttonHold(int);
     sf::Vector2i underSquare(sf::Vector2i&);
-    bool intersects(const sf::Vector2i&);
 protected:
-    bool hoover;
     ItemGrid grid;
-    bool in_area;
     sf::RectangleShape _backgrd;
     std::vector<Item> items_in_grid;
 };

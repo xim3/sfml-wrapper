@@ -15,6 +15,10 @@ INITIALIZE_EASYLOGGINGPP
 #include "DialogSystem/TextWindow.hpp"
 #include "DialogSystem/DataFormat.hpp"
 #include "NpcManager/DataReader.hpp"
+#include "DialogSystem/PlayerDataWindow.hpp"
+#include "DialogSystem/PopupMenu.hpp"
+#include "MapSystem/ItemLoader.hpp"
+#include "Person/MemoryBridge.hpp"
 //
 
 int main()
@@ -28,17 +32,19 @@ int main()
     window.setFramerateLimit(60);
     sf::Texture l;l.loadFromFile("tile.png");
     sf::Font fon;
+    ItemLoader iload;
     fon.loadFromFile("DialogSystem/arialuni.ttf");
-    ItemManager imgr;
-    EquipFormat eqFormater;
+    ItemManager imgr(iload);
+
     DataRead dataRead;
+    MemoryManager mem;
+    EquipFormat eqFormater(&mem);
     sf::Vector2i mysza;
     sf::Event event;
-    EquipmentWindow eqw(&l,&fon,sf::Vector2f(30,300),5,5,imgr,eqFormater,sf::Color(30,30,30,200), sf::Color(30,50,30,200));
-    imgr.setCapacity(eqw.getCapacity());
-    TextWindow text(sf::Vector2f(0,800-200), sf::Vector2f(800,200),mysza,&fon,15);
+    imgr.setCapacity(5*5);
+    TextWindow text(sf::Vector2f(0,800-200), sf::Vector2f(800,200),mysza,&fon,13);
     	sf::Vector2u pzz;
-    NpcManager nmgr(dataRead, text, pzz);
+    NpcManager nmgr(dataRead, text, pzz, mysza);
     TileMap map(imgr, nmgr);
     Player gamer;
     Entity a;
@@ -46,19 +52,34 @@ int main()
     gamer.load("player.xml");
 	map.loadMap("r.tmx");
     nmgr.loadDialogs("dialogs.xml");
-
+    gamer.addStat("level", 30);
+    gamer.addStat("exp", 1000);
+    gamer.addStat("strength", 100);
+    gamer.addStat("agility", 10);
+    gamer.addStat("vital",5);
+    gamer.addStat("energy",4);
+    gamer.addStat("wisdom", 9);
+    gamer.addStat("charisma", 30);
+    gamer.addStat("freepoints", 300);
+    gamer.addStat("weapon",0);
+    gamer.addStat("pants", 0);
+    gamer.addStat("armor", 0);
+    gamer.addStat("boots", 0);
+    gamer.addStat("helmet",0);
+    gamer.addStat("shield",0);
+    mem.set(gamer.getFullStats());
 
 	imgr.loadItems("items.xml");
-
-
+    nmgr.setPlayerStats(gamer.getFullStats());
 	gamer.setPosition(10,10);
 	a.setPosition(3,10);
 	text.setVisible(false);
 	sf::Vector2f aPos;
-	sf::Int32 itemId = 0;
 	unsigned int iid = 0;
-	bool isit,sol,por;
+	bool sol,por;
 	sf::Vector2f x;
+	DataWindow dw(sf::Vector2f(300,300), pzz, mysza, &fon, &l, imgr, map ,eqFormater, 12);
+	dw.setMemoryManager(&mem);
     while (window.isOpen())
     {
     while(window.pollEvent(event))
@@ -70,34 +91,25 @@ int main()
 				if (event.mouseButton.button == sf::Mouse::Right )
 							++iid;
 				if(event.mouseButton.button == sf::Mouse::Left && iid > 0)
-				{
-
 							--iid;
-				}
-
 			}
-			if(sf::Mouse::isButtonPressed(sf::Mouse::Left)){
-			  std::cout << "pressed\n";
-			}
-        mysza = sf::Mouse::getPosition(window);
+            mysza = sf::Mouse::getPosition(window);
 	}
     pzz = gamer.getPosition();
-	isit = map.isItem(pzz,itemId);
     sf::Vector2f pzz1 = gamer.getPositionFloat();
 	sol = map.isSolidTile(pzz1);
 	por = map.isPortal(pzz);
-	nmgr.nearNPC(pzz);
-//printf("intersect:%i x:%i y:%i ua:%i\n",
+	nmgr.nearNPC(pzz);    //printf("under butt:%i\n",men.underButton(sf::Vector2f(mysza.x, mysza.y)));
     //text.intersects(mysza), mysza.x,mysza.y, text.selectAnwser());
 	//printf("X:%f Y:%f, solid:%i item:%i itemId:%i playerit:%i items:%i iid:%i portal:%i near:%i \n",pzz1.x,pzz1.y, sol,isit, itemId, imgr.playerItemCount(), map.itemsOnMapCount(),iid,por, nmgr.nearNPC(pzz));
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
     {
-        eqw.update(imgr.getItemsVector());
-	  	if(isit == false && sol == false)
+	  	if(sol == false)
 	    {
-			if(map.dropItem(iid)){
+			if(map.dropItem(iid))
+			{
 				printf("Dropped!\n");
-				eqw.refresh(0);
+				dw.equipRefresh();
 			}
 			else
 				printf("No Way\n");
@@ -107,22 +119,15 @@ int main()
 	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::R))
 	{
-        eqw.update(imgr.getItemsVector());
 		if(map.pickItem(pzz)){
 			printf("Picked!\n");
 		}
 		else
 			printf("No Item\n");
 	}
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::N)){
-
-	    eqw.move(sf::Vector2f(eqw.getPosition().x-1,eqw.getPosition().y));
-		map.printItems1();
-	}
 	if(sf::Keyboard::isKeyPressed(sf::Keyboard::B)){
-
-	    eqw.move(sf::Vector2f(eqw.getPosition().x+1,eqw.getPosition().y));
 		imgr.printItems();
+
 	}
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::O))
     {
@@ -145,36 +150,32 @@ int main()
 			gamer.setPosition((unsigned int)(x1.x),(unsigned int)(x1.y));
 		}
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) == true && map.isSolidTile(gamer.getPositionFixed(D_UP, 0.1)) == false)
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W) == true && map.isSolidTile(gamer.getPositionFixed(D_UP, 0.3)) == false)
            gamer.move("up");
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) ==true && map.isSolidTile(gamer.getPositionFixed(D_DOWN, 0.1)) == false){
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) ==true && map.isSolidTile(gamer.getPositionFixed(D_DOWN, 0.1)) == false){
             gamer.move("down");
     }
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)==true && map.isSolidTile(gamer.getPositionFixed(D_LEFT, 0.1)) == false)
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)==true && map.isSolidTile(gamer.getPositionFixed(D_LEFT, 0.1)) == false)
            gamer.move("left");
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) ==true&& map.isSolidTile(gamer.getPositionFixed(D_RIGHT,0.1))== false)
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::D) ==true&& map.isSolidTile(gamer.getPositionFixed(D_RIGHT,0.1))== false)
            gamer.move("right");
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::H))
 	    gamer.action("insane");
+
     a.update();
-    nmgr.choiceMouseNPC(mysza,pzz, 32,32);
-   //nmgr.talkWithNearest(pzz);
-   nmgr.update();
+    nmgr.update();
     map.refreshAnimations();
 	imgr.update(pzz);
     window.setView(cam);
-    eqw.controlCloud(mysza);
     gamer.update();
     window.clear();
     window.draw(map);
     if(text.isVisible())
-    window.draw(text);
+        window.draw(text);
+    dw.update();
     window.draw(a);
-       window.draw(gamer);
-    window.draw(eqw);
-
-    //window.draw(win);
-
+    window.draw(gamer);
+    window.draw(dw);
     window.display();
     }
     return 0;

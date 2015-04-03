@@ -4,9 +4,9 @@
      <reply text="Witaj!">
       <player text="Witaj magu!">
        <reply text="Chcesz questa?">
-        <player text="Tak">
+        <player text="Tak" condition="level > 30">
          <reply text="Na moczarach są złote kalesony, przynieś je!">
-          <player text="Podejme się!" condition="level > 10">
+          <player text="Podejme się!">
            <reply text="A więc idź, czekam!" action="3" questname="moczary0">
            </reply>
           </player>
@@ -28,7 +28,7 @@
       </player>
       <player text="Dawaj itemy" >
        <reply text="Czy to napad?">
-        <player text="Tak" condition="strength > 50">
+        <player text="Tak" condition="strength >= 110">
          <reply text="Okej koksie nie bij, masz" action="1" params="103,22,45,125,1024">
          </reply>
         </player>
@@ -38,7 +38,7 @@
         </player>
         <player text="Być może">
          <reply text="Żadam dokładnej odpowiedzi">
-          <player text="Tak">
+          <player text="Tak" condition="strength > 30">
            <reply text="Więc walcz!">
            </reply>
           </player>
@@ -76,15 +76,15 @@
                           </player>
                           <player text="Daj jescze plix">
                            <reply text="Ile?">
-                            <player text="1 zet">
+                            <player text="1 zet" condition="level > 5">
                              <reply text="Tyle Ci moge dać">
                              </reply>
                             </player>
-                            <player text="3 zeta">
+                            <player text="3 zeta" condition="level > 10">
                              <reply text="Okej, ale nie pokazuj sie tu przez tydzień!">
                              </reply>
                             </player>
-                            <player text="10 zeta">
+                            <player text="10 zeta" condition="level > 15">
                              <reply text="O ty chamie!">
                              </reply>
                             </player>

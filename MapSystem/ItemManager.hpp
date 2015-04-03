@@ -14,7 +14,7 @@
 class ItemManager
 {
 public:
-    ItemManager();
+    ItemManager(IItemRead&);
     virtual ~ItemManager();
     /** \brief Tylko do debugowania */
     void     printItems()
@@ -49,6 +49,7 @@ for(auto item : playerItems)
     size_t   playerItemCount() const;
 protected:
     /** \brief itemy w plecaku */
+    IItemRead             &loader;
     std::vector<ItemData> itemsinfo;
     std::vector<Item> playerItems;
     /** \brief flagi podniesienia */

@@ -1,12 +1,12 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "../Resources/Utils.hpp"
-class TextWindow : public sf::Drawable, public sf::Transformable
+class TextWindow : public IWindow
 {
 public:
     TextWindow(sf::Vector2f, sf::Vector2f,sf::Vector2i&, sf::Font*, unsigned int f_size=15);
     bool intersects(sf::Vector2i&);
-    bool isVisible();
+    bool isVisible() const;
     bool buttonHold(int);
     int  underAnwser(sf::Vector2i&,int);
     int  selectAnwser(int);

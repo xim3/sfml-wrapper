@@ -1,8 +1,6 @@
 # depslib dependency file v1.0
-1426196628 source:/home/b30/codes/git/AnimatedSprite/AnimatedTex.cpp
+1427544124 source:/home/b30/codes/git/AnimatedSprite/AnimatedTex.cpp
 	"AnimatedTex.hpp"
-	<iostream>
-	<iostream>
 	<stdexcept>
 
 1425310932 /home/b30/codes/git/AnimatedSprite/AnimatedTex.hpp
@@ -355,48 +353,62 @@
 1427102199 source:/home/b30/codes/git/AnimatedSprite/Animation.cpp
 	"Animation.hpp"
 
-1426506748 source:/home/b30/codes/git/DialogSystem/DataFormat.cpp
+1427964828 source:/home/b30/codes/git/DialogSystem/DataFormat.cpp
 	"DataFormat.hpp"
 	"../Resources/Utils.hpp"
 	<string>
 	<SFML/Graphics.hpp>
+	<iostream>
 
-1426505829 /home/b30/codes/git/DialogSystem/DataFormat.hpp
+1427967833 /home/b30/codes/git/DialogSystem/DataFormat.hpp
 	"../MapSystem/Item.h"
 	"../Resources/Utils.hpp"
+	"../Person/MemoryBridge.hpp"
 	<SFML/Graphics.hpp>
+	<vector>
 
-1426501245 /home/b30/codes/git/MapSystem/Item.h
+1427811333 /home/b30/codes/git/MapSystem/Item.h
 	<string>
+	<vector>
+	<utility>
 
-1426761546 /home/b30/codes/git/Resources/Utils.hpp
+1427994669 /home/b30/codes/git/Resources/Utils.hpp
+	<stack>
+	<utility>
+	<unordered_map>
 	<SFML/Graphics.hpp>
 	"../MapSystem/Item.h"
 
-1426510786 source:/home/b30/codes/git/DialogSystem/EquipWindow.cpp
+1427995037 source:/home/b30/codes/git/DialogSystem/EquipWindow.cpp
 	"EquipWindow.hpp"
 	"../MapSystem/Item.h"
 	<string>
 	<locale>
+	<utility>
 
-1426504819 /home/b30/codes/git/DialogSystem/EquipWindow.hpp
+1427994957 /home/b30/codes/git/DialogSystem/EquipWindow.hpp
 	"GridWindow.hpp"
+	"PopupMenu.hpp"
+	"PlayerEquip.hpp"
 	"../MapSystem/ItemManager.hpp"
 	"../MapSystem/Item.h"
 	"DataFormat.hpp"
+	<utility>
 
-1426663164 /home/b30/codes/git/DialogSystem/GridWindow.hpp
+1427994740 /home/b30/codes/git/DialogSystem/GridWindow.hpp
+	"../Resources/Utils.hpp"
 	"ItemGrid.hpp"
 	"../MapSystem/Item.h"
 	<SFML/Graphics.hpp>
 
-1426490246 /home/b30/codes/git/DialogSystem/Window.hpp
+1427987267 /home/b30/codes/git/DialogSystem/Window.hpp
+	<SFML/Graphics.hpp>
+	<vector>
+
+1427577113 /home/b30/codes/git/DialogSystem/ItemGrid.hpp
 	<SFML/Graphics.hpp>
 
-1426490246 /home/b30/codes/git/DialogSystem/ItemGrid.hpp
-	<SFML/Graphics.hpp>
-
-1426504967 /home/b30/codes/git/MapSystem/ItemManager.hpp
+1427665238 /home/b30/codes/git/MapSystem/ItemManager.hpp
 	<SFML/Graphics/RenderTarget.hpp>
 	<SFML/System/Vector2.hpp>
 	<SFML/Graphics/Drawable.hpp>
@@ -410,19 +422,15 @@
 1426075761 /home/b30/codes/git/MapSystem/Tiles.h
 	"../AnimatedSprite/AnimatedTex.hpp"
 
-1426505000 source:/home/b30/codes/git/DialogSystem/GridWindow.cpp
+1427994716 source:/home/b30/codes/git/DialogSystem/GridWindow.cpp
 	"GridWindow.hpp"
 	"../MapSystem/Item.h"
 	"../Resources/Utils.hpp"
 
-1426415290 source:/home/b30/codes/git/DialogSystem/ItemGrid.cpp
+1427577103 source:/home/b30/codes/git/DialogSystem/ItemGrid.cpp
 	"ItemGrid.hpp"
 
-1426488891 source:/home/b30/codes/git/DialogSystem/Window.cpp
-	"Window.hpp"
-	<iostream>
-	<SFML/Graphics.hpp>
-	"../Resources/easylogging++.h"
+1427987285 source:/home/b30/codes/git/DialogSystem/Window.cpp
 
 1425310932 /home/b30/codes/git/Resources/easylogging++.h
 	<syslog.h>
@@ -493,7 +501,7 @@
 	<boost/container/flat_set.hpp>
 	<wx/vector.h>
 
-1427113073 source:/home/b30/codes/git/Main.cpp
+1427826068 source:/home/b30/codes/git/Main.cpp
 	<iostream>
 	<string>
 	<SFML/Graphics.hpp>
@@ -509,6 +517,10 @@
 	"DialogSystem/TextWindow.hpp"
 	"DialogSystem/DataFormat.hpp"
 	"NpcManager/DataReader.hpp"
+	"DialogSystem/PlayerDataWindow.hpp"
+	"DialogSystem/PopupMenu.hpp"
+	"MapSystem/ItemLoader.hpp"
+	"Person/MemoryBridge.hpp"
 
 1425310932 /home/b30/codes/git/Resources/tinyxml/tinyxml.h
 	<ctype.h>
@@ -525,19 +537,22 @@
 	<assert.h>
 	<string.h>
 
-1426662372 /home/b30/codes/git/MapSystem/StaticTiledMap.hpp
+1427658956 /home/b30/codes/git/MapSystem/StaticTiledMap.hpp
 	<chrono>
 	<ctime>
 	<queue>
 	<SFML/Graphics.hpp>
+	<stack>
 	"ItemManager.hpp"
 	"../NpcManager/NpcManager.hpp"
 
-1427112959 /home/b30/codes/git/NpcManager/NpcManager.hpp
+1427265441 /home/b30/codes/git/NpcManager/NpcManager.hpp
 	"NPC.hpp"
 	"../DialogSystem/TextWindow.hpp"
 	"../Resources/tree.hh"
 	"../Resources/Utils.hpp"
+	<unordered_map>
+	<string>
 
 1426844292 /home/b30/codes/git/NpcManager/NPC.hpp
 	<string>
@@ -552,16 +567,18 @@
 	<SFML/Graphics.hpp>
 	<map>
 
-1426490246 /home/b30/codes/git/Person/Player.hpp
+1427201839 /home/b30/codes/git/Person/Player.hpp
 	<SFML/Graphics.hpp>
+	<string>
+	<unordered_map>
 	"Entity.hpp"
 
-1427012439 source:/home/b30/codes/git/MapSystem/ItemManager.cpp
+1427810774 source:/home/b30/codes/git/MapSystem/ItemManager.cpp
 	"ItemManager.hpp"
 	"../Resources/tinyxml/tinyxml.h"
 	"../Resources/easylogging++.h"
 
-1426677781 source:/home/b30/codes/git/MapSystem/StaticTiledMap.cpp
+1427656997 source:/home/b30/codes/git/MapSystem/StaticTiledMap.cpp
 	"StaticTiledMap.hpp"
 	"Item.h"
 	"../Resources/Utils.hpp"
@@ -571,13 +588,14 @@
 	"NPC.hpp"
 	<iostream>
 
-1427113381 source:/home/b30/codes/git/NpcManager/NpcManager.cpp
+1427265453 source:/home/b30/codes/git/NpcManager/NpcManager.cpp
 	"NpcManager.hpp"
 	"NPC.hpp"
 	"../Resources/Utils.hpp"
 	"../Resources/tinyxml/tinyxml.h"
 	<iostream>
 	<SFML/Graphics.hpp>
+	<stdexcept>
 	<iostream>
 
 1426489261 source:/home/b30/codes/git/Person/Entity.cpp
@@ -586,9 +604,10 @@
 	"../Resources/tinyxml/tinyxml.h"
 	<stdexcept>
 
-1425310932 source:/home/b30/codes/git/Person/Player.cpp
+1427201834 source:/home/b30/codes/git/Person/Player.cpp
 	"Player.hpp"
 	"Entity.hpp"
+	<stdexcept>
 
 1425310932 source:/home/b30/codes/git/Resources/tinyxml/tinystr.cpp
 	"tinystr.h"
@@ -626,7 +645,7 @@
 	<algorithm>
 	<cstddef>
 
-1427111504 source:/home/b30/codes/git/DialogSystem/TextWindow.cpp
+1427995157 source:/home/b30/codes/git/DialogSystem/TextWindow.cpp
 	"TextWindow.hpp"
 	<iostream>
 	<SFML/Graphics.hpp>
@@ -635,7 +654,7 @@
 	"../Resources/Utils.hpp"
 	<iostream>
 
-1427101456 /home/b30/codes/git/DialogSystem/TextWindow.hpp
+1427995079 /home/b30/codes/git/DialogSystem/TextWindow.hpp
 	<SFML/Graphics.hpp>
 	"../Resources/Utils.hpp"
 
@@ -661,7 +680,7 @@
 	<string>
 	<vector>
 
-1426830203 source:/home/b30/codes/git/NpcManager/DataReader.cpp
+1427395321 source:/home/b30/codes/git/NpcManager/DataReader.cpp
 	"DataReader.hpp"
 	"../Resources/Utils.hpp"
 	"../Resources/tinyxml/tinyxml.h"
@@ -669,4 +688,70 @@
 	<string>
 	<sstream>
 	<iostream>
+
+1427195634 source:/home/b30/codes/git/VirtualMachine/VM.cpp
+	"VM.hpp"
+
+1427195604 /home/b30/codes/git/VirtualMachine/VM.hpp
+	"../NpcManager/NpcManager.hpp"
+	"../Resources/Utils.hpp"
+	"../DialogSystem/TextWindow.hpp"
+	<iostream>
+	<vector>
+	<SFML/Graphics.hpp>
+
+1427995187 source:/home/b30/codes/git/DialogSystem/PlayerDataWindow.cpp
+	"PlayerDataWindow.hpp"
+
+1427995187 /home/b30/codes/git/DialogSystem/PlayerDataWindow.hpp
+	<SFML/Graphics.hpp>
+	<vector>
+	<string>
+	<unordered_map>
+	"EquipWindow.hpp"
+	"PlayerEquip.hpp"
+	"../MapSystem/StaticTiledMap.hpp"
+	"../Person/MemoryBridge.hpp"
+	"../Resources/Utils.hpp"
+
+1427988097 source:/home/b30/codes/git/DialogSystem/PlayerEquip.cpp
+	"PlayerEquip.hpp"
+	"../Resources/Utils.hpp"
+	<iostream>
+
+1427988038 /home/b30/codes/git/DialogSystem/PlayerEquip.hpp
+	"GridWindow.hpp"
+
+1427995012 source:/home/b30/codes/git/DialogSystem/PopupMenu.cpp
+	"PopupMenu.hpp"
+	<utility>
+	<iostream>
+
+1427995020 /home/b30/codes/git/DialogSystem/PopupMenu.hpp
+	"../Resources/Utils.hpp"
+	<SFML/Graphics.hpp>
+
+1427387654 /home/b30/codes/git/DialogSystem/PopupMenu.cpp
+	"PopupMenu.hpp"
+	<utility>
+	<iostream>
+
+1427812767 source:/home/b30/codes/git/MapSystem/ItemLoader.cpp
+	"ItemLoader.hpp"
+	"../Resources/tinyxml/tinyxml.h"
+	"../Resources/easylogging++.h"
+	<iostream>
+
+1427752231 /home/b30/codes/git/MapSystem/ItemLoader.hpp
+	"../Resources/Utils.hpp"
+
+1427796003 source:/home/b30/codes/git/Person/MemoryBridge.cpp
+	"MemoryBridge.hpp"
+
+1427797159 /home/b30/codes/git/Person/MemoryBridge.hpp
+	"../Resources/Utils.hpp"
+	<unordered_set>
+	<string>
+
+1427986002 source:/home/b30/codes/git/Window.cpp
 

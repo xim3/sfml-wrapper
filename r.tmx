@@ -1905,6 +1905,9 @@
   <object id="12" gid="3035" x="267" y="465"/>
   <object id="13" gid="3039" x="144" y="432"/>
   <object id="14" gid="1605" x="642" y="194"/>
+  <object id="15" gid="1449" x="170" y="500"/>
+  <object id="16" gid="2672" x="250" y="400"/>
+  <object id="17" gid="2849" x="175" y="320"/>
  </objectgroup>
  <objectgroup name="portal">
   <object id="16" gid="2885" x="642" y="352" src="y.tmx" spawnx="33" spawny="65"/>

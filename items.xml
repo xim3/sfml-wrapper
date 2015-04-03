@@ -8,25 +8,58 @@
         <desc>fajny wand</desc>
         <data attack="15" defence="3" speed="0.5" quality="2" price="200" power="1"/>
     </item>
-    <item gid="1602" name="Mikstura many" type="2">
+    <item gid="1602" name="Mikstura many" type="7">
         <desc>Odnawia 10 mp</desc>
         <data power="1" price="15" />
     </item>
-    <item gid="1472" name="Magic Book" type="1">
+    <item gid="1472" name="Magic Book" type="5">
         <desc>Bardzo dobry item</desc>
         <data defence="10" quality="2" price="600" power="1"/>
     </item>
-    <item gid="1604" name="Heal potion" type="2">
+    <item gid="1604" name="Heal potion" type="7">
         <desc>Odnawia 10 hp</desc>
         <data power="2" price="600" />
     </item>
-    <item gid="1357" name="Rękawica Chwały" type="1">
+    <item gid="1357" name="Rękawica Chwały" type="5">
 		<desc> Ukradziona Karmazynowemu Mścicielowi \\nPodczas gdy siedział na toalecie.\\nPonoć bardzo sie zdenerwował i do dziś szuka sprawcy.</desc>
 		<data defence="20" quality="3" price="5000" power="0.3"/>
+		<properties>
+		 <attr name="unbelive" sign="+" value="0.4"/>
+		</properties>
     </item>
     <item gid="2945" name="Rózga druida" type="0">
 		<desc> Dla początkującego druida jest to bardzo \\nDobra różdżka \\nStworzył ją sam Kótonus, wielki mag,\\nktóry aktualnie
-		\\nSiedzi w więzieniu za wykroczenia i niezapłacone \\nMandaty otrzymane podczas prowadzenia \\nPowozu konnego.</desc>
-		<data attack="20" defence="2" speed="25" quality="2" price="20" power="0.3"/>
+		\\nSiedzi w więzieniu za wykroczenia i niezapłacone \\nMandaty otrzymane podczas prowadzenia.</desc>
+		<data attack="20" defence="2" speed="25" quality="2" price="20" power="0.3" conditions="wisdom > 100, agility > 100, strength > 110, charisma > 50, vital > 20, energy > 10"/>
+        <properties>
+         <attr name="critical" sign="+" value="5"/>
+         <attr name="hpregeneration" sign="-" value="33"/>
+         <attr name="mpregeneration" sign="-" value="5"/>
+         <attr name="droprate" sign="+" value="30"/>
+         <attr name="rape" sign="+" value="52"/>
+         <attr name="luma" sign="+" value="23"/>
+         <attr name="mort" sign="+" value="2"/>
+        </properties>
     </item>
+    <item gid="387" name="Lekka Zbroja" type="2">
+        <desc>Lekka zbroja, bardzo dobra i dosyć tania \\n została zrobiona ze skóry pterodaktyla.</desc>
+        <data defence="5" quality="3" price="150" power="0.5"/>
+    </item>
+    <item gid="1448" name="Hełm Valoona" type="1">
+        <desc>Ciężki hełm który obroni właściciela \\nnawet przed najcięższymi atakami fizycznymi \\njest przedmiotem który pozostawił po \\nsobie Valoon, 1 król Kurwidołka.</desc>
+         <data defence="13" quality="3" price="5000" power="0.5" conditions="strength > 30, charisma > 50"/>
+    </item>
+    <item gid="1451" name="Hełm kata" type="1">
+        <desc>Hełm kata, widoczne ślady zaschniętej krwii</desc>
+        <data defence="6" quality="2" price="400" power="0"/>
+    </item>
+    <item gid="2671" name="Majty porywacza" type="3">
+        <desc>Spodnie porywacza, bardzo niebezpieczne</desc>
+        <data defence="3" quality="3" price="1200" power="0"/>
+    </item>
+    <item gid="2848" name="Rycerskie buty" type="4">
+        <desc>Buty rycerza</desc>
+        <data defence="2" quality="2" price="500" power="1"/>
+    </item>
+
 </items>
